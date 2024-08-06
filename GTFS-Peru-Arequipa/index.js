@@ -1,7 +1,7 @@
 const { osmToGtfs, OSMOverpassDownloader } = require('trufi-gtfs-builder')
 
 osmToGtfs({
-    outputFiles: { outputDir: __dirname + '/out', trufiTPData: true, gtfs: true, },
+    outputFiles: { outputDir: __dirname + '/out', trufiTPData: true, gtfs: true,routes: true,},
     geojsonOptions: {
         osmDataGetter: new OSMOverpassDownloader({
             south: -16.489732,

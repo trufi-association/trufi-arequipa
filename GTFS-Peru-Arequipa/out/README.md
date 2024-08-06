@@ -1,5 +1,5 @@
 ### Count
-**Total**: 192  **Correct**: 187  **With error**: 5
+**Total**: 192  **Correct**: 192  **With error**: 0
 
 
 | Id | Name | Ref | From | To | State |
@@ -12,7 +12,7 @@
 [17683273](https://www.openstreetmap.org/relation/17683273) | Custer 4B : Terminal Terreste → Villa Hermosa | 4B | Terminal Terreste | Villa Hermosa | ✅
 [17653490](https://www.openstreetmap.org/relation/17653490) | Custer 4C : Villa Milagros → Avenida Venezuela | 4C | Villa Milagros | Avenida Venezuela | ✅
 [17684890](https://www.openstreetmap.org/relation/17684890) | Custer 4C : Avenida Venezuela → Villa Milagros | 4C | Avenida Venezuela | Villa Milagros | ✅
-[17683269](https://www.openstreetmap.org/relation/17683269) | Custer 4D : Villa Los Milagros → Avelino | 4D | Villa Los Milagros | Avelino | [streets not sequential](https://overpass-turbo.eu/?Q=//streets%20not%20sequential%0Arel(17683269);out%20geom;%0Away(1293974176);out%20geom;%0Away(1285317079);out%20geom;&R)
+[17683269](https://www.openstreetmap.org/relation/17683269) | Custer 4D : Villa Los Milagros → Avelino | 4D | Villa Los Milagros | Avelino | ✅
 [17683270](https://www.openstreetmap.org/relation/17683270) | Custer 4D : Óvalo Mariscal Castilla → Villa Los Milagros | 4D | Avelino | Villa Los Milagros | ✅
 [17658187](https://www.openstreetmap.org/relation/17658187) | Custer 7 de Junio : Alata → Av Paucarpata | 7 de Junio | Alata | Av Paucarpata | ✅
 [17688056](https://www.openstreetmap.org/relation/17688056) | Custer 7 de Junio : Av Paucarpata → Alata | 7 de Junio | Av Paucarpata | Alata | ✅
@@ -61,10 +61,10 @@
 [17688019](https://www.openstreetmap.org/relation/17688019) | Custer B2 : Terminal Terrestre → Miguel Grau | B2 | Terminal Terrestre | Miguel Grau | ✅
 [17636285](https://www.openstreetmap.org/relation/17636285) | Custer B2 A : Miguel Grau → Terminal Terrestre | B2 A | Miguel Grau | Terminal Terrestre | ✅
 [17688020](https://www.openstreetmap.org/relation/17688020) | Custer B2 A : Terminal Terrestre → Miguel Grau | B2 A | Terminal Terrestre | Miguel Grau | ✅
-[17608045](https://www.openstreetmap.org/relation/17608045) | Custer BR : Apipa → Terminal Terrestre | BR | Apipa | Terminal Terrestre | [streets not sequential](https://overpass-turbo.eu/?Q=//streets%20not%20sequential%0Arel(17608045);out%20geom;%0Away(570304879);out%20geom;%0Away(1284431074);out%20geom;&R)
-[17684889](https://www.openstreetmap.org/relation/17684889) | Custer BR : Terminal Terrestre → Apipa | BR | Terminal Terrestre | Apipa | [streets not sequential](https://overpass-turbo.eu/?Q=//streets%20not%20sequential%0Arel(17684889);out%20geom;%0Away(1285270188);out%20geom;%0Away(650735490);out%20geom;&R)
+[17608045](https://www.openstreetmap.org/relation/17608045) | Custer BR : Apipa → Terminal Terrestre | BR | Apipa | Terminal Terrestre | ✅
+[17684889](https://www.openstreetmap.org/relation/17684889) | Custer BR : Terminal Terrestre → Apipa | BR | Terminal Terrestre | Apipa | ✅
 [17581799](https://www.openstreetmap.org/relation/17581799) | Custer C : Señor de los milagros → Ormeño | C | Señor de los milagros | Ormeño | ✅
-[17608077](https://www.openstreetmap.org/relation/17608077) | Custer C : Angeles del sur Zona A → La isla | C | Angeles del sur Zona A | La isla | [streets not sequential](https://overpass-turbo.eu/?Q=//streets%20not%20sequential%0Arel(17608077);out%20geom;%0Away(675676890);out%20geom;%0Away(675676890);out%20geom;&R)
+[17608077](https://www.openstreetmap.org/relation/17608077) | Custer C : Angeles del sur Zona A → La isla | C | Angeles del sur Zona A | La isla | ✅
 [17636305](https://www.openstreetmap.org/relation/17636305) | Custer C : Miguel Grau → Plaza las Américas | C | Miguel Grau | Plaza las Américas | ✅
 [17658522](https://www.openstreetmap.org/relation/17658522) | Custer C : Sor Ana → Alto San Martín | C | Sor Ana | Alto San Martín | ✅
 [17664826](https://www.openstreetmap.org/relation/17664826) | Custer C : Los Olivos → Estadio Melgar | C | Los Olivos | Estadio Melgar | ✅
@@ -89,7 +89,7 @@
 [17658550](https://www.openstreetmap.org/relation/17658550) | Custer CIMA : Ciudad Municipal → Ciudad Blanca | CIMA | Ciudad Municipal | Ciudad Blanca | ✅
 [17658558](https://www.openstreetmap.org/relation/17658558) | Custer CIMA : Ciudad Blanca → Ciudad Municipal | CIMA | Ciudad Blanca | Ciudad Municipal | ✅
 [17683271](https://www.openstreetmap.org/relation/17683271) | Custer CIMA Bustamante : Apipa → Óvalo Mariscal Castilla | CIMA Bustamante | Apipa | Óvalo Mariscal Castilla | ✅
-[17683272](https://www.openstreetmap.org/relation/17683272) | Custer CIMA Bustamante : Óvalo Mariscal Castilla → Apipa | CIMA Bustamante | Óvalo Mariscal Castilla | Apipa | [streets not sequential](https://overpass-turbo.eu/?Q=//streets%20not%20sequential%0Arel(17683272);out%20geom;%0Away(1285270188);out%20geom;%0Away(650735490);out%20geom;&R)
+[17683272](https://www.openstreetmap.org/relation/17683272) | Custer CIMA Bustamante : Óvalo Mariscal Castilla → Apipa | CIMA Bustamante | Óvalo Mariscal Castilla | Apipa | ✅
 [17644902](https://www.openstreetmap.org/relation/17644902) | Custer Ciudad mi trabajo A : El pasto → Pachacutec | Ciudad mi trabajo A | El pasto | Pachacutec | ✅
 [17688044](https://www.openstreetmap.org/relation/17688044) | Custer Ciudad mi trabajo A : Pachacutec → El pasto | Ciudad mi trabajo A | Pachacutec | El pasto | ✅
 [17644912](https://www.openstreetmap.org/relation/17644912) | Custer Ciudad mi trabajo M : La mansión → La Salle | Ciudad mi trabajo M | La mansión | La Salle | ✅

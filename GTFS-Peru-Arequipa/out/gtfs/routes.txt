@@ -2,192 +2,192 @@ route_id,agency_id,route_short_name,route_long_name,route_color,route_type
 17445532,0,Enace,Custer Enace : Urb. Dean Valdivia → Av. Venezuela,FEDD00,3
 17445672,0,Enace,Custer Enace : Av. Venezuela → Urb. Dean Valdivia,FEDD00,3
 17511052,1,B,Custer B : La campiña II → Parque Selva Alegre,10069f,3
-17511191,2,Cotaspa 4,Custer Cotaspa 4 : El Golf → Enace,10069f,3
+17511191,1,Cotaspa 4,Custer Cotaspa 4 : El Golf → Enace,10069f,3
 17515510,0,San miguel,Custer San miguel : Sector 7 Dean Valdivia → Las convenciones,FEDD00,3
-17518939,3,A,Custer A : San Luis → Ormeño,FF6900,3
-17581799,3,C,Custer C : Señor de los milagros → Ormeño,FF6900,3
-17607753,4,Cettar,Custer Cettar : Ciudad Municipal → Terminal Terrestre,DBD9D1,3
-17608042,3,Villa Ecológica,Custer Villa Ecológica : Villa Ecológica → Ormeño,FF6900,3
-17608045,4,BR,Custer BR : Apipa → Terminal Terrestre,DBD9D1,3
-17608051,4,Peruarbo,Custer Peruarbo : Peruarbo → Sepúlveda,DBD9D1,3
-17608055,4,A,Custer A : El Naranjal → Angeles del sur Zona A,DBD9D1,3
-17608077,4,C,Custer C : Angeles del sur Zona A → La isla,DBD9D1,3
-17608110,4,Santa Clara,Custer Santa Clara : Fundo Cabrería → Villa Miguel Grau,DBD9D1,3
-17619994,3,Royal Bus B,Custer Royal Bus B : Señor de los milagros → Terminal Terrestre,FF6900,3
-17620010,4,4A,Custer 4A : Ciudad de Dios → Terminal Terrestre,DBD9D1,3
-17626535,3,San Luis B,Custer San Luis B : San Luis → Avelino,FF6900,3
-17633924,3,D,Custer D : San Luis → Terminal Terrestre,FF6900,3
-17633927,3,Umacollo,Custer Umacollo : San Luis → Umacollo,FF6900,3
-17633932,3,Transpol B,Custer Transpol B : El mirador → Avelino,FF6900,3
-17633933,3,A1,Custer A1 : El mirador → Ruta del sillar,FF6900,3
-17633936,3,A15,Custer A15 : Revolución → Av La Paz,FF6900,3
-17633938,5,B2,Custer B2 : Miguel Grau → Terminal Terrestre,AFA96E,3
-17634339,5,A,Custer A : Miguel Grau → La Merced,AFA96E,3
-17634360,6,3,Custer 3 : Baños de Jesús → Aeropuerto,8D4925,3
-17636285,5,B2 A,Custer B2 A : Miguel Grau → Terminal Terrestre,AFA96E,3
-17636304,6,B,Combi B : Villa Santa Rosa → Terminal Terrestre,8D4925,3
-17636305,5,C,Custer C : Miguel Grau → Plaza las Américas,AFA96E,3
-17636328,5,B,Custer B : Miguel Grau → Cementerio Apacheta,AFA96E,3
-17636366,7,Avelino,Custer Avelino : Av Paisajista → Ciudad Blanca,DF1995,3
-17636375,8,LA,Custer LA : Characato → La paz,00C996,3
-17636635,5,H,Custer H : Miguel Grau → Alto de la Alianza,AFA96E,3
-17642932,8,T San Antorio,Custer T San Antorio : San Antonio → Terminal Terrestre,00C996,3
-17643025,8,A,Custer A : Penal → Filtro,00C996,3
-17643070,9,Dolores,Custer Dolores : La campiña III → La Salle,10069f,3
-17644902,10,Ciudad mi trabajo A,Custer Ciudad mi trabajo A : El pasto → Pachacutec,10069f,3
-17644912,10,Ciudad mi trabajo M,Custer Ciudad mi trabajo M : La mansión → La Salle,10069f,3
-17644947,10,Alto Libertad,Custer Alto Libertad : Av Paisajista → Alto Libertad,10069f,3
-17653490,4,4C,Custer 4C : Villa Milagros → Avenida Venezuela,DBD9D1,3
-17653560,4,4B,Custer 4B : Villa Hermosa → Terminal Terrestre,DBD9D1,3
+17518939,2,A,Custer A : San Luis → Ormeño,FF6900,3
+17581799,2,C,Custer C : Señor de los milagros → Ormeño,FF6900,3
+17607753,3,Cettar,Custer Cettar : Ciudad Municipal → Terminal Terrestre,DBD9D1,3
+17608042,2,Villa Ecológica,Custer Villa Ecológica : Villa Ecológica → Ormeño,FF6900,3
+17608045,3,BR,Custer BR : Apipa → Terminal Terrestre,DBD9D1,3
+17608051,3,Peruarbo,Custer Peruarbo : Peruarbo → Sepúlveda,DBD9D1,3
+17608055,3,A,Custer A : El Naranjal → Angeles del sur Zona A,DBD9D1,3
+17608077,3,C,Custer C : Angeles del sur Zona A → La isla,DBD9D1,3
+17608110,3,Santa Clara,Custer Santa Clara : Fundo Cabrería → Villa Miguel Grau,DBD9D1,3
+17619994,2,Royal Bus B,Custer Royal Bus B : Señor de los milagros → Terminal Terrestre,FF6900,3
+17620010,3,4A,Custer 4A : Ciudad de Dios → Terminal Terrestre,DBD9D1,3
+17626535,2,San Luis B,Custer San Luis B : San Luis → Avelino,FF6900,3
+17633924,2,D,Custer D : San Luis → Terminal Terrestre,FF6900,3
+17633927,2,Umacollo,Custer Umacollo : San Luis → Umacollo,FF6900,3
+17633932,2,Transpol B,Custer Transpol B : El mirador → Avelino,FF6900,3
+17633933,2,A1,Custer A1 : El mirador → Ruta del sillar,FF6900,3
+17633936,2,A15,Custer A15 : Revolución → Av La Paz,FF6900,3
+17633938,4,B2,Custer B2 : Miguel Grau → Terminal Terrestre,AFA96E,3
+17634339,4,A,Custer A : Miguel Grau → La Merced,AFA96E,3
+17634360,5,3,Custer 3 : Baños de Jesús → Aeropuerto,8D4925,3
+17636285,4,B2 A,Custer B2 A : Miguel Grau → Terminal Terrestre,AFA96E,3
+17636304,5,B,Combi B : Villa Santa Rosa → Terminal Terrestre,8D4925,3
+17636305,4,C,Custer C : Miguel Grau → Plaza las Américas,AFA96E,3
+17636328,4,B,Custer B : Miguel Grau → Cementerio Apacheta,AFA96E,3
+17636366,6,Avelino,Custer Avelino : Av Paisajista → Ciudad Blanca,DF1995,3
+17636375,7,LA,Custer LA : Characato → La paz,00C996,3
+17636635,4,H,Custer H : Miguel Grau → Alto de la Alianza,AFA96E,3
+17642932,7,T San Antorio,Custer T San Antorio : San Antonio → Terminal Terrestre,00C996,3
+17643025,7,A,Custer A : Penal → Filtro,00C996,3
+17643070,1,Dolores,Custer Dolores : La campiña III → La Salle,10069f,3
+17644902,1,Ciudad mi trabajo A,Custer Ciudad mi trabajo A : El pasto → Pachacutec,10069f,3
+17644912,1,Ciudad mi trabajo M,Custer Ciudad mi trabajo M : La mansión → La Salle,10069f,3
+17644947,1,Alto Libertad,Custer Alto Libertad : Av Paisajista → Alto Libertad,10069f,3
+17653490,3,4C,Custer 4C : Villa Milagros → Avenida Venezuela,DBD9D1,3
+17653560,3,4B,Custer 4B : Villa Hermosa → Terminal Terrestre,DBD9D1,3
 17653636,0,11 de Mayo,Custer 11 de Mayo : Mujeres con esperanza → Terminal Terrestre,FEDD00,3
-17654231,2,Socabaya B,Custer Socabaya B : Horacio Zevallos → Pachacutec,10069f,3
-17654414,11,Independencia,Custer Independencia : El Golf → C. Teniente Palacios,10069f,3
-17658187,7,7 de Junio,Custer 7 de Junio : Alata → Av Paucarpata,DF1995,3
-17658190,12,Monterrey Corbacho,Custer Monterrey Corbacho : Av Paisajista → Av La Paz,10069f,3
-17658204,7,13,Custer 13 : San Hilarión → Av Paucarpata,DF1995,3
-17658205,7,38,Custer 38 : Av Tahuantinsuyo → Av Progreso,DF1995,3
-17658212,13,A Pachacutec,Custer A Pachacutec : Semirual Pachacutec → Av EE.UU.,2F4F4F,3
-17658213,13,B Pachacutec,Custer B Pachacutec : Semirual Pachacutec → Av EE.UU.,2F4F4F,3
-17658215,13,M Pachacutec,Custer M Pachacutec : Semirual Pachacutec → La salle,2F4F4F,3
-17658252,7,M Upis,Custer M Upis : Mansión → Av Paucarpata,DF1995,3
-17658522,4,C,Custer C : Sor Ana → Alto San Martín,DBD9D1,3
-17658549,4,S,Custer S : Alto San Martín → Sor Ana,DBD9D1,3
-17658550,4,CIMA,Custer CIMA : Ciudad Municipal → Ciudad Blanca,DBD9D1,3
-17658558,4,CIMA,Custer CIMA : Ciudad Blanca → Ciudad Municipal,DBD9D1,3
+17654231,1,Socabaya B,Custer Socabaya B : Horacio Zevallos → Pachacutec,10069f,3
+17654414,1,Independencia,Custer Independencia : El Golf → C. Teniente Palacios,10069f,3
+17658187,6,7 de Junio,Custer 7 de Junio : Alata → Av Paucarpata,DF1995,3
+17658190,1,Monterrey Corbacho,Custer Monterrey Corbacho : Av Paisajista → Av La Paz,10069f,3
+17658204,6,13,Custer 13 : San Hilarión → Av Paucarpata,DF1995,3
+17658205,6,38,Custer 38 : Av Tahuantinsuyo → Av Progreso,DF1995,3
+17658212,8,A Pachacutec,Custer A Pachacutec : Semirual Pachacutec → Av EE.UU.,2F4F4F,3
+17658213,8,B Pachacutec,Custer B Pachacutec : Semirual Pachacutec → Av EE.UU.,2F4F4F,3
+17658215,8,M Pachacutec,Custer M Pachacutec : Semirual Pachacutec → La salle,2F4F4F,3
+17658252,6,M Upis,Custer M Upis : Mansión → Av Paucarpata,DF1995,3
+17658522,3,C,Custer C : Sor Ana → Alto San Martín,DBD9D1,3
+17658549,3,S,Custer S : Alto San Martín → Sor Ana,DBD9D1,3
+17658550,3,CIMA,Custer CIMA : Ciudad Municipal → Ciudad Blanca,DBD9D1,3
+17658558,3,CIMA,Custer CIMA : Ciudad Blanca → Ciudad Municipal,DBD9D1,3
 17658664,0,Zamacola,M3 Zamacola : Terminal Terrestre → Terminal Pesquero,FEDD00,3
-17658669,4,El Litoral,Custer El Litoral : Chachani → Salaverry,DBD9D1,3
+17658669,3,El Litoral,Custer El Litoral : Chachani → Salaverry,DBD9D1,3
 17659504,0,Zamacola,M3 Zamacola : Terminal Pesquero → Terminal Terrestre,FEDD00,3
 17659544,0,Embajada,M3 Embajada : Los Pioneros → Terminal Terrestre,FEDD00,3
 17664509,0,Chapi,Custer Chapi : Primero de Junio → Av. Venezuela,FEDD00,3
 17664511,0,Chapi,Custer Chapi : Av. Venezuela → Primero de Junio,FEDD00,3
 17664629,0,Casimiro,Custer Casimiro : Casimiro → Coliseo Arequipa,FEDD00,3
 17664645,0,Casimiro,Custer Casimiro : Coliseo Arequipa → Casimiro,FEDD00,3
-17664646,3,Gráficos,Custer Gráficos : Av. Emancipación → Salaverry,FF6900,3
-17664647,3,Gráficos,Custer Gráficos : Salaverry → Av. Emancipación,FF6900,3
-17664648,3,Juan XXIII,Custer Juan XXIII : La galaxia → Avelino,FF6900,3
-17664649,3,Juan XXIII,Custer Juan XXIII : Avelino → La galaxia,FF6900,3
-17664775,3,Alto Selva Alegre,Custer Alto Selva Alegre : San Luis → Palacio de Bellas Artes,FF6900,3
-17664776,3,Alto Selva Alegre,Custer Alto Selva Alegre : Palacio de Bellas Artes → San Luis,FF6900,3
-17664787,14,Cenepa,M3 Cenepa : Heroes del Cenepa → Estadio Melgar,FF0000,3
-17664788,14,Cenepa,M3 Cenepa : Estadio Melgar → Heroes del cenepa,FF0000,3
-17664789,14,Olivos,Custer Olivos : Los Olivos → Terminal Terrestre,FF0000,3
-17664790,14,Olivos,Custer Olivos : Terminal Terrestre → Los Olivos,FF0000,3
-17664791,14,Miguel Grau,Custer Miguel Grau : Miguel Grau → Estadio Melgar,FF0000,3
-17664792,14,Miguel Grau,Custer Miguel Grau : Estadio Melgar → Miguel Grau,FF0000,3
-17664793,14,C Atalaya,Custer C Atalaya : Atalaya → Terminal Terrestre,FF0000,3
-17664794,14,C Atalaya,Custer C Atalaya : Terminal Terrestre → Atalaya,FF0000,3
-17664795,14,Atalaya,Combi Atalaya : Atalaya → Estadio Melgar,FF0000,3
-17664821,14,Atalaya,Combi Atalaya : Estadio Melgar → Atalaya,FF0000,3
-17664822,14,Mirador Berlín,Custer Mirador Berlín : Berlín → Estadio Melgar,FF0000,3
-17664823,14,Mirador Berlín,Custer Mirador Berlín : Estadio Melgar → Berlín,FF0000,3
-17664824,14,A,Combi A : Jerusalen → Estadio Melgar,FF0000,3
-17664825,14,A,Combi A : Estadio Melgar → Jerusalen,FF0000,3
-17664826,14,C,Custer C : Los Olivos → Estadio Melgar,FF0000,3
-17664827,14,C,Custer C : Estadio Melgar → Los Olivos,FF0000,3
-17664828,6,01,Custer 01 : Plaza Paucarpata → C. José Olaya,8D4925,3
-17664829,6,01,Custer 01 : C. José Olaya → Plaza Paucarpata,8D4925,3
-17664830,6,02,Custer 02 : Plaza Paucarpata → C. José Olaya,8D4925,3
-17664831,6,02,Custer 02 : C. José Olaya → Plaza Paucarpata,8D4925,3
-17664971,6,05,Custer 05 : Campo de Marte → Alto Libertad,8D4925,3
-17664972,6,05,Custer 05 : Alto Libertad → Campo de Marte,8D4925,3
-17664973,6,06,Custer 06 : Huacsapata → Avelino,8D4925,3
-17664974,6,06,Custer 06 : Avelino → Huacsapata,8D4925,3
-17664975,6,07,M3 07 : Guardia Civil → Vallecito,8D4925,3
-17664977,6,09,M3 09 : Campo de Marte → La Católica,8D4925,3
-17664978,6,09,M3 09 : La Católica → Campo de Marte,8D4925,3
+17664646,2,Gráficos,Custer Gráficos : Av. Emancipación → Salaverry,FF6900,3
+17664647,2,Gráficos,Custer Gráficos : Salaverry → Av. Emancipación,FF6900,3
+17664648,2,Juan XXIII,Custer Juan XXIII : La galaxia → Avelino,FF6900,3
+17664649,2,Juan XXIII,Custer Juan XXIII : Avelino → La galaxia,FF6900,3
+17664775,2,Alto Selva Alegre,Custer Alto Selva Alegre : San Luis → Palacio de Bellas Artes,FF6900,3
+17664776,2,Alto Selva Alegre,Custer Alto Selva Alegre : Palacio de Bellas Artes → San Luis,FF6900,3
+17664787,9,Cenepa,M3 Cenepa : Heroes del Cenepa → Estadio Melgar,FF0000,3
+17664788,9,Cenepa,M3 Cenepa : Estadio Melgar → Heroes del cenepa,FF0000,3
+17664789,9,Olivos,Custer Olivos : Los Olivos → Terminal Terrestre,FF0000,3
+17664790,9,Olivos,Custer Olivos : Terminal Terrestre → Los Olivos,FF0000,3
+17664791,9,Miguel Grau,Custer Miguel Grau : Miguel Grau → Estadio Melgar,FF0000,3
+17664792,9,Miguel Grau,Custer Miguel Grau : Estadio Melgar → Miguel Grau,FF0000,3
+17664793,9,C Atalaya,Custer C Atalaya : Atalaya → Terminal Terrestre,FF0000,3
+17664794,9,C Atalaya,Custer C Atalaya : Terminal Terrestre → Atalaya,FF0000,3
+17664795,9,Atalaya,Combi Atalaya : Atalaya → Estadio Melgar,FF0000,3
+17664821,9,Atalaya,Combi Atalaya : Estadio Melgar → Atalaya,FF0000,3
+17664822,9,Mirador Berlín,Custer Mirador Berlín : Berlín → Estadio Melgar,FF0000,3
+17664823,9,Mirador Berlín,Custer Mirador Berlín : Estadio Melgar → Berlín,FF0000,3
+17664824,9,A,Combi A : Jerusalen → Estadio Melgar,FF0000,3
+17664825,9,A,Combi A : Estadio Melgar → Jerusalen,FF0000,3
+17664826,9,C,Custer C : Los Olivos → Estadio Melgar,FF0000,3
+17664827,9,C,Custer C : Estadio Melgar → Los Olivos,FF0000,3
+17664828,5,01,Custer 01 : Plaza Paucarpata → C. José Olaya,8D4925,3
+17664829,5,01,Custer 01 : C. José Olaya → Plaza Paucarpata,8D4925,3
+17664830,5,02,Custer 02 : Plaza Paucarpata → C. José Olaya,8D4925,3
+17664831,5,02,Custer 02 : C. José Olaya → Plaza Paucarpata,8D4925,3
+17664971,5,05,Custer 05 : Campo de Marte → Alto Libertad,8D4925,3
+17664972,5,05,Custer 05 : Alto Libertad → Campo de Marte,8D4925,3
+17664973,5,06,Custer 06 : Huacsapata → Avelino,8D4925,3
+17664974,5,06,Custer 06 : Avelino → Huacsapata,8D4925,3
+17664975,5,07,M3 07 : Guardia Civil → Vallecito,8D4925,3
+17664977,5,09,M3 09 : Campo de Marte → La Católica,8D4925,3
+17664978,5,09,M3 09 : La Católica → Campo de Marte,8D4925,3
 17664981,1,A,Custer A : La campiña II → Tahuantinsuyo,10069f,3
 17664982,1,A,Custer A : Tahuantinsuyo → La campiña II,10069f,3
 17664983,1,C,Custer C : La Campiña II → Mariano Melgar,10069f,3
 17664984,1,C,Custer C : Mariano Melgar → La Campiña II,10069f,3
 17664985,1,D,Custer D : La Campiña II → Alto Misti,10069f,3
 17664986,1,D,Custer D : La Campiña II → La Campiña II,10069f,3
-17664987,9,San Martín,Custer San Martín : La Campiña III → La Salle,10069f,3
-17664988,9,San Martín,Custer San Martín : La Salle → La Campiña III,10069f,3
-17677829,6,C,Combi C : Israel → Terminal Terrestre,8D4925,3
-17677911,8,T Quequeña,Custer T Quequeña : Quequeña → Terminal Terrestre,00C996,3
-17678105,13,B,Custer B : Plaza de Armas → Alto Libertad,2F4F4F,3
-17679511,4,El Litoral,Custer El Litoral : Salaverry → Chachani,DBD9D1,3
-17681083,3,D Huaranguillo,Custer D Huaranguillo : San Luis → Huaranguillo,FF6900,3
+17664987,1,San Martín,Custer San Martín : La Campiña III → La Salle,10069f,3
+17664988,1,San Martín,Custer San Martín : La Salle → La Campiña III,10069f,3
+17677829,5,C,Combi C : Israel → Terminal Terrestre,8D4925,3
+17677911,7,T Quequeña,Custer T Quequeña : Quequeña → Terminal Terrestre,00C996,3
+17678105,8,B,Custer B : Plaza de Armas → Alto Libertad,2F4F4F,3
+17679511,3,El Litoral,Custer El Litoral : Salaverry → Chachani,DBD9D1,3
+17681083,2,D Huaranguillo,Custer D Huaranguillo : San Luis → Huaranguillo,FF6900,3
 17683264,0,11 de Mayo,Custer 11 de Mayo : Terminal Terrestre → Mujeres con esperanza,FEDD00,3
-17683265,3,D,Custer D : Terminal terrestre → San Luis,FF6900,3
-17683266,3,Umacollo,Custer Umacollo : Umacollo → San Luis,FF6900,3
-17683267,4,Cettar,Custer Cettar : Terminal Terrestre → Ciudad Municipal,DBD9D1,3
-17683268,4,Peruarbo,Custer Peruarbo : Sepúlveda → Peruarbo,DBD9D1,3
-17683269,4,4D,Custer 4D : Villa Los Milagros → Avelino,DBD9D1,3
-17683270,4,4D,Custer 4D : Óvalo Mariscal Castilla → Villa Los Milagros,DBD9D1,3
-17683271,4,CIMA Bustamante,Custer CIMA Bustamante : Apipa → Óvalo Mariscal Castilla,DBD9D1,3
-17683272,4,CIMA Bustamante,Custer CIMA Bustamante : Óvalo Mariscal Castilla → Apipa,DBD9D1,3
-17683273,4,4B,Custer 4B : Terminal Terreste → Villa Hermosa,DBD9D1,3
-17683274,3,D Huaranguillo,Custer D Huaranguillo : Huaranguillo → San Luis,FF6900,3
-17684885,4,Santa Clara,Custer Santa Clara : Villa Miguel Grau → Fundo Cabrería,DBD9D1,3
-17684886,4,A,Custer A : Angeles del sur Zona A → El Naranjal,DBD9D1,3
-17684887,4,C,Custer C : La isla → Angeles del sur Zona A,DBD9D1,3
-17684888,4,4A,Custer 4A : Terminal Terrestre → Ciudad de Dios,DBD9D1,3
-17684889,4,BR,Custer BR : Terminal Terrestre → Apipa,DBD9D1,3
-17684890,4,4C,Custer 4C : Avenida Venezuela → Villa Milagros,DBD9D1,3
-17684891,8,LB Mollebaya,Custer LB Mollebaya : 2 de Mayo → Mollebaya,00C996,3
+17683265,2,D,Custer D : Terminal terrestre → San Luis,FF6900,3
+17683266,2,Umacollo,Custer Umacollo : Umacollo → San Luis,FF6900,3
+17683267,3,Cettar,Custer Cettar : Terminal Terrestre → Ciudad Municipal,DBD9D1,3
+17683268,3,Peruarbo,Custer Peruarbo : Sepúlveda → Peruarbo,DBD9D1,3
+17683269,3,4D,Custer 4D : Villa Los Milagros → Avelino,DBD9D1,3
+17683270,3,4D,Custer 4D : Óvalo Mariscal Castilla → Villa Los Milagros,DBD9D1,3
+17683271,3,CIMA Bustamante,Custer CIMA Bustamante : Apipa → Óvalo Mariscal Castilla,DBD9D1,3
+17683272,3,CIMA Bustamante,Custer CIMA Bustamante : Óvalo Mariscal Castilla → Apipa,DBD9D1,3
+17683273,3,4B,Custer 4B : Terminal Terreste → Villa Hermosa,DBD9D1,3
+17683274,2,D Huaranguillo,Custer D Huaranguillo : Huaranguillo → San Luis,FF6900,3
+17684885,3,Santa Clara,Custer Santa Clara : Villa Miguel Grau → Fundo Cabrería,DBD9D1,3
+17684886,3,A,Custer A : Angeles del sur Zona A → El Naranjal,DBD9D1,3
+17684887,3,C,Custer C : La isla → Angeles del sur Zona A,DBD9D1,3
+17684888,3,4A,Custer 4A : Terminal Terrestre → Ciudad de Dios,DBD9D1,3
+17684889,3,BR,Custer BR : Terminal Terrestre → Apipa,DBD9D1,3
+17684890,3,4C,Custer 4C : Avenida Venezuela → Villa Milagros,DBD9D1,3
+17684891,7,LB Mollebaya,Custer LB Mollebaya : 2 de Mayo → Mollebaya,00C996,3
 17684893,0,San miguel,Custer San miguel : Las convenciones → Sector 7 Dean Valdivia,FEDD00,3
-17684894,3,A,Custer A : Ormeño → San Luis,FF6900,3
-17684907,3,San Luis B,Custer San Luis B : Avelino → San Luis,FF6900,3
+17684894,2,A,Custer A : Ormeño → San Luis,FF6900,3
+17684907,2,San Luis B,Custer San Luis B : Avelino → San Luis,FF6900,3
 17686763,0,Embajada,M3 Embajada : Terminal Terrestre → Los Pioneros,FEDD00,3
-17687840,13,B,Custer B : Alto Libertad → Plaza de Armas,2F4F4F,3
-17687934,14,San Jeronimo,Custer San Jeronimo : San Jerónimo → Estadio Melgar,FF0000,3
-17687963,7,P30,M3 P30 : Plaza Huayco → La Salle,DF1995,3
-17687966,7,P30,M3 P30 : La Salle → Plaza Huayco,DF1995,3
-17687967,3,Villa Ecológica,Custer Villa Ecológica : Ormeño → Villa Ecológica,FF6900,3
-17687970,13,A,Custer A : Plaza de Armas → Alto Libertad,2F4F4F,3
-17688012,3,A1,Custer A1 : Ruta del sillar → El mirador,FF6900,3
-17688013,3,Transpol B,Custer Transpol B : Avelino → El mirador,FF6900,3
-17688014,3,A15,Custer A15 : Av La Paz → Revolución,FF6900,3
-17688015,3,Royal Bus B,Custer Royal Bus B : Terminal terrestre → Señor de los milagros,FF6900,3
-17688016,3,C,Custer C : Ormeño → Señor de los milagros,FF6900,3
-17688017,8,LB Cerrillos,Custer LB Cerrillos : 2 de Mayo → C. Milagro,00C996,3
-17688018,14,Señor de Huanca,Custer Señor de Huanca : Señor de Huanca → Estadio Melgar,FF0000,3
-17688019,5,B2,Custer B2 : Terminal Terrestre → Miguel Grau,AFA96E,3
-17688020,5,B2 A,Custer B2 A : Terminal Terrestre → Miguel Grau,AFA96E,3
-17688021,5,C,Custer C : Plaza las Américas → Miguel Grau,AFA96E,3
-17688022,5,B,Cementerio Apacheta,AFA96E,3
-17688023,5,H,Custer H : Alto de la Alianza → Miguel Grau,AFA96E,3
-17688024,5,A,Custer A : La Merced → Miguel Grau,AFA96E,3
-17688025,6,7-04,Custer 7-04 : Aeropuerto → Baños de Jesús,8D4925,3
-17688026,6,B,Combi B : Terminal Terrestre → Villa Santa Rosa,8D4925,3
-17688027,6,C,Combi C : Terminal Terrestre → Israel,8D4925,3
-17688028,8,LB Mollebaya,Custer LB Mollebaya : Mollebaya → 2 de Mayo,00C996,3
-17688029,8,LB Cerrillos,Custer LB Cerrillos : C. Milagro → 2 de Mayo,00C996,3
-17688030,8,LA,Custer LA : La Paz → Characato,00C996,3
-17688031,8,T San Antorio,Custer T San Antorio : Terminal Terrestre → San Antonio,00C996,3
-17688038,8,T Quequeña,Custer T Quequeña : Terminal Terrestre → Quequeña,00C996,3
-17688039,8,A,Custer A : Filtro → Penal,00C996,3
+17687840,8,B,Custer B : Alto Libertad → Plaza de Armas,2F4F4F,3
+17687934,9,San Jeronimo,Custer San Jeronimo : San Jerónimo → Estadio Melgar,FF0000,3
+17687963,6,P30,M3 P30 : Plaza Huayco → La Salle,DF1995,3
+17687966,6,P30,M3 P30 : La Salle → Plaza Huayco,DF1995,3
+17687967,2,Villa Ecológica,Custer Villa Ecológica : Ormeño → Villa Ecológica,FF6900,3
+17687970,8,A,Custer A : Plaza de Armas → Alto Libertad,2F4F4F,3
+17688012,2,A1,Custer A1 : Ruta del sillar → El mirador,FF6900,3
+17688013,2,Transpol B,Custer Transpol B : Avelino → El mirador,FF6900,3
+17688014,2,A15,Custer A15 : Av La Paz → Revolución,FF6900,3
+17688015,2,Royal Bus B,Custer Royal Bus B : Terminal terrestre → Señor de los milagros,FF6900,3
+17688016,2,C,Custer C : Ormeño → Señor de los milagros,FF6900,3
+17688017,7,LB Cerrillos,Custer LB Cerrillos : 2 de Mayo → C. Milagro,00C996,3
+17688018,9,Señor de Huanca,Custer Señor de Huanca : Señor de Huanca → Estadio Melgar,FF0000,3
+17688019,4,B2,Custer B2 : Terminal Terrestre → Miguel Grau,AFA96E,3
+17688020,4,B2 A,Custer B2 A : Terminal Terrestre → Miguel Grau,AFA96E,3
+17688021,4,C,Custer C : Plaza las Américas → Miguel Grau,AFA96E,3
+17688022,4,B,Cementerio Apacheta,AFA96E,3
+17688023,4,H,Custer H : Alto de la Alianza → Miguel Grau,AFA96E,3
+17688024,4,A,Custer A : La Merced → Miguel Grau,AFA96E,3
+17688025,5,7-04,Custer 7-04 : Aeropuerto → Baños de Jesús,8D4925,3
+17688026,5,B,Combi B : Terminal Terrestre → Villa Santa Rosa,8D4925,3
+17688027,5,C,Combi C : Terminal Terrestre → Israel,8D4925,3
+17688028,7,LB Mollebaya,Custer LB Mollebaya : Mollebaya → 2 de Mayo,00C996,3
+17688029,7,LB Cerrillos,Custer LB Cerrillos : C. Milagro → 2 de Mayo,00C996,3
+17688030,7,LA,Custer LA : La Paz → Characato,00C996,3
+17688031,7,T San Antorio,Custer T San Antorio : Terminal Terrestre → San Antonio,00C996,3
+17688038,7,T Quequeña,Custer T Quequeña : Terminal Terrestre → Quequeña,00C996,3
+17688039,7,A,Custer A : Filtro → Penal,00C996,3
 17688040,1,B,Custer B : Parque Selva Alegre → La campiña II,10069f,3
-17688041,9,Dolores,Custer Dolores : La Salle → La campiña III,10069f,3
-17688044,10,Ciudad mi trabajo A,Custer Ciudad mi trabajo A : Pachacutec → El pasto,10069f,3
-17688045,10,Ciudad mi trabajo M,Custer Ciudad mi trabajo M : La Salle → La mansión,10069f,3
-17688046,10,Alto Libertad,Custer Alto Libertad : Alto Libertad → Av Paisajista,10069f,3
-17688047,2,Socabaya B,Custer Socabaya B : Pachacutec → Horacio Zevallos,10069f,3
-17688048,2,Cotaspa 4,Custer Cotaspa 4 : Enace → El Golf,10069f,3
-17688049,15,Simon Bolivar Horario,Custer Simon Bolivar Horario : Cruce Sabandía → Av Independencia,10069f,3
-17688050,15,Simon Bolivar AntiHorario,Custer Simon Bolivar AntiHorario : Av Independencia → Cruce Sabandía,10069f,3
-17688051,12,Monterrey Corbacho,Custer Monterrey Corbacho : Av La Paz → Av Paisajista,10069f,3
-17688052,7,A,M3 A : Tiabaya → Paucarpata,DF1995,3
-17688053,7,A,M3 A : Paucarpata → Tiabaya,DF1995,3
-17688054,7,Avelino,Custer Avelino : Ciudad Blanca → Av Paisajista,DF1995,3
-17688055,7,D,Custer D : Av. Paisajista → Los Alpes,DF1995,3
-17688056,7,7 de Junio,Custer 7 de Junio : Av Paucarpata → Alata,DF1995,3
-17688057,7,Tahuaycani,Custer Tahuaycani : Urb. Micael Bastidas → Calle Peral,DF1995,3
-17688058,7,13,Custer 13 : Av Paucarpata → San Hilarión,DF1995,3
-17688059,7,38,Custer 38 : Av Progreso → Av Tahuantinsuyo,DF1995,3
-17688060,7,M Upis,Custer M Upis : Av Paucarpata → Mansión,DF1995,3
-17688061,13,A,Custer A : Alto Libertad → Plaza de Armas,2F4F4F,3
-17688062,13,A Pachacutec,Custer A Pachacutec : Av EE.UU. → Semirual Pachacutec,2F4F4F,3
-17688063,13,B Pachacutec,Custer B Pachacutec : Av EE.UU. → Semirual Pachacutec,2F4F4F,3
-17688064,13,M Pachacutec,Custer M Pachacutec : La salle → Semirual Pachacutec,2F4F4F,3
-17688065,13,Cural,Custer Cural : El Cural → La isla,2F4F4F,3
-17688066,13,Uchumayo,Custer Uchumayo : Uchumayo → La salle,2F4F4F,3
-17688180,14,San Jeronimo,Custer San Jeronimo : Estadio Melgar → San Jerónimo,FF0000,3
-17688206,11,Independencia,Custer Independencia : C. Teniente Palacios → El Golf,10069f,3
-17688207,14,Señor de Huanca,Custer Señor de Huanca : Estadio Melgar → Señor de Huanca,FF0000,3
-17688208,7,Tahuaycani,Custer Tahuaycani : Calle Peral → Urb. Micael Bastidas,DF1995,3
-17688209,13,Cural,Custer Cural : La isla → El Cural,2F4F4F,3
-17688210,13,Uchumayo,Custer Uchumayo : La salle → Uchumayo,2F4F4F,3
-17688229,7,D,Custer D : Los Alpes → Av. Paisajista,DF1995,3
-17775694,6,07,M3 07 : Vallecito → Guardia Civil,8D4925,3
+17688041,1,Dolores,Custer Dolores : La Salle → La campiña III,10069f,3
+17688044,1,Ciudad mi trabajo A,Custer Ciudad mi trabajo A : Pachacutec → El pasto,10069f,3
+17688045,1,Ciudad mi trabajo M,Custer Ciudad mi trabajo M : La Salle → La mansión,10069f,3
+17688046,1,Alto Libertad,Custer Alto Libertad : Alto Libertad → Av Paisajista,10069f,3
+17688047,1,Socabaya B,Custer Socabaya B : Pachacutec → Horacio Zevallos,10069f,3
+17688048,1,Cotaspa 4,Custer Cotaspa 4 : Enace → El Golf,10069f,3
+17688049,1,Simon Bolivar Horario,Custer Simon Bolivar Horario : Cruce Sabandía → Av Independencia,10069f,3
+17688050,1,Simon Bolivar AntiHorario,Custer Simon Bolivar AntiHorario : Av Independencia → Cruce Sabandía,10069f,3
+17688051,1,Monterrey Corbacho,Custer Monterrey Corbacho : Av La Paz → Av Paisajista,10069f,3
+17688052,6,A,M3 A : Tiabaya → Paucarpata,DF1995,3
+17688053,6,A,M3 A : Paucarpata → Tiabaya,DF1995,3
+17688054,6,Avelino,Custer Avelino : Ciudad Blanca → Av Paisajista,DF1995,3
+17688055,6,D,Custer D : Av. Paisajista → Los Alpes,DF1995,3
+17688056,6,7 de Junio,Custer 7 de Junio : Av Paucarpata → Alata,DF1995,3
+17688057,6,Tahuaycani,Custer Tahuaycani : Urb. Micael Bastidas → Calle Peral,DF1995,3
+17688058,6,13,Custer 13 : Av Paucarpata → San Hilarión,DF1995,3
+17688059,6,38,Custer 38 : Av Progreso → Av Tahuantinsuyo,DF1995,3
+17688060,6,M Upis,Custer M Upis : Av Paucarpata → Mansión,DF1995,3
+17688061,8,A,Custer A : Alto Libertad → Plaza de Armas,2F4F4F,3
+17688062,8,A Pachacutec,Custer A Pachacutec : Av EE.UU. → Semirual Pachacutec,2F4F4F,3
+17688063,8,B Pachacutec,Custer B Pachacutec : Av EE.UU. → Semirual Pachacutec,2F4F4F,3
+17688064,8,M Pachacutec,Custer M Pachacutec : La salle → Semirual Pachacutec,2F4F4F,3
+17688065,8,Cural,Custer Cural : El Cural → La isla,2F4F4F,3
+17688066,8,Uchumayo,Custer Uchumayo : Uchumayo → La salle,2F4F4F,3
+17688180,9,San Jeronimo,Custer San Jeronimo : Estadio Melgar → San Jerónimo,FF0000,3
+17688206,1,Independencia,Custer Independencia : C. Teniente Palacios → El Golf,10069f,3
+17688207,9,Señor de Huanca,Custer Señor de Huanca : Estadio Melgar → Señor de Huanca,FF0000,3
+17688208,6,Tahuaycani,Custer Tahuaycani : Calle Peral → Urb. Micael Bastidas,DF1995,3
+17688209,8,Cural,Custer Cural : La isla → El Cural,2F4F4F,3
+17688210,8,Uchumayo,Custer Uchumayo : La salle → Uchumayo,2F4F4F,3
+17688229,6,D,Custer D : Los Alpes → Av. Paisajista,DF1995,3
+17775694,5,07,M3 07 : Vallecito → Guardia Civil,8D4925,3

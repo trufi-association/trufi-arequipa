@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:trufi_core/base/blocs/map_configuration/map_configuration_cubit.dart';
-import 'package:trufi_core/base/blocs/map_tile_provider/map_tile_provider.dart';
 import 'package:trufi_core/base/models/trufi_latlng.dart';
+import 'package:trufi_core/base/pages/home/services/online_request_plan/graphq_request_plan/graphql_request_plan.dart';
 import 'package:trufi_core/base/utils/certificates_letsencrypt_android.dart';
 import 'package:trufi_core/base/utils/graphql_client/hive_init.dart';
 import 'package:trufi_core/base/utils/trufi_app_id.dart';
 import 'package:trufi_core/base/widgets/drawer/menu/social_media_item.dart';
 import 'package:trufi_core/base/widgets/screen/lifecycle_reactor_notification.dart';
 import 'package:trufi_core/default_values.dart';
+import 'package:trufi_core/realtime/realtime_routes_cubit/realtime_routes_cubit.dart';
 import 'package:trufi_core/trufi_core.dart';
 import 'package:trufi_core/trufi_router.dart';
 void main() async {
@@ -18,34 +20,43 @@ void main() async {
   await TrufiAppId.initialize();
   runApp(
     TrufiCore(
-      appNameTitle: 'IncaGo',
+      appNameTitle: 'Arequipa Bus',
       trufiLocalization: DefaultValues.trufiLocalization(
         currentLocale: const Locale("es"),
       ),
       blocProviders: [
         ...DefaultValues.blocProviders(
-          otpEndpoint: "https://navigator.trufi.app/otp",
-          otpGraphqlEndpoint: "https://navigator.trufi.app/otp/index/graphql",
+          otpEndpoint:
+              "https://arequipabus.app/otp/routers/default/index/graphql",
+          otpGraphqlEndpoint:
+              "https://arequipabus.app/otp/routers/default/index/graphql",
           mapConfiguration: MapConfiguration(
-            center: const TrufiLatLng(-17.392600, -66.158787),
+            center: const TrufiLatLng(-16.4090, -71.5375),
             feedbackForm: "https://forms.gle/QMLhJT7N44Bh9zBN6",
           ),
+          customRequestPlanService: GraphqlRequestPlan(
+            "https://arequipabus.app/otp/routers/default/index/graphql",
+          ),
           searchAssetPath: "assets/data/search.json",
-          photonUrl: "https://navigator.trufi.app/photon",
-          mapTileProviders: [
-            OSMMapLayer(
-              mapTilesUrl:
-                  "http://navigator.trufi.app/static-maps/trufi-liberty/{z}/{x}/{y}@2x.jpg",
-            ),
-          ],
+          photonUrl: "https://arequipabus.app/photon",
+          querySearchParameters: {
+            "bbox": "-71.6969739304, -16.5803448859, -71.408492046, -16.2889070545",
+          },
+          // mapTileProviders: [
+          //   OSMMapLayer(
+          //     mapTilesUrl:
+          //         "http://navigator.trufi.app/static-maps/trufi-liberty/{z}/{x}/{y}@2x.jpg",
+          //   ),
+          // ],
           layersContainer: [],
+          additionalProviders: [],
         ),
       ],
       trufiRouter: TrufiRouter(
         routerDelegate: DefaultValues.routerDelegate(
-          appName: 'IncaGo',
+          appName: 'Arequipa Bus',
           cityName: 'Arequipa',
-          countryName: 'Peru',
+          countryName: 'Perú',
           backgroundImageBuilder: (_) {
             return Image.asset(
               'assets/images/drawer-bg.jpg',
@@ -61,11 +72,11 @@ void main() async {
           ),
           shareBaseUri: Uri(
             scheme: "https",
-            host: "navigator.trufi.app",
+            host: "arequipabus.app",
           ),
-          lifecycleReactorHandler: LifecycleReactorNotifications(
-            url: 'https://navigator.trufi.app/static_files/notification.json',
-          ),
+          // lifecycleReactorHandler: LifecycleReactorNotifications(
+          //   url: 'https://navigator.trufi.app/static_files/notification.json',
+          // ),
           urlFeedback: 'https://example/feedback',
         ),
       ),

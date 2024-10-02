@@ -1,4 +1,4 @@
-# app_peru_arequipa_navigator
+# arequipa_bus
 
 A new Flutter project.
 

@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>App Peru Arequipa Navigator</string>
+	<string>Arequipa Bus</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>app_peru_arequipa_navigator</string>
+	<string>Arequipa Bus</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -24,23 +24,17 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-      <string>https</string>
-      <string>http</string>
-	  <string>sms</string>
-	  <string>tel</string>
+		<string>https</string>
+		<string>http</string>
+		<string>sms</string>
+		<string>tel</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>your location will be used to display your location on the map and will be used as the default location for searches.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>your location will be used to display your location on the map and will be used as the default location for searches.</string>
+	<string>Arequipa Bus is using your location to display it on a map.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>your location will be used to display your location on the map and will be used as the default location for searches.</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>location</string>
-	</array>
+	<string>Arequipa Bus is using your location to display it on a map.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

@@ -1,0 +1,736 @@
+part of 'survey_cubit.dart';
+
+@immutable
+class SurveyState extends Equatable {
+  static const String _isPresentation = "isPresentation";
+  static const String _currentQuestion = "currentQuestion";
+  static const String _selectedOptions = "selectedOptions";
+
+  static final List<SurveyQuestionEnum> surveyForOthers = [
+    SurveyQuestionEnum.gender,
+    SurveyQuestionEnum.age_group,
+    SurveyQuestionEnum.disability
+  ];
+  static final List<SurveyQuestionEnum> surveyForWoman = [
+    SurveyQuestionEnum.gender,
+    SurveyQuestionEnum.age_group,
+    SurveyQuestionEnum.disability,
+    SurveyQuestionEnum.frequency_public_transport,
+    SurveyQuestionEnum.usage_public_transport,
+    SurveyQuestionEnum.time_public_transport,
+    SurveyQuestionEnum.safety_public_transport,
+    SurveyQuestionEnum.experience_public_transport,
+    SurveyQuestionEnum.satisfaction_security_measures,
+    SurveyQuestionEnum.additional_security_measures,
+  ];
+  static final List<SurveyQuestionEnum> surveyForDisability = [
+    SurveyQuestionEnum.gender,
+    SurveyQuestionEnum.age_group,
+    SurveyQuestionEnum.disability,
+    SurveyQuestionEnum.relation_to_disability,
+    SurveyQuestionEnum.type_of_disability,
+    SurveyQuestionEnum.disability_related_frequency,
+    SurveyQuestionEnum.time_to_nearest_stop,
+    SurveyQuestionEnum.ease_of_use_public_transport,
+    SurveyQuestionEnum.desired_facilities,
+    SurveyQuestionEnum.availability_of_information,
+  ];
+
+  const SurveyState({
+    this.isPresentation = true,
+    this.currentQuestion,
+    required this.selectedOptions,
+  });
+
+  final bool isPresentation;
+  final SurveyQuestionEnum? currentQuestion;
+  final List<SurveyOptionEnum> selectedOptions;
+
+  SurveyState copyWith({
+    bool? isPresentation,
+    SurveyQuestionEnum? currentQuestion,
+    List<SurveyOptionEnum>? selectedOptions,
+  }) {
+    return SurveyState(
+      isPresentation: isPresentation ?? this.isPresentation,
+      currentQuestion: currentQuestion ?? this.currentQuestion,
+      selectedOptions: selectedOptions ?? this.selectedOptions,
+    );
+  }
+
+  SurveyState copyWithNullable({
+    bool? isPresentation,
+    Optional<SurveyQuestionEnum?>? currentQuestion = const Optional(),
+    List<SurveyOptionEnum>? selectedOptions,
+  }) {
+    return SurveyState(
+      isPresentation: isPresentation ?? this.isPresentation,
+      currentQuestion: currentQuestion!.isValid
+          ? currentQuestion.value
+          : this.currentQuestion,
+      selectedOptions: selectedOptions ?? this.selectedOptions,
+    );
+  }
+
+  factory SurveyState.fromJson(Map<String, dynamic> json) {
+    return SurveyState(
+      isPresentation: json[_isPresentation],
+      currentQuestion: SurveyQuestionEnumExtension.fromValue(
+        json[_currentQuestion],
+      ),
+      selectedOptions: json[_selectedOptions] != null
+          ? (List<String>.from(json[_selectedOptions]))
+              .map((e) => SurveyOptionEnumExtension.fromValue(e)!)
+              .toList()
+          : <SurveyOptionEnum>[],
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      _isPresentation: isPresentation,
+      _currentQuestion: currentQuestion?.toValue(),
+      _selectedOptions: selectedOptions.map((e) => e.toValue()).toList(),
+    };
+  }
+
+  @override
+  List<Object?> get props => [
+        isPresentation,
+        currentQuestion,
+        selectedOptions,
+      ];
+}
+
+class Optional<T> {
+  final bool isValid;
+  final T? _value;
+
+  T? get value => _value;
+
+  const Optional()
+      : isValid = false,
+        _value = null;
+
+  const Optional.value(this._value) : isValid = true;
+}
+
+final dataSurvey = [
+  {
+    "id": "00000000-0000-0000-0000-000000000001",
+    "questions": [
+      {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "surveyId": "00000000-0000-0000-0000-000000000001",
+        "text": "Eres:",
+        "order": 1,
+        "options": [
+          {
+            "id": "00000000-0000-0000-0000-000000000003",
+            "questionId": "00000000-0000-0000-0000-000000000001",
+            "text": "Otro",
+            "order": 3
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000002",
+            "questionId": "00000000-0000-0000-0000-000000000001",
+            "text": "Mujer",
+            "order": 2
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000001",
+            "questionId": "00000000-0000-0000-0000-000000000001",
+            "text": "Hombre",
+            "order": 1
+          }
+        ]
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000002",
+        "surveyId": "00000000-0000-0000-0000-000000000001",
+        "text": "¿Cuál es tu grupo de edad?",
+        "order": 2,
+        "options": [
+          {
+            "id": "00000000-0000-0000-0000-000000000008",
+            "questionId": "00000000-0000-0000-0000-000000000002",
+            "text": "65 años o más",
+            "order": 5
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000007",
+            "questionId": "00000000-0000-0000-0000-000000000002",
+            "text": "51-64 años",
+            "order": 4
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000006",
+            "questionId": "00000000-0000-0000-0000-000000000002",
+            "text": "36-50 años",
+            "order": 3
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000005",
+            "questionId": "00000000-0000-0000-0000-000000000002",
+            "text": "18-35 años",
+            "order": 2
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000004",
+            "questionId": "00000000-0000-0000-0000-000000000002",
+            "text": "Menos de 18 años",
+            "order": 1
+          }
+        ]
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000003",
+        "surveyId": "00000000-0000-0000-0000-000000000001",
+        "text":
+            "¿Tienes alguna discapacidad o eres cuidador(a) de una persona con discapacidad?",
+        "order": 3,
+        "options": [
+          {
+            "id": "00000000-0000-0000-0000-000000000010",
+            "questionId": "00000000-0000-0000-0000-000000000003",
+            "text": "No",
+            "order": 2
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000009",
+            "questionId": "00000000-0000-0000-0000-000000000003",
+            "text": "Sí",
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000000002",
+    "title": "Encuesta 2",
+    "description": "",
+    "introductionText":
+        "Queremos conocer tus opiniones y experiencias sobre el transporte público en tu ciudad. Esta encuesta tiene como objetivo mejorar el servicio para mujeres . Tus respuestas serán confidenciales y solo tomarán unos minutos.",
+    "conclusionText":
+        "Gracias por tu participación. Tus respuestas nos ayudarán a mejorar el transporte público para todos los usuarios, especialmente adultos mayores, personas con discapacidad y sus cuidadores. Si tienes otros comentarios orientado a mejorar el transporte público, por favor enviar un correo a:",
+    "questions": [
+      {
+        "id": "00000000-0000-0000-0000-000000000004",
+        "surveyId": "00000000-0000-0000-0000-000000000002",
+        "text": "¿Con qué frecuencia utilizas el transporte público?",
+        "order": 1,
+        "options": [
+          {
+            "id": "00000000-0000-0000-0000-000000000014",
+            "questionId": "00000000-0000-0000-0000-000000000004",
+            "text": "Rara vez",
+            "order": 4
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000013",
+            "questionId": "00000000-0000-0000-0000-000000000004",
+            "text": "Una vez a la semana",
+            "order": 3
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000012",
+            "questionId": "00000000-0000-0000-0000-000000000004",
+            "text": "Varias veces a la semana",
+            "order": 2
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000011",
+            "questionId": "00000000-0000-0000-0000-000000000004",
+            "text": "Diario",
+            "order": 1
+          }
+        ]
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000005",
+        "surveyId": "00000000-0000-0000-0000-000000000002",
+        "text": "¿Para qué usas más el transporte público?",
+        "order": 2,
+        "options": [
+          {
+            "id": "00000000-0000-0000-0000-000000000018",
+            "questionId": "00000000-0000-0000-0000-000000000005",
+            "text": "Compras/ocio",
+            "order": 4
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000017",
+            "questionId": "00000000-0000-0000-0000-000000000005",
+            "text": "Cuidado de la salud",
+            "order": 3
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000016",
+            "questionId": "00000000-0000-0000-0000-000000000005",
+            "text": "Estudio",
+            "order": 2
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000015",
+            "questionId": "00000000-0000-0000-0000-000000000005",
+            "text": "Trabajo",
+            "order": 1
+          }
+        ]
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000006",
+        "surveyId": "00000000-0000-0000-0000-000000000002",
+        "text":
+            "¿En qué horario usas más el transporte público? (seleccione todas las que apliquen)",
+        "order": 3,
+        "options": [
+          {
+            "id": "00000000-0000-0000-0000-000000000022",
+            "questionId": "00000000-0000-0000-0000-000000000006",
+            "text": "Resto del día (10pm -  4:30 am)",
+            "order": 4
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000021",
+            "questionId": "00000000-0000-0000-0000-000000000006",
+            "text": "Noche (3 pm – 10 pm)",
+            "order": 3
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000020",
+            "questionId": "00000000-0000-0000-0000-000000000006",
+            "text": "Medio día (9 pm - 3 pm)",
+            "order": 2
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000019",
+            "questionId": "00000000-0000-0000-0000-000000000006",
+            "text": "Mañana (4:30 am – 9 pm)",
+            "order": 1
+          }
+        ]
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000007",
+        "surveyId": "00000000-0000-0000-0000-000000000002",
+        "text": "¿Te sientes segura utilizando el transporte público?",
+        "order": 4,
+        "options": [
+          {
+            "id": "00000000-0000-0000-0000-000000000027",
+            "questionId": "00000000-0000-0000-0000-000000000007",
+            "text": "Nunca",
+            "order": 5
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000026",
+            "questionId": "00000000-0000-0000-0000-000000000007",
+            "text": "Rara vez",
+            "order": 4
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000025",
+            "questionId": "00000000-0000-0000-0000-000000000007",
+            "text": "A veces",
+            "order": 3
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000024",
+            "questionId": "00000000-0000-0000-0000-000000000007",
+            "text": "La mayoría de las veces",
+            "order": 2
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000023",
+            "questionId": "00000000-0000-0000-0000-000000000007",
+            "text": "Siempre",
+            "order": 1
+          }
+        ]
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000008",
+        "surveyId": "00000000-0000-0000-0000-000000000002",
+        "text":
+            "¿Ha experimentado alguna de las siguientes situaciones durante tus viajes? (seleccione todas las que apliquen)",
+        "order": 5,
+        "options": [
+          {
+            "id": "00000000-0000-0000-0000-000000000033",
+            "questionId": "00000000-0000-0000-0000-000000000008",
+            "text": "No he experimentado ninguna de estas situaciones",
+            "order": 6
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000032",
+            "questionId": "00000000-0000-0000-0000-000000000008",
+            "text": "Robo",
+            "order": 5
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000031",
+            "questionId": "00000000-0000-0000-0000-000000000008",
+            "text": "Seguimiento",
+            "order": 4
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000030",
+            "questionId": "00000000-0000-0000-0000-000000000008",
+            "text": "Contacto físico no deseado",
+            "order": 3
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000029",
+            "questionId": "00000000-0000-0000-0000-000000000008",
+            "text": "Comentarios ofensivos",
+            "order": 2
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000028",
+            "questionId": "00000000-0000-0000-0000-000000000008",
+            "text": "Miradas inapropiadas",
+            "order": 1
+          }
+        ]
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000009",
+        "surveyId": "00000000-0000-0000-0000-000000000002",
+        "text":
+            "¿Qué tan satisfecha estás con las medidas de seguridad actuales en el transporte público?",
+        "order": 6,
+        "options": [
+          {
+            "id": "00000000-0000-0000-0000-000000000038",
+            "questionId": "00000000-0000-0000-0000-000000000009",
+            "text": "Muy insatisfecha",
+            "order": 5
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000037",
+            "questionId": "00000000-0000-0000-0000-000000000009",
+            "text": "Insatisfecha",
+            "order": 4
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000036",
+            "questionId": "00000000-0000-0000-0000-000000000009",
+            "text": "Neutral",
+            "order": 3
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000035",
+            "questionId": "00000000-0000-0000-0000-000000000009",
+            "text": "Satisfecha",
+            "order": 2
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000034",
+            "questionId": "00000000-0000-0000-0000-000000000009",
+            "text": "Muy satisfecha",
+            "order": 1
+          }
+        ]
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000010",
+        "surveyId": "00000000-0000-0000-0000-000000000002",
+        "text":
+            "¿Qué medidas de seguridad adicionales te gustaría que sean implementadas? (seleccione todas las que apliquen)",
+        "order": 7,
+        "options": [
+          {
+            "id": "00000000-0000-0000-0000-000000000043",
+            "questionId": "00000000-0000-0000-0000-000000000010",
+            "text": "Línea de emergencia. ",
+            "order": 5
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000042",
+            "questionId": "00000000-0000-0000-0000-000000000010",
+            "text": "Mejor iluminación en estaciones y paradas",
+            "order": 4
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000041",
+            "questionId": "00000000-0000-0000-0000-000000000010",
+            "text": "Zonas exclusivas para mujeres",
+            "order": 3
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000040",
+            "questionId": "00000000-0000-0000-0000-000000000010",
+            "text": "Cámaras de vigilancia",
+            "order": 2
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000039",
+            "questionId": "00000000-0000-0000-0000-000000000010",
+            "text": "Mayor presencia policial",
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000000003",
+    "title":
+        "Encuesta sobre la Accesibilidad y Experiencia del Transporte Público",
+    "description": "",
+    "introductionText":
+        "Gracias por participar en nuestra encuesta dirigida a adultos mayores, personas con discapacidad y sus cuidadores. Queremos conocer sus opiniones y experiencias para mejorar la accesibilidad y calidad del transporte público en nuestra ciudad. Sus respuestas serán confidenciales y solo tomarán unos minutos.",
+    "conclusionText":
+        "Gracias por tu participación. Tus respuestas nos ayudarán a mejorar el transporte público para todos los usuarios, especialmente adultos mayores, personas con discapacidad y sus cuidadores.\r\n\r\n                        Si tienes otros comentarios orientado a mejorar el transporte público, por favor enviar un correo a:",
+    "questions": [
+      {
+        "id": "00000000-0000-0000-0000-000000000011",
+        "surveyId": "00000000-0000-0000-0000-000000000003",
+        "text": "¿Cuál es tu relación con la discapacidad?",
+        "order": 1,
+        "options": [
+          {
+            "id": "00000000-0000-0000-0000-000000000046",
+            "questionId": "00000000-0000-0000-0000-000000000011",
+            "text":
+                "Ninguna de las anteriores (para adultos mayores sin discapacidad)",
+            "order": 3
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000045",
+            "questionId": "00000000-0000-0000-0000-000000000011",
+            "text": "Cuidador de una persona con discapacidad",
+            "order": 2
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000044",
+            "questionId": "00000000-0000-0000-0000-000000000011",
+            "text": "Persona con discapacidad",
+            "order": 1
+          }
+        ]
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000012",
+        "surveyId": "00000000-0000-0000-0000-000000000003",
+        "text":
+            "¿Qué tipo de discapacidad está presente? (seleccione todas las que apliquen)",
+        "order": 2,
+        "options": [
+          {
+            "id": "00000000-0000-0000-0000-000000000051",
+            "questionId": "00000000-0000-0000-0000-000000000012",
+            "text": "No aplica",
+            "order": 5
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000050",
+            "questionId": "00000000-0000-0000-0000-000000000012",
+            "text": "Cognitiva",
+            "order": 4
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000049",
+            "questionId": "00000000-0000-0000-0000-000000000012",
+            "text": "Auditiva",
+            "order": 3
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000048",
+            "questionId": "00000000-0000-0000-0000-000000000012",
+            "text": "Visual",
+            "order": 2
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000047",
+            "questionId": "00000000-0000-0000-0000-000000000012",
+            "text": "Motora",
+            "order": 1
+          }
+        ]
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000013",
+        "surveyId": "00000000-0000-0000-0000-000000000003",
+        "text": "¿Con qué frecuencia utilizas el transporte público?",
+        "order": 3,
+        "options": [
+          {
+            "id": "00000000-0000-0000-0000-000000000055",
+            "questionId": "00000000-0000-0000-0000-000000000013",
+            "text": "Rara vez",
+            "order": 4
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000054",
+            "questionId": "00000000-0000-0000-0000-000000000013",
+            "text": "Una vez a la semana",
+            "order": 3
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000053",
+            "questionId": "00000000-0000-0000-0000-000000000013",
+            "text": "Varias veces a la semana",
+            "order": 2
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000052",
+            "questionId": "00000000-0000-0000-0000-000000000013",
+            "text": "Diario",
+            "order": 1
+          }
+        ]
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000014",
+        "surveyId": "00000000-0000-0000-0000-000000000003",
+        "text": "¿Cuánto tardas en llegar al paradero más cercano?",
+        "order": 4,
+        "options": [
+          {
+            "id": "00000000-0000-0000-0000-000000000059",
+            "questionId": "00000000-0000-0000-0000-000000000014",
+            "text": "Más de 20 minutos",
+            "order": 4
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000058",
+            "questionId": "00000000-0000-0000-0000-000000000014",
+            "text": "10-20 minutos",
+            "order": 3
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000057",
+            "questionId": "00000000-0000-0000-0000-000000000014",
+            "text": "5-10 minutos",
+            "order": 2
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000056",
+            "questionId": "00000000-0000-0000-0000-000000000014",
+            "text": "Menos de 5 minutos",
+            "order": 1
+          }
+        ]
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000015",
+        "surveyId": "00000000-0000-0000-0000-000000000003",
+        "text": "Qué tan fácil te es usar el transporte público:",
+        "order": 5,
+        "options": [
+          {
+            "id": "00000000-0000-0000-0000-000000000064",
+            "questionId": "00000000-0000-0000-0000-000000000015",
+            "text": "Muy difícil",
+            "order": 5
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000063",
+            "questionId": "00000000-0000-0000-0000-000000000015",
+            "text": "Difícil",
+            "order": 4
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000062",
+            "questionId": "00000000-0000-0000-0000-000000000015",
+            "text": "Neutral",
+            "order": 3
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000061",
+            "questionId": "00000000-0000-0000-0000-000000000015",
+            "text": "Fácil",
+            "order": 2
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000060",
+            "questionId": "00000000-0000-0000-0000-000000000015",
+            "text": "Muy fácil",
+            "order": 1
+          }
+        ]
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000016",
+        "surveyId": "00000000-0000-0000-0000-000000000003",
+        "text":
+            "Cuál de estas facilidades te gustaría encontrar en el transporte público: (selecciona todas las que apliquen)",
+        "order": 6,
+        "options": [
+          {
+            "id": "00000000-0000-0000-0000-000000000069",
+            "questionId": "00000000-0000-0000-0000-000000000016",
+            "text": "Más asientos reservados",
+            "order": 5
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000068",
+            "questionId": "00000000-0000-0000-0000-000000000016",
+            "text": "Frecuencia y puntualidad del servicio",
+            "order": 4
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000067",
+            "questionId": "00000000-0000-0000-0000-000000000016",
+            "text": "Espacio para sillas de ruedas",
+            "order": 3
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000066",
+            "questionId": "00000000-0000-0000-0000-000000000016",
+            "text": "Personal capacitado",
+            "order": 2
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000065",
+            "questionId": "00000000-0000-0000-0000-000000000016",
+            "text": "Rampas o ascensores",
+            "order": 1
+          }
+        ]
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000017",
+        "surveyId": "00000000-0000-0000-0000-000000000003",
+        "text":
+            "Disponibilidad de información sobre el transporte público (horarios, rutas, etc.):",
+        "order": 7,
+        "options": [
+          {
+            "id": "00000000-0000-0000-0000-000000000074",
+            "questionId": "00000000-0000-0000-0000-000000000017",
+            "text": "Muy mala",
+            "order": 5
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000073",
+            "questionId": "00000000-0000-0000-0000-000000000017",
+            "text": "Mala",
+            "order": 4
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000072",
+            "questionId": "00000000-0000-0000-0000-000000000017",
+            "text": "Neutral",
+            "order": 3
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000071",
+            "questionId": "00000000-0000-0000-0000-000000000017",
+            "text": "Buena",
+            "order": 2
+          },
+          {
+            "id": "00000000-0000-0000-0000-000000000070",
+            "questionId": "00000000-0000-0000-0000-000000000017",
+            "text": "Muy buena",
+            "order": 1
+          }
+        ]
+      }
+    ]
+  }
+];

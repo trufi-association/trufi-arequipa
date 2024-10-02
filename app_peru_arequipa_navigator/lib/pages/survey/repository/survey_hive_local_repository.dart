@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:arequipa_bus/pages/survey/survey/survey_cubit/survey_cubit.dart';
+import 'package:arequipa_bus/pages/survey/survey_cubit/survey_cubit.dart';
 import 'package:hive/hive.dart';
 
 class SurveyHiveLocalRepository {

@@ -1,7 +1,7 @@
 import 'package:arequipa_bus/arequipa_bus_theme.dart';
 import 'package:arequipa_bus/default_values.dart';
 import 'package:arequipa_bus/lifecycle_reactor_notification.dart';
-import 'package:arequipa_bus/pages/survey/survey/repository/survey_hive_local_repository.dart';
+import 'package:arequipa_bus/pages/survey/repository/survey_hive_local_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:async_executor/async_executor.dart';
 

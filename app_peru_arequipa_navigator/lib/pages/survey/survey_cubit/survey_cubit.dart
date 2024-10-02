@@ -1,6 +1,6 @@
-import 'package:arequipa_bus/pages/survey/survey/repository/survey_hive_local_repository.dart';
-import 'package:arequipa_bus/pages/survey/survey/services/survey_service.dart';
-import 'package:arequipa_bus/pages/survey/survey_enums.dart';
+import 'package:arequipa_bus/pages/survey/repository/survey_hive_local_repository.dart';
+import 'package:arequipa_bus/pages/survey/services/survey_service.dart';
+import 'package:arequipa_bus/pages/survey/survey_cubit/models/survey_enums.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';

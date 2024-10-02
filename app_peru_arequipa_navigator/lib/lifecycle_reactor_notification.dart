@@ -1,4 +1,4 @@
-import 'package:arequipa_bus/pages/survey/survey/repository/survey_hive_local_repository.dart';
+import 'package:arequipa_bus/pages/survey/repository/survey_hive_local_repository.dart';
 import 'package:arequipa_bus/pages/survey/survey_modal.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';

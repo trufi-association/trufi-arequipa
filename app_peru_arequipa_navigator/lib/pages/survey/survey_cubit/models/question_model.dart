@@ -1,4 +1,4 @@
-import 'package:arequipa_bus/pages/survey/survey/survey_cubit/models/option_model.dart';
+import 'package:arequipa_bus/pages/survey/survey_cubit/models/option_model.dart';
 import 'package:equatable/equatable.dart';
 
 class QuestionModel extends Equatable {

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:trufi_core/base/translations/trufi_base_localizations.dart';
 
 class SurveyButton extends StatelessWidget {
-  const SurveyButton({Key? key}) : super(key: key);
+  const SurveyButton({super.key});
 
   @override
   Widget build(BuildContext context) {

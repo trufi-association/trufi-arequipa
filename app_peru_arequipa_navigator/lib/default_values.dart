@@ -3,7 +3,7 @@ import 'package:arequipa_bus/pages/about/translations/ab_about_localizations.dar
 import 'package:arequipa_bus/pages/feedback/feedback.dart';
 import 'package:arequipa_bus/pages/feedback/translations/ab_feedback_localizations.dart';
 import 'package:arequipa_bus/pages/survey/survey_cubit/survey_cubit.dart';
-import 'package:arequipa_bus/pages/survey/survey_button.dart';
+import 'package:arequipa_bus/pages/survey/widgets/survey_button.dart';
 import 'package:arequipa_bus/pages/survey/translations/ab_survey_localizations.dart';
 import 'package:async_executor/async_executor.dart';
 import 'package:flutter/material.dart';

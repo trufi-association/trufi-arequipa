@@ -25,10 +25,10 @@ class SurveyCubit extends Cubit<SurveyState> {
   Future<void> _load() async {
     await _localRepository.loadRepository();
     final surveyLoaded = await _localRepository.getSurvey();
+    emit((surveyLoaded ?? SurveyState.surveyStateDefault));
     if (surveyLoaded != null && surveyLoaded.surveyQuestions.isNotEmpty) {
       syncDataWithServer(surveyLoaded);
     }
-    emit((surveyLoaded ?? SurveyState.surveyStateDefault));
   }
 
   Future<void> syncDataWithServer(SurveyState surveyStateLoaded) async {
@@ -45,7 +45,7 @@ class SurveyCubit extends Cubit<SurveyState> {
           tempSelectedOptions[i] = tempSelectedOptions[i].copyWith(
             isBackendSynced: true,
           );
-          final newState = state.copyWith(surveyQuestions: tempSelectedOptions);
+          final newState = surveyStateLoaded.copyWith(surveyQuestions: tempSelectedOptions);
           _localRepository.saveSurvey(newState.toJson());
         } catch (e) {
           if (kDebugMode) {
@@ -54,7 +54,7 @@ class SurveyCubit extends Cubit<SurveyState> {
         }
       }
     }
-    final newState = state.copyWith(surveyQuestions: tempSelectedOptions);
+    final newState = surveyStateLoaded.copyWith(surveyQuestions: tempSelectedOptions);
     _localRepository.saveSurvey(newState.toJson());
     emit(newState);
   }

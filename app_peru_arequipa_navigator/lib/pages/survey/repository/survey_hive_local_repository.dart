@@ -37,7 +37,6 @@ class SurveyHiveLocalRepository {
 
   static Future<void> migrationSurveyOldData() async {
     final box = Hive.box(SurveyHiveLocalRepository.path);
-    await box.put(_surveyKey, jsonEncode(SurveyState.surveyStateDefault));
 
     if (!box.containsKey(_surveyKey)) return;
     final json = jsonDecode(box.get(_surveyKey));
@@ -67,13 +66,13 @@ class SurveyHiveLocalRepository {
         ));
       }
     }
-    if (surveyQuestions.isNotEmpty) {
-      final surveyState = SurveyState.surveyStateDefault.copyWith(
-        isPresentation: isPresentation,
-        currentQuestion: currentQuestion,
-        surveyQuestions: surveyQuestions,
-      );
-      await box.put(_surveyKey, jsonEncode(surveyState.toJson()));
-    }
+    // if (surveyQuestions.isNotEmpty) {
+    //   final surveyState = SurveyState.surveyStateDefault.copyWith(
+    //     isPresentation: isPresentation,
+    //     currentQuestion: currentQuestion,
+    //     surveyQuestions: surveyQuestions,
+    //   );
+    //   await box.put(_surveyKey, jsonEncode(surveyState.toJson()));
+    // }
   }
 }

@@ -24,6 +24,7 @@ void main() async {
   ]);
   await CertificatedLetsencryptAndroid.workAroundCertificated();
   await TrufiAppId.initialize();
+  await SurveyHiveLocalRepository.migrationSurveyOldData();
   runApp(
     TrufiCore(
       appNameTitle: 'Arequipa Bus',

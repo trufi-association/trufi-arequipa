@@ -115,6 +115,7 @@ abstract class ArequipaBusDefaultValues {
         create: (context) => SurveyCubit(
           surveyUpdate: "https://arequipabus.app/Survey/response",
         ),
+        lazy: false,
       ),
       ...additionalProviders
     ];

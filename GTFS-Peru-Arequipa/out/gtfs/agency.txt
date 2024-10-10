@@ -1,0 +1,11 @@
+agency_id,agency_name,agency_timezone,agency_url
+0,C3 - Transcayma,America/Lima,https://arequipabus.app/
+1,C9 - Emarsistran,America/Lima,https://arequipabus.app/
+2,C4 - Unión Aqp,America/Lima,https://arequipabus.app/
+3,C2 - Cono Norte,America/Lima,https://arequipabus.app/
+4,C6 - Unión Grau,America/Lima,https://arequipabus.app/
+5,C7 - AqpMasivo,America/Lima,https://arequipabus.app/
+6,C10 - MegaBus,America/Lima,https://arequipabus.app/
+7,C8 - Bus Characato,America/Lima,https://arequipabus.app/
+8,C12 - Cotum,America/Lima,https://arequipabus.app/
+9,C5 - EtraBus,America/Lima,https://arequipabus.app/

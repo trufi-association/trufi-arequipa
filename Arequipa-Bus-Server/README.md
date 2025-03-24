@@ -5,7 +5,7 @@ The server structure is based on Docker and NGINX due to their security manageme
 
 ### Server Structure
 
-:::image type="content" source="Diagram/structure.png" alt-text="structure":::
+:::image type="content" source="Arequipa-Bus-Server/Diagram/structure.png" alt-text="structure":::
 
 ## Modules
 - OpenTripPlanner: It is the main service of the server; it calculates the most suitable route for a query.
@@ -71,7 +71,7 @@ To start the server installation, the only requirement is that Docker is install
 
 The files (GTFS and PBF) must be located in the directory `otp/data`.
 
-:::image type="content" source="Diagram/gtfs-pbf-folder.png" alt-text="gtfs-pbf-folder":::
+:::image type="content" source="Arequipa-Bus-Server/Diagram/gtfs-pbf-folder.png" alt-text="gtfs-pbf-folder":::
 
 Once the requirements have been reviewed, the following command should be executed to proceed with the installation.
 

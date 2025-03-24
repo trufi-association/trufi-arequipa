@@ -1,0 +1,14 @@
+{
+    "menuFeedback": "Buzón de sugerencias",
+    "@menuFeedback": {
+        "description": "Menu item that shows the feedback page"
+    },
+    "feedbackTitle": "Envíanos una sugerencia",
+    "@feedbackTitle": {
+        "description": "Title displayed on the feedback page"
+    },
+    "feedbackContent": "¿Tienes sugerencias sobre nuestra aplicación o el servicio de transporte? ¡Queremos saber tu opinión! Por favor, agrega tu correo electrónico o teléfono para que podamos responderte.",
+    "@feedbackContent": {
+        "description": "Text displayed on the feedback page"
+    }
+}

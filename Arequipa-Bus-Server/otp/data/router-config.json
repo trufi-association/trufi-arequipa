@@ -1,0 +1,9 @@
+{
+    "requestLogFile": "/var/otp/request.log",
+    "timeouts": [
+        99,
+        50,
+        20,
+        10
+    ]
+}

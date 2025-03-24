@@ -17,7 +17,7 @@ This project contains the **server-side services and configurations** required t
 - Photon for place search
 - Static map tile services
 
-For full configuration steps, refer to the [Backend-Services README](Backend-Services/README.md).
+For full configuration steps, refer to the [README](Arequipa-Bus-Server/README.md).
 
 ### 🔹 [GTFS-Peru-Arequipa](GTFS-Peru-Arequipa/README.md)
 This subproject manages **GTFS data and tools** used to generate the official transit feed of Arequipa. It enables route mapping and feed updates, and the data can be shared with platforms such as **Google Maps**, **OpenStreetMap**, and **OpenTripPlanner**. See the [GTFS-Peru-Arequipa README](GTFS-Peru-Arequipa/README.md) for details.

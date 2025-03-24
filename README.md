@@ -1,54 +1,29 @@
-## INTRODUCTION 
+# Arequipa Bus
 
-Trufi’s General Transit Feed Specification (GTFS) tool allows you to create a map for Arequipa city. You can also send your route data to Google Maps, Open Trip Planner, OpenStreetMap, and other public atlases to keep navigation databases updated. 
+**Arequipa Bus** is a public transport navigation app officially launched in **September 2024** by the Municipality of Arequipa. Developed by the **Trufi Association**, the app serves as the city’s official transit tool, offering detailed information on bus routes, stops, and schedules. It leverages **open data** sources such as OpenStreetMap and is built entirely on an **open-source platform**.
 
-Follow the steps below to create a public transportation map using our tool.
+Designed for both residents and visitors, Arequipa Bus allows users to plan **door-to-door trips** with alternative route suggestions. The app supports **Spanish and English**, providing a bilingual user experience. It integrates the entire formal transit network of Arequipa—**142 routes operated by 10 bus companies** under the city's Integrated Transport System—making public transport more accessible and understandable. This contributes to reducing traffic congestion and lowering the city’s carbon footprint.
 
-### Steps 
+## Project Structure
 
-+ Step 1:  Download [trufi-arequipa](https://github.com/trufi-association/trufi-arequipa)
+This repository is organized into three main subprojects, each with dedicated scope and documentation:
 
-+ Step 2: Download three tools: [Nodsjs](https://nodejs.org/en), [Git]( https://github.com/git-guides/install-git), and a text code editor. We recommend [Visual Studio (VS) Code]( https://code.visualstudio.com/).
+### 🔹 [Arequipa-Bus-App](Arequipa-Bus-App/README.md)
+The **mobile application frontend** for Android and iOS. Built using the Flutter-based **Trufi Core** framework, this project includes city-specific configurations such as themes, localization, and app-level settings. Visit its [README](Arequipa-Bus-App/README.md) for instructions on setup and customization.
 
-+ Step 3: Click on “code” and copy the HTTPS URL. 
-You may choose to download GitHub Desktop and select the “GitHub CLI”. 
-There is a login required to use this method. There is no login required to use the HTTPS method.
- 
-+ Step 4: Type Git clone and the HTTPS URL into the Git PowerShell command line.
- 
-+ Step 5: Find the Trufi GFTS folder on your device. Right-click it and copy the folder.
+### 🔹 [Backend-Services](Backend-Services/README.md)
+This project contains the **server-side services and configurations** required to power the app. It includes:
+- OpenTripPlanner (OTP) for routing
+- Photon for place search
+- Static map tile services
 
-+ Step 6: Find the VS Code folder. Paste the Trufi folder inside it.
- 
-+ Step 7: Type npm install in the console to install all node dependencies.
+For full configuration steps, refer to the [Backend-Services README](Backend-Services/README.md).
 
-+ Step 8: Under the output files set GFTS to true.
+### 🔹 [GTFS-Peru-Arequipa](GTFS-Peru-Arequipa/README.md)
+This subproject manages **GTFS data and tools** used to generate the official transit feed of Arequipa. It enables route mapping and feed updates, and the data can be shared with platforms such as **Google Maps**, **OpenStreetMap**, and **OpenTripPlanner**. See the [GTFS-Peru-Arequipa README](GTFS-Peru-Arequipa/README.md) for details.
 
-+ Step 9: Run the application in the VS Code terminal. Type: Node - .\examples\ your folder \index\js. 
+---
 
-In your output folder, there is a new README file. You can copy and paste its contents into a markdown viewer to see your new map and errors. 
+We welcome contributions from the open-source community! Whether you're improving routes, fixing bugs, or extending features, your input helps improve a real-world app that serves thousands of daily users in Arequipa.
 
-
-## Optional Steps 
-
-### Test a sample map
-
-There are route examples inside the folder that allow you to visualize how the application works. 
-
-- [ ] Work inside an index, run, and type node -.\examples\the example you want to work inside\index.js
- 
-- [ ] Test one of the sample maps, open its README file. Copy the markdown text. 
-Navigate to a markdown reader and paste the text. Examine the output. 
-Here, you can see the output layout and learn how to fix errors.
-
-### Customize your application
- 
-To specify routes, operation times, and other local options, you can change the following elements:
-
-- [ ] Add or update the "agencytimezone" element. Use it to add your transportation agency’s name. You may also use the default calendar option to set transportation operation times.
-
-- [ ] Every city does not have stops included in its routes. The “fakestops” option allows you to create fake stops so that your output is not empty. If you live in a place without designated bus stops, select false under "fakestops" to create fake ones. The default interval is 100 meters. However, if you would like more or fewer stops, change the interval. 
- 
-- [ ] To build or add streets, type and inside the “return.stops.join" element.
-
-- [ ] You have a section in your code called “stops”. If a stop name is unknown, type unknown in this section so that the map does not output an incorrect street name. 
+**Let’s make public transport better, together.**

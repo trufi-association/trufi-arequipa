@@ -48,10 +48,10 @@ Then, execute the following command to clip:
 
 ```bash
 # Osmium
-osmium extract --polygon=arequipa.poly peru-latest.osm.pbf -o lima.osm.pbf
+osmium extract --polygon=arequipa.poly peru-latest.osm.pbf -o arequipa.osm.pbf
 ```
 
-Use the approximate boundaries of Lima
+Use the approximate boundaries of Arequipa
 ```bash
 # Osmosis
 osmosis --read-pbf peru-latest.osm.pbf --bounding-box top=-16.28546234927424 left=-71.68530956865706 bottom=-16.577267400595446 right=-71.44366525499784 --write-pbf arequipa.osm.pbf

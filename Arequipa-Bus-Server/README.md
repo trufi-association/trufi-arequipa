@@ -30,6 +30,7 @@ The updated data to create the GTFS file is available in OpenStreetMap. To downl
 
 ##### PBF
 You must obtain the .pbf file for Peru or South America from Geofabrik or BBBike.
+
 Example to download Peru from Geofabrik:
 
 ```bash
@@ -39,13 +40,19 @@ wget https://download.geofabrik.de/south-america/peru-latest.osm.pbf
 
 To extract only Arequipa, you can use Osmium or Osmosis:
 
+- [Download osmium-tool](https://osmcode.org/osmium-tool/)
+- [Download osmosis](https://github.com/openstreetmap/osmosis/releases/latest)
+
 Define the boundaries of Arequipa in a .poly file. You can generate it from [polygons.openstreetmap.fr](https://polygons.openstreetmap.fr/)
 Then, execute the following command to clip:
 
 ```bash
 # Osmium
 osmium extract --polygon=arequipa.poly peru-latest.osm.pbf -o lima.osm.pbf
+```
 
+Use the approximate boundaries of Lima
+```bash
 # Osmosis
 osmosis --read-pbf peru-latest.osm.pbf --bounding-box top=-16.28546234927424 left=-71.68530956865706 bottom=-16.577267400595446 right=-71.44366525499784 --write-pbf arequipa.osm.pbf
 ```

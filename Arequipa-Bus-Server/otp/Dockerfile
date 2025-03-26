@@ -6,7 +6,8 @@ RUN apt update
 RUN apt install -y wget
 
 WORKDIR /otp
-COPY . .
+COPY ./data ./data
+COPY ./run.sh ./run.sh
 
 RUN wget https://github.com/opentripplanner/OpenTripPlanner/releases/download/v1.5.0/otp-1.5.0-shaded.jar
 

@@ -107,13 +107,13 @@ abstract class ArequipaBusDefaultValues {
       BlocProvider<RealtimeRoutesCubit>(
         create: (context) => RealtimeRoutesCubit(
           otpEndpoint:
-              "https://arequipabus.app/otp/routers/default/index/graphql",
+              "https://arequipabus.muniarequipa.gob.pe/otp/routers/default/index/graphql",
           routeTransportsCubit: routeTransportsCubit,
         ),
       ),
       BlocProvider<SurveyCubit>(
         create: (context) => SurveyCubit(
-          surveyUpdate: "https://arequipabus.app/Survey/response",
+          surveyUpdate: "https://arequipabus.muniarequipa.gob.pe/Survey/response",
         ),
         lazy: false,
       ),

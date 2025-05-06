@@ -75,9 +75,9 @@ The app is initialized using the `TrufiCore` widget, with Arequipa-specific valu
 
 - **App name and default locale**:Arequipa Bus
 - **Routing services**:
-  - [OpenTripPlanner (OTP)](https://github.com/opentripplanner/OpenTripPlanner) for routing with next url "https://arequipabus.app/otp/routers/default/index/graphql"
-  - [Photon](https://github.com/komoot/photon) for place search, the service is provided in https://arequipabus.app/photon
-  - [OpenStreetMap](https://www.openstreetmap.org/) for maps, the service provided in http://arequipabus.app/static-maps/trufi-liberty/{z}/{x}/{y}@2x.jpg
+  - [OpenTripPlanner (OTP)](https://github.com/opentripplanner/OpenTripPlanner) for routing with next url "https://arequipabus.muniarequipa.gob.pe/otp/routers/default/index/graphql"
+  - [Photon](https://github.com/komoot/photon) for place search, the service is provided in https://arequipabus.muniarequipa.gob.pe/photon
+  - [OpenStreetMap](https://www.openstreetmap.org/) for maps, the service provided in http://arequipabus.muniarequipa.gob.pe/static-maps/trufi-liberty/{z}/{x}/{y}@2x.jpg
 - **Center of map**: Arequipa coordinates with Lat(-16.4090) and Long(-71.5375)
 - **Survey support** with localized forms
 - **Feedback and About pages** fully customized

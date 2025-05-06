@@ -47,7 +47,7 @@ class ABFeedbackPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           String version = await PackageInfoPlatform.version();
-          final uri = Uri.parse("https://arequipabus.app/form")
+          final uri = Uri.parse("https://arequipabus.muniarequipa.gob.pe/form")
               .replace(queryParameters: {"AppVersion": version});
           await launchUrl(uri);
         },

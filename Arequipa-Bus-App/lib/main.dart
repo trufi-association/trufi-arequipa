@@ -39,18 +39,18 @@ void main() async {
       ),
       blocProviders: [
         ...ArequipaBusDefaultValues.blocProviders(
-          otpEndpoint: "https://arequipabus.app/otp/routers/default",
+          otpEndpoint: "https://arequipabus.muniarequipa.gob.pe/otp/routers/default",
           otpGraphqlEndpoint:
-              "https://arequipabus.app/otp/routers/default/index/graphql",
+              "https://arequipabus.muniarequipa.gob.pe/otp/routers/default/index/graphql",
           mapConfiguration: MapConfiguration(
             center: const TrufiLatLng(-16.4090, -71.5375),
             feedbackForm: "https://forms.gle/QMLhJT7N44Bh9zBN6",
           ),
           // customRequestPlanService: GraphqlRequestPlan(
-          //   "https://arequipabus.app/otp/routers/default/index/graphql",
+          //   "https://arequipabus.muniarequipa.gob.pe/otp/routers/default/index/graphql",
           // ),
           searchAssetPath: "assets/data/search.json",
-          photonUrl: "https://arequipabus.app/photon",
+          photonUrl: "https://arequipabus.muniarequipa.gob.pe/photon",
           querySearchParameters: {
             "bbox":
                 "-71.6969739304, -16.5803448859, -71.408492046, -16.2889070545",
@@ -58,7 +58,7 @@ void main() async {
           mapTileProviders: [
             OSMMapLayer(
               mapTilesUrl:
-                  "http://arequipabus.app/static-maps/trufi-liberty/{z}/{x}/{y}@2x.jpg",
+                  "http://arequipabus.muniarequipa.gob.pe/static-maps/trufi-liberty/{z}/{x}/{y}@2x.jpg",
             ),
           ],
           layersContainer: [],
@@ -77,7 +77,7 @@ void main() async {
             );
           },
           emailContact: 'feedback@trufi.app',
-          urlShareApp: 'https://arequipabus.app/app-stores/',
+          urlShareApp: 'https://arequipabus.muniarequipa.gob.pe/app-stores/',
           urlSocialMedia: const UrlSocialMedia(
             urlFacebook: 'https://www.facebook.com/MuniArequipa',
             urlInstagram: 'https://www.instagram.com/muni.arequipa/',
@@ -87,10 +87,10 @@ void main() async {
           ),
           shareBaseUri: Uri(
             scheme: "https",
-            host: "arequipabus.app",
+            host: "arequipabus.muniarequipa.gob.pe",
           ),
           lifecycleReactorHandler: LifecycleReactorNotifications2(
-            url: 'https://arequipabus.app/static_files/notification.json',
+            url: 'https://arequipabus.muniarequipa.gob.pe/static_files/notification.json',
           ),
           asyncExecutor: AsyncExecutor(
             errorMessage: (

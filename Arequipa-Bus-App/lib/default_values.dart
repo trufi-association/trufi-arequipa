@@ -155,12 +155,12 @@ abstract class ArequipaBusDefaultValues {
           routes: {
             SplashScreen.route: (route) {
               return NoAnimationPage(
+                lifecycleReactorHandler: lifecycleReactorHandler,
                 child: const SplashScreen(),
               );
             },
             HomePage.route: (route) {
               return NoAnimationPage(
-                lifecycleReactorHandler: lifecycleReactorHandler,
                 child: HomePage(
                   drawerBuilder: generateDrawer(HomePage.route),
                   mapRouteProvider: mapCollectionSelected.mapRouteProvider(

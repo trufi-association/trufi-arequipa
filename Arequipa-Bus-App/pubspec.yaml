@@ -39,7 +39,7 @@ dependencies:
     git:
       url: https://github.com/trufi-association/trufi-core.git
       # LTS de Arequipa + fixes de compatibilidad con Flutter 3.44
-      ref: 1.0.0-arequipa-lts-flutter344
+      ref: 1.0.1-arequipa-lts
   # trufi_core:
   #   path: ../../trufi-core
   flutter_bloc: ^8.1.6

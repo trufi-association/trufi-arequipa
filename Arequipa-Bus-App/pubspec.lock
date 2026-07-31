@@ -878,7 +878,7 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "1.0.0-arequipa-lts-flutter344"
+      ref: "1.0.1-arequipa-lts"
       resolved-ref: fa88607ea6b73673ab8958314dadc86134ec64d6
       url: "https://github.com/trufi-association/trufi-core.git"
     source: git

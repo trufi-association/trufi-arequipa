@@ -13,7 +13,8 @@ osmToGtfs({
         }
     },
     gtfsOptions: {
-        fakeStops: (routeFeature) => [].includes(routeFeature.properties.id),
+        stopsConfig: () => ({ mode: "fakeStops" }),
+        vehicleSpeed: () => 50,
         stopNameBuilder: (stops) => {
             if (!stops || stops.length == 0) {
                 stops = ["Innominada"]

@@ -1,5 +1,5 @@
 ### Count
-**Total**: 241  **Correct**: 241  **With error**: 0
+**Total**: 227  **Correct**: 227  **With error**: 0
 
 
 | Id | Name | Ref | From | To | State |
@@ -39,8 +39,6 @@
 [17634339](https://www.openstreetmap.org/relation/17634339) | C-6 Bus A: Miguel Grau → La Merced | A | Miguel Grau | La Merced | ✅
 [17636366](https://www.openstreetmap.org/relation/17636366) | C-10 Bus A: Ciudad Blanca → La Mansión del Fundador | A | Ciudad Blanca | La Mansión del Fundador | ✅
 [17643025](https://www.openstreetmap.org/relation/17643025) | C-8 Bus A: Santa Ana → Plaza Mayta Capac | A | Santa Ana | Plaza Mayta Capac | ✅
-[17664824](https://www.openstreetmap.org/relation/17664824) | C-5 (DISUSED) Bus A: Jerusalen → Estadio Melgar | A | Jerusalen | Estadio Melgar | ✅
-[17664825](https://www.openstreetmap.org/relation/17664825) | C-5 (DISUSED) Bus A: Estadio Melgar → Jerusalen | A | Estadio Melgar | Jerusalen | ✅
 [17684886](https://www.openstreetmap.org/relation/17684886) | C-2 Bus A: Ángeles del Sur Zona A → El Naranjal | A | Ángeles del Sur Zona A | El Naranjal | ✅
 [17688024](https://www.openstreetmap.org/relation/17688024) | C-6 Bus A: La Merced → Miguel Grau | A | La Merced | Miguel Grau | ✅
 [17688039](https://www.openstreetmap.org/relation/17688039) | C-8 Bus A: Plaza Mayta Capac → Santa Ana | A | Plaza Mayta Capac | Santa Ana | ✅
@@ -144,8 +142,6 @@
 [17688229](https://www.openstreetmap.org/relation/17688229) | C-10 Bus D: Av. Los Alpes → Av. Paisajista | D | Av. Los Alpes | Av. Paisajista | ✅
 [17681083](https://www.openstreetmap.org/relation/17681083) | C-4 Bus "D (Huaranguillo)": San Luis → Huaranguillo | D (Huaranguillo) | San Luis | Huaranguillo | ✅
 [17683274](https://www.openstreetmap.org/relation/17683274) | C-4 Bus "D (Huaranguillo)": Huaranguillo → San Luis | D (Huaranguillo) | Huaranguillo | San Luis | ✅
-[17658669](https://www.openstreetmap.org/relation/17658669) | C-2 (DISUSED) Bus "El Litoral": Chachani → Salaverry | El Litoral | Chachani | Salaverry | ✅
-[17679511](https://www.openstreetmap.org/relation/17679511) | C-2 (DISUSED) Bus "El Litoral": Salaverry → Chachani | El Litoral | Salaverry | Chachani | ✅
 [17659544](https://www.openstreetmap.org/relation/17659544) | C-3 Bus Embajada: Los Pioneros → Terminal Terrestre | Embajada | Los Pioneros | Terminal Terrestre | ✅
 [17686763](https://www.openstreetmap.org/relation/17686763) | C-3 Bus Embajada: Terminal Terrestre → Los Pioneros | Embajada | Terminal Terrestre | Los Pioneros | ✅
 [17445532](https://www.openstreetmap.org/relation/17445532) | C-3 Bus Enace: Urbanización Deán Valdivia → Avenida Venezuela | Enace | Urbanización Deán Valdivia | Avenida Venezuela | ✅
@@ -226,21 +222,11 @@
 [17688053](https://www.openstreetmap.org/relation/17688053) | C-10 Bus "Tiabaya - Goyeneche": Av. Paucarpata → Tiabaya | Tiabaya - Goyeneche | Av. Paucarpata | Tiabaya | ✅
 [17688066](https://www.openstreetmap.org/relation/17688066) | C-11 Bus Uchumayo: La Estación de Uchumayo → Av. La Salle | Uchumayo | La Estación de Uchumayo | Av. La Salle | ✅
 [17688210](https://www.openstreetmap.org/relation/17688210) | C-11 Bus Uchumayo: Av. La Salle → La Estación de Uchumayo | Uchumayo | Av. La Salle | La Estación de Uchumayo | ✅
-[17658664](https://www.openstreetmap.org/relation/17658664) | C-3 (DISUSED) Bus Zamacola: Terminal Terrestre → Terminal Pesquero | Zamacola | Terminal Terrestre | Terminal Pesquero | ✅
-[17659504](https://www.openstreetmap.org/relation/17659504) | C-3 (DISUSED) Bus Zamacola: Terminal Pesquero → Terminal Terrestre | Zamacola | Terminal Pesquero | Terminal Terrestre | ✅
-[17664830](https://www.openstreetmap.org/relation/17664830) | C-7 (DISUSED) Bus 2: Plaza Paucarpata → C. José Olaya | 2 | Plaza Paucarpata | C. José Olaya | ✅
-[17664831](https://www.openstreetmap.org/relation/17664831) | C-7 (DISUSED) Bus 2: C. José Olaya → Plaza Paucarpata | 2 | C. José Olaya | Plaza Paucarpata | ✅
 [17634360](https://www.openstreetmap.org/relation/17634360) | C-7 Bus 3: Baños de Jesús → Aeropuerto | 3 | Baños de Jesús | Aeropuerto | ✅
 [21105225](https://www.openstreetmap.org/relation/21105225) | C-2 Bus 4: Salaverry → Villa Los Milagros | 4 | Salaverry | Villa Los Milagros | ✅
 [21105226](https://www.openstreetmap.org/relation/21105226) | C-2 Bus 4: Villa Los Milagros → Salaverry | 4 | Villa Los Milagros | Salaverry | ✅
 [17664971](https://www.openstreetmap.org/relation/17664971) | C-7 Bus 5: Campo de Marte → Alto Libertad | 5 | Campo de Marte | Alto Libertad | ✅
 [17664972](https://www.openstreetmap.org/relation/17664972) | C-7 Bus 5: Alto Libertad → Campo de Marte | 5 | Alto Libertad | Campo de Marte | ✅
-[17664973](https://www.openstreetmap.org/relation/17664973) | C-7 (DISUSED) Bus 6: Huacsapata → Avelino | 6 | Huacsapata | Avelino | ✅
-[17664974](https://www.openstreetmap.org/relation/17664974) | C-7 (DISUSED) Bus 6: Avelino → Huacsapata | 6 | Avelino | Huacsapata | ✅
-[17664975](https://www.openstreetmap.org/relation/17664975) | C-7 (DISUSED) Bus 7: Guardia Civil → Vallecito | 7 | Guardia Civil | Vallecito | ✅
-[17775694](https://www.openstreetmap.org/relation/17775694) | C-7 (DISUSED) Bus 7: Vallecito → Guardia Civil | 7 | Vallecito | Guardia Civil | ✅
-[17664977](https://www.openstreetmap.org/relation/17664977) | C-7 (DISUSED) Bus 9: Campo de Marte → La Católica | 9 | Campo de Marte | La Católica | ✅
-[17664978](https://www.openstreetmap.org/relation/17664978) | C-7 (DISUSED) Bus 9: La Católica → Campo de Marte | 9 | La Católica | Campo de Marte | ✅
 [17658204](https://www.openstreetmap.org/relation/17658204) | C-10 Bus 13: San Hilarión → Av. Paucarpata | 13 | San Hilarión | Av. Paucarpata | ✅
 [17688058](https://www.openstreetmap.org/relation/17688058) | C-10 Bus 13: Av. Paucarpata → San Hilarión | 13 | Av. Paucarpata | San Hilarión | ✅
 [17658205](https://www.openstreetmap.org/relation/17658205) | C-10 Bus 38: Av. Tahuantinsuyo → Av. Progreso | 38 | Av. Tahuantinsuyo | Av. Progreso | ✅

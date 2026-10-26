@@ -12,7 +12,7 @@ The server structure is based on Docker and NGINX due to their security manageme
 | Path | What it is |
 |------|------------|
 | `docker-compose.yml` | Runs the three services below on one Docker network (`trufi-server`). |
-| `otp/` | OpenTripPlanner **1.5.0** (Java 8). `Dockerfile` (base image `eclipse-temurin:8-jre`), `run.sh` (builds `Graph.obj` on the first start and serves it afterwards) and `data/` with the inputs: `gtfs.zip`, `arequipa.osm.pbf`, `otp-config.json`, `router-config.json`. |
+| `otp/` | OpenTripPlanner **1.5.0** (Java 8). `Dockerfile` (base image `eclipse-temurin:8-jre`), `run.sh` (builds `Graph.obj` on the first start and serves it afterwards) and `data/` with the inputs: `gtfs.zip` (the builder's `GTFS-Peru-Arequipa/out/city.gtfs.zip`, copied as is), `arequipa.osm.pbf` (OSM extract clipped to the city with margin, lon −71.75..−71.30 / lat −16.65..−16.20), `build-config.json` (`maxTransferDistance: 500` — keeps the graph at ~60 MB instead of ~365 MB with the 10 000 synthetic stops; itineraries are identical), `otp-config.json`, `router-config.json`. |
 | `updater/` | **Updater**, a .NET 8 web API (`OTP-Updater`) that stores the responses of the in-app survey in PostgreSQL (`/Survey/...`), has an admin login with JWT (`/Auth/...`) and exposes `/health`. Its EF Core migrations run automatically at start. |
 | `Diagram/` | The pictures used in this README. |
 | `.env.example` | Template for the secrets the compose file needs. See [Configuration and secrets](#configuration-and-secrets). |

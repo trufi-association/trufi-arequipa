@@ -9,9 +9,17 @@ on:
     paths:
       - "Arequipa-Bus-App/**"
 
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   android-debug:
     runs-on: ubuntu-latest
+    timeout-minutes: 40
     defaults:
       run:
         working-directory: Arequipa-Bus-App
@@ -21,14 +29,14 @@ jobs:
         with:
           distribution: temurin
           java-version: "17"
-      - name: Read the Flutter version from .fvmrc
-        id: fvm
-        run: echo "version=$(python3 -c 'import json; print(json.load(open(".fvmrc"))["flutter"])')" >> "$GITHUB_OUTPUT"
+          cache: gradle
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: ${{ steps.fvm.outputs.version }}
+          flutter-version-file: Arequipa-Bus-App/.fvmrc
           channel: stable
           cache: true
+          pub-cache: true
       - run: flutter pub get
+      - run: git diff --exit-code -- analysis_options.yaml || { echo "::error::flutter pub get rewrote analysis_options.yaml - commit the migrated file"; exit 1; }
       - run: flutter analyze --no-fatal-infos --no-fatal-warnings
       - run: flutter build apk --debug

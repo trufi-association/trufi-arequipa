@@ -11,9 +11,17 @@ on:
       - "GTFS-Peru-Arequipa/out/**"
       - "Backend-Services/otp/data/gtfs.zip"
 
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -21,31 +29,42 @@ jobs:
           distribution: temurin
           java-version: "21"
       - name: Download MobilityData gtfs-validator
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          URL=$(curl -s https://api.github.com/repos/MobilityData/gtfs-validator/releases/latest | grep browser_download_url | grep 'cli.jar"' | cut -d'"' -f4)
+          URL=$(curl -sS -H "Authorization: Bearer $GH_TOKEN" https://api.github.com/repos/MobilityData/gtfs-validator/releases/latest | grep browser_download_url | grep 'cli.jar"' | cut -d'"' -f4)
+          [ -n "$URL" ] || { echo "::error::could not resolve the gtfs-validator download URL"; exit 1; }
           echo "validator: $URL"
-          curl -sL -o gtfs-validator-cli.jar "$URL"
-      - name: Validate the builder output
+          curl -sSL -o gtfs-validator-cli.jar "$URL"
+      - name: Validate every GTFS zip in the repository
+        shell: bash
         run: |
-          java -jar gtfs-validator-cli.jar -i GTFS-Peru-Arequipa/out/city.gtfs.zip -o report-out -c pe
-          python3 - <<'PY'
-          import json
-          r = json.load(open("report-out/report.json"))
-          errors = [n for n in r["notices"] if n["severity"] == "ERROR"]
+          set -euo pipefail
+          found=0; failed=0
+          for z in GTFS-Peru-Arequipa/out/city.gtfs.zip Backend-Services/otp/data/gtfs.zip; do
+            [ -f "$z" ] || { echo "::notice::$z not present, skipped"; continue; }
+            found=1
+            if unzip -l "$z" | grep -q __MACOSX; then echo "::error::$z carries __MACOSX entries (zip it with the builder, not Finder)"; failed=1; fi
+            out="report-$(echo "$z" | tr '/' '_')"
+            java -jar gtfs-validator-cli.jar -i "$z" -o "$out" -c pe
+            python3 - "$z" "$out/report.json" <<'PY'
+          import json, sys
+          z, path = sys.argv[1], sys.argv[2]
+          r = json.load(open(path))
           for n in r["notices"]:
-              print(f'{n["severity"]:8s} {n["totalNotices"]:6d}  {n["code"]}')
-          if errors:
-              raise SystemExit(f"{len(errors)} error notice type(s) in GTFS-Peru-Arequipa/out/city.gtfs.zip")
+              print(f'{z}: {n["severity"]:8s} {n["totalNotices"]:6d}  {n["code"]}')
+          if any(n["severity"] == "ERROR" for n in r["notices"]):
+              raise SystemExit(f"{z}: ERROR notices present")
           PY
-      - name: The server zip must be the builder output
-        if: hashFiles('Backend-Services/otp/data/gtfs.zip') != ''
-        run: |
-          if ! cmp -s GTFS-Peru-Arequipa/out/city.gtfs.zip Backend-Services/otp/data/gtfs.zip; then
-            echo "::warning::Backend-Services/otp/data/gtfs.zip differs from GTFS-Peru-Arequipa/out/city.gtfs.zip (regenerate and copy, do not re-zip by hand)"
-            unzip -l Backend-Services/otp/data/gtfs.zip | grep -q __MACOSX && { echo "::error::Backend-Services/otp/data/gtfs.zip carries __MACOSX entries"; exit 1; }
+          done
+          [ "$found" = 1 ] || echo "::warning::no GTFS zip found to validate"
+          if [ -f GTFS-Peru-Arequipa/out/city.gtfs.zip ] && [ -f Backend-Services/otp/data/gtfs.zip ] && ! cmp -s GTFS-Peru-Arequipa/out/city.gtfs.zip Backend-Services/otp/data/gtfs.zip; then
+            echo "::warning::Backend-Services/otp/data/gtfs.zip differs from GTFS-Peru-Arequipa/out/city.gtfs.zip (regenerate and copy; do not re-zip by hand)"
           fi
+          [ "$failed" = 0 ]
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: gtfs-validator-report
-          path: report-out
+          name: gtfs-validator-reports
+          path: report-*
+          if-no-files-found: ignore

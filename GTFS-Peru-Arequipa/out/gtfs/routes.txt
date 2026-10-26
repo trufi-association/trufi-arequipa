@@ -1,228 +1,228 @@
 route_id,agency_id,route_short_name,route_long_name,route_color,route_type
-17445532,0,Enace,Bus Enace: Urbanización Deán Valdivia → Avenida Venezuela,FEDD00,3
-17445672,0,Enace,Bus Enace: Avenida Venezuela → Urbanización Deán Valdivia,FEDD00,3
-17511052,1,3 de octubre: B,Bus 3 de octubre: B: La Campiña II → Parque Selva Alegre,10069f,3
-17511191,1,4 de octubre: Cayma,Bus 4 de octubre: Cayma: El Golf → Enace,10069f,3
-17515510,0,San Miguel,Bus San Miguel: Sector 7 Deán Valdivia → Las Convenciones,FEDD00,3
-17518939,2,Gráficos: A,Bus Gráficos: A: San Luis → Av. Salaverry,FF6900,3
-17581799,2,C: Miraflores,Bus C: Miraflores: Cementerio de Miraflores → Av. Salaverry,FF6900,3
-17607753,3,Cettar,Bus Cettar: Ciudad Municipal → Terminal Terrestre,DBD9D1,3
-17608042,2,7A: Villa Ecológica,Bus 7A: Villa Ecológica: Villa Ecológica → Av. Salaverry,FF6900,3
-17608045,3,BR,Bus BR: Apipa → Terminal Terrestre,DBD9D1,3
-17608051,3,P2,Bus P2: Peruarbo → Alameda Salaverry,DBD9D1,3
-17608055,3,A,Bus A: El Naranjal → Ángeles del Sur Zona A,DBD9D1,3
-17608077,3,C,Bus C: Ángeles del Sur Zona A → Los Ccoritos,DBD9D1,3
-17608110,3,Santa Clara: B,Bus Santa Clara: B: Fundo Cabrería → Villa Miguel Grau,DBD9D1,3
-17619994,2,B: Miraflores (Salvador),Bus B: Miraflores (Salvador): El Salvador → Terminal Terrestre,FF6900,3
-17620010,3,4A,Bus 4A: Ciudad de Dios → Terminal Terrestre,DBD9D1,3
-17626535,2,Gráficos: B (San Luis),Bus Gráficos: B (San Luis): San Luis → Avelino,FF6900,3
-17633924,2,D,Bus D: San Luis → Terminal Terrestre,FF6900,3
-17633927,2,Gráficos: Umacollo,Bus Gráficos: Umacollo: San Luis → Umacollo,FF6900,3
-17633932,2,Gráficos: B (P. Polanco),Bus Gráficos: B (P. Polanco): El Mirador → Avelino,FF6900,3
-17633933,2,A1,Bus A1: El Mirador → Ruta del Sillar,FF6900,3
-17633936,2,A15,Bus A15: Tomasa → Plaza España,FF6900,3
-17633938,4,B2,Bus B2: Miguel Grau → Terminal Terrestre,AFA96E,3
-17634339,4,A,Bus A: Miguel Grau → La Merced,AFA96E,3
-17634360,5,3,Bus 3: Baños de Jesús → Aeropuerto,8D4925,3
-17636285,4,B2 A,Bus B2 A: Miguel Grau → Terminal Terrestre,AFA96E,3
-17636304,5,B,Bus B: Villa Santa Rosa → Terminal Terrestre,8D4925,3
-17636305,4,C,Bus C: Miguel Grau → Plaza Las Américas,AFA96E,3
-17636328,4,B,Bus B: Miguel Grau → Cementerio Apacheta,AFA96E,3
-17636366,6,A,Bus A: Ciudad Blanca → La Mansión del Fundador,DF1995,3
-17636375,7,LA,Bus LA: Juventud Characato → Av. La Paz,00C996,3
-17636635,4,H,Bus H: Miguel Grau → Alto de la Alianza,AFA96E,3
-17642932,7,T: San Antonio,Bus T: San Antonio: San Antonio → Terminal Terrestre,00C996,3
-17643025,7,A,Bus A: Santa Ana → Plaza Mayta Capac,00C996,3
-17643070,1,Monterrey - Dolores,Bus Monterrey - Dolores: La Campiña III → La Salle,10069f,3
-17644902,1,Ciudad Mi Trabajo: A,Bus Ciudad Mi Trabajo: A: El Pasto → Pachacutec,10069f,3
-17644912,1,Ciudad Mi Trabajo: M,Bus Ciudad Mi Trabajo: M: La Mansión → La Salle,10069f,3
-17644947,1,Alto Libertad,Bus Alto Libertad: Av. Paisajista → Alto Libertad,10069f,3
-17653490,3,4C,Bus 4C: Villa Milagros → Avenida Venezuela,DBD9D1,3
-17653560,3,4B,Bus 4B: Villa Hermosa → Terminal Terrestre,DBD9D1,3
-17653636,0,11 de Mayo,Bus 11 de Mayo: Mujeres con Esperanza → Terminal Terrestre,FEDD00,3
-17654231,1,Socabaya: B,Bus Socabaya: B: Horacio Zevallos → Pachacutec,10069f,3
-17654414,1,4 de octubre: Feria Altiplano,Bus 4 de octubre: Feria Altiplano: El Golf → Feria Altiplano,10069f,3
-17658187,6,Sachaca - 7 de Junio,Bus Sachaca - 7 de Junio: Alata → Av. Paucarpata,DF1995,3
-17658190,1,Monterrey - Corbacho,Bus Monterrey - Corbacho: Av. Paisajista → Av. La Paz,10069f,3
-17658204,6,13,Bus 13: San Hilarión → Av. Paucarpata,DF1995,3
-17658205,6,38,Bus 38: Av. Tahuantinsuyo → Av. Progreso,DF1995,3
-17658212,8,A: Pachacutec,Bus A: Pachacutec: Semirural Pachacutec → Av. Estados Unidos,2F4F4F,3
-17658213,8,B: Pachacutec,Bus B: Pachacutec: Semirural Pachacutec → Av. Estados Unidos,2F4F4F,3
-17658215,8,M,Bus M: Pachacutec → Avelino,2F4F4F,3
-17658252,6,M,Bus M: Mansión → Av. Paucarpata,DF1995,3
-17658522,3,CIMA C,Bus CIMA C: Sor Ana → Alto San Martín,DBD9D1,3
-17658549,3,CIMA S,Bus CIMA S: Alto San Martín → Sor Ana,DBD9D1,3
-17658550,3,CIMA,Bus CIMA: Ciudad Municipal → Ciudad Blanca,DBD9D1,3
-17658558,3,CIMA,Bus CIMA: Ciudad Blanca → Ciudad Municipal,DBD9D1,3
-17659544,0,Embajada,Bus Embajada: Los Pioneros → Terminal Terrestre,FEDD00,3
-17664509,0,Chapi,Bus Chapi: Mujeres con Esperanza → Av. Independencia,FEDD00,3
-17664511,0,Chapi,Bus Chapi: Av. Independencia → Mujeres con Esperanza,FEDD00,3
-17664629,0,Casimiro (Seguro Social),Bus Casimiro (Seguro Social): Casimiro → Coliseo Arequipa,FEDD00,3
-17664645,0,Casimiro (Seguro Social),Bus Casimiro (Seguro Social): Coliseo Arequipa → Casimiro,FEDD00,3
-17664646,2,Gráficos,Bus Gráficos: Av. Emancipación → Salaverry,FF6900,3
-17664647,2,Gráficos,Bus Gráficos: Salaverry → Av. Emancipación,FF6900,3
-17664648,2,B: Juan XXIII,Bus B: Juan XXIII: La Galaxia → Avelino,FF6900,3
-17664649,2,B: Juan XXIII,Bus B: Juan XXIII: Avelino → La Galaxia,FF6900,3
-17664775,2,Alto Selva Alegre: A,Bus Alto Selva Alegre: A: San Luis → Av. Salaverry,FF6900,3
-17664776,2,Alto Selva Alegre: A,Bus Alto Selva Alegre: A: Av. Salaverry → San Luis,FF6900,3
-17664787,9,C: Cenepa,Bus C: Cenepa: Héroes del Cenepa → Colegio Independencia,FF0000,3
-17664788,9,C: Cenepa,Bus C: Cenepa: Colegio Independencia → Héroes del Cenepa,FF0000,3
-17664789,9,C: Olivos (Terminal Terrestre),Bus C: Olivos (Terminal Terrestre): San Miguel → Terminal Terrestre,FF0000,3
-17664790,9,C: Olivos (Terminal Terrestre),Bus C: Olivos (Terminal Terrestre): Terminal Terrestre → San Miguel,FF0000,3
-17664791,9,Miguel Grau,Bus Miguel Grau: Miguel Grau → Estadio Melgar,FF0000,3
-17664792,9,Miguel Grau,Bus Miguel Grau: Estadio Melgar → Miguel Grau,FF0000,3
-17664793,9,C: Atalaya,Bus C: Atalaya: Atalaya → Terminal Terrestre,FF0000,3
-17664794,9,C: Atalaya,Bus C: Atalaya: Terminal Terrestre → Atalaya,FF0000,3
-17664795,9,Atalaya,Bus Atalaya: Atalaya → Estadio Melgar,FF0000,3
-17664821,9,Atalaya,Bus Atalaya: Estadio Melgar → Atalaya,FF0000,3
-17664822,9,C: Mirador Berlín,Bus C: Mirador Berlín: Berlín → Estadio Melgar,FF0000,3
-17664823,9,C: Mirador Berlín,Bus C: Mirador Berlín: Estadio Melgar → Berlín,FF0000,3
-17664826,9,C: Los Olivos (Estadio Melgar),Bus C: Los Olivos (Estadio Melgar): San Miguel → Estadio Melgar,FF0000,3
-17664827,9,C: Los Olivos (Estadio Melgar),Bus C: Los Olivos (Estadio Melgar): Estadio Melgar → San Miguel,FF0000,3
-17664828,5,P: Tío Chico,Bus P: Tío Chico: Plaza Paucarpata → Tío Chico,8D4925,3
-17664829,5,P: Tío Chico,Bus P: Tío Chico: Tío Chico → Plaza Paucarpata,8D4925,3
-17664971,5,5,Bus 5: Campo de Marte → Alto Libertad,8D4925,3
-17664972,5,5,Bus 5: Alto Libertad → Campo de Marte,8D4925,3
-17664981,1,3 de octubre: A,Bus 3 de octubre: A: La Campiña II → Tahuantinsuyo,10069f,3
-17664982,1,3 de octubre: A,Bus 3 de octubre: A: Tahuantinsuyo → La Campiña II,10069f,3
-17664983,1,3 de octubre: C,Bus 3 de octubre: C: La Campiña II → Mariano Melgar,10069f,3
-17664984,1,3 de octubre: C,Bus 3 de octubre: C: Mariano Melgar → La Campiña II,10069f,3
-17664985,1,3 de octubre: D,Bus 3 de octubre: D: La Campiña II → Alto Misti,10069f,3
-17664986,1,3 de octubre: D,Bus 3 de octubre: D: Alto Misti → La Campiña II,10069f,3
-17664987,1,Monterrey - San Martín,Bus Monterrey - San Martín: La Campiña III → La Salle,10069f,3
-17664988,1,Monterrey - San Martín,Bus Monterrey - San Martín: La Salle → La Campiña III,10069f,3
-17677829,5,C: Israel,Bus C: Israel: Israel → Terminal Terrestre,8D4925,3
-17677911,7,T: Quequeña,Bus T: Quequeña: Quequeña → Terminal Terrestre,00C996,3
-17678105,8,B: Alto Libertad,Bus B: Alto Libertad: Plaza de Armas → Alto Libertad,2F4F4F,3
-17681083,2,D (Huaranguillo),Bus D (Huaranguillo): San Luis → Huaranguillo,FF6900,3
-17683264,0,11 de Mayo,Bus 11 de Mayo: Terminal Terrestre → Mujeres con Esperanza,FEDD00,3
-17683265,2,D,Bus D: Terminal Terrestre → San Luis,FF6900,3
-17683266,2,Gráficos: Umacollo,Bus Gráficos: Umacollo: Umacollo → San Luis,FF6900,3
-17683267,3,Cettar,Bus Cettar: Terminal Terrestre → Ciudad Municipal,DBD9D1,3
-17683268,3,P2,Bus P2: Alameda Salaverry → Peruarbo,DBD9D1,3
-17683269,3,4D,Bus 4D: Villa Los Milagros → Óvalo Avelino,DBD9D1,3
-17683270,3,4D,Bus 4D: Óvalo Avelino → Villa Los Milagros,DBD9D1,3
-17683271,3,CIMA Bustamante,Bus CIMA Bustamante: Apipa → Óvalo Mariscal Castilla,DBD9D1,3
-17683272,3,CIMA Bustamante,Bus CIMA Bustamante: Óvalo Mariscal Castilla → Apipa,DBD9D1,3
-17683273,3,4B,Bus 4B: Terminal Terrestre → Villa Hermosa,DBD9D1,3
-17683274,2,D (Huaranguillo),Bus D (Huaranguillo): Huaranguillo → San Luis,FF6900,3
-17684885,3,Santa Clara: A,Bus Santa Clara: A: Villa Miguel Grau → Fundo Cabrería,DBD9D1,3
-17684886,3,A,Bus A: Ángeles del Sur Zona A → El Naranjal,DBD9D1,3
-17684887,3,C,Bus C: Los Ccoritos → Ángeles del Sur Zona A,DBD9D1,3
-17684888,3,4A,Bus 4A: Terminal Terrestre → Ciudad de Dios,DBD9D1,3
-17684889,3,BR,Bus BR: Terminal Terrestre → Apipa,DBD9D1,3
-17684890,3,4C,Bus 4C: Avenida Venezuela → Villa Milagros,DBD9D1,3
-17684891,7,LB: Mollebaya,Bus LB: Mollebaya: Calle Victor Lira → Mollebaya,00C996,3
-17684893,0,San Miguel,Bus San Miguel: Las Convenciones → Sector 7 Deán Valdivia,FEDD00,3
-17684894,2,Gráficos: A,Bus Gráficos: A: Av. Salaverry → San Luis,FF6900,3
-17684907,2,Gráficos: B (San Luis),Bus Gráficos: B (San Luis): Avelino → San Luis,FF6900,3
-17686763,0,Embajada,Bus Embajada: Terminal Terrestre → Los Pioneros,FEDD00,3
-17687840,8,B: Alto Libertad,Bus B: Alto Libertad: Alto Libertad → Plaza de Armas,2F4F4F,3
-17687934,9,A: San Jerónimo,Bus A: San Jerónimo: San Jerónimo → Estadio Melgar,FF0000,3
-17687963,6,Congata,Bus Congata: Plaza Huayco → La Salle,DF1995,3
-17687966,6,Congata,Bus Congata: La Salle → Plaza Huayco,DF1995,3
-17687967,2,7A: Villa Ecológica,Bus 7A: Villa Ecológica: Av. Salaverry → Villa Ecológica,FF6900,3
-17687970,8,A: Alto Libertad,Bus A: Alto Libertad: Plaza de Armas → Alto Libertad,2F4F4F,3
-17688012,2,A1,Bus A1: Ruta del Sillar → El Mirador,FF6900,3
-17688013,2,Gráficos: B (P. Polanco),Bus Gráficos: B (P. Polanco): Avelino → El Mirador,FF6900,3
-17688014,2,A15,Bus A15: Plaza España → Tomasa,FF6900,3
-17688015,2,B: Miraflores (Salvador),Bus B: Miraflores (Salvador): Terminal Terrestre → El Salvador,FF6900,3
-17688016,2,C: Miraflores,Bus C: Miraflores: Av. Salaverry → Cementerio de Miraflores,FF6900,3
-17688017,7,LB: Cerrillo,Bus LB: Cerrillo: Calle Victor Lira → Cerrillo,00C996,3
-17688018,9,A: Señor de Huanca,Bus A: Señor de Huanca: Señor de Huanca → Estadio Melgar,FF0000,3
-17688019,4,B2,Bus B2: Terminal Terrestre → Miguel Grau,AFA96E,3
-17688020,4,B2 A,Bus B2 A: Terminal Terrestre → Miguel Grau,AFA96E,3
-17688021,4,C,Bus C: Plaza Las Américas → Miguel Grau,AFA96E,3
-17688022,4,B,Bus B: Cementerio Apacheta → Miguel Grau,AFA96E,3
-17688023,4,H,Bus H: Alto de la Alianza → Miguel Grau,AFA96E,3
-17688024,4,A,Bus A: La Merced → Miguel Grau,AFA96E,3
-17688025,5,C: Goyeneche,Bus C: Goyeneche: Aeropuerto → Baños de Jesús,8D4925,3
-17688026,5,B,Bus B: Terminal Terrestre → Villa Santa Rosa,8D4925,3
-17688027,5,C: Israel,Bus C: Israel: Terminal Terrestre → Israel,8D4925,3
-17688028,7,LB: Mollebaya,Bus LB: Mollebaya: Mollebaya → Calle Victor Lira,00C996,3
-17688029,7,LB: Cerrillo,Bus LB: Cerrillo: Cerrillo → Calle Victor Lira,00C996,3
-17688030,7,LA,Bus LA: Av. La Paz → Juventud Characato,00C996,3
-17688031,7,T: San Antonio,Bus T: San Antonio: Terminal Terrestre → San Antonio,00C996,3
-17688038,7,T: Quequeña,Bus T: Quequeña: Terminal Terrestre → Quequeña,00C996,3
-17688039,7,A,Bus A: Plaza Mayta Capac → Santa Ana,00C996,3
-17688040,1,3 de octubre: B,Bus 3 de octubre: B: Parque Selva Alegre → La Campiña II,10069f,3
-17688041,1,Monterrey - Dolores,Bus Monterrey - Dolores: La Salle → La Campiña III,10069f,3
-17688044,1,Ciudad Mi Trabajo: A,Bus Ciudad Mi Trabajo: A: Pachacutec → El Pasto,10069f,3
-17688045,1,Ciudad Mi Trabajo: M,Bus Ciudad Mi Trabajo: M: La Salle → La Mansión,10069f,3
-17688046,1,Alto Libertad,Bus Alto Libertad: Alto Libertad → Av. Paisajista,10069f,3
-17688047,1,Socabaya: B,Bus Socabaya: B: Pachacutec → Horacio Zevallos,10069f,3
-17688048,1,4 de octubre: Cayma,Bus 4 de octubre: Cayma: Enace → El Golf,10069f,3
-17688049,1,Simon Bolivar,Bus Simon Bolivar: Cruce Sabandía → Cruce Sabandía,10069f,3
-17688050,1,Simon Bolivar,Bus Simon Bolivar: Cruce Sabandía → Cruce Sabandía,10069f,3
-17688051,1,Monterrey - Corbacho,Bus Monterrey - Corbacho: Av. La Paz → Av. Paisajista,10069f,3
-17688052,6,Tiabaya - Goyeneche,Bus Tiabaya - Goyeneche: Tiabaya → Av. Paucarpata,DF1995,3
-17688053,6,Tiabaya - Goyeneche,Bus Tiabaya - Goyeneche: Av. Paucarpata → Tiabaya,DF1995,3
-17688054,6,A,Bus A: La Mansión del Fundador → Ciudad Blanca,DF1995,3
-17688055,6,D,Bus D: Av. Paisajista → Av. Los Alpes,DF1995,3
-17688056,6,Sachaca - 7 de Junio,Bus Sachaca - 7 de Junio: Av. Paucarpata → Alata,DF1995,3
-17688057,6,Tahuaycani,Bus Tahuaycani: Urb. Micaela Bastidas → Calle Peral,DF1995,3
-17688058,6,13,Bus 13: Av. Paucarpata → San Hilarión,DF1995,3
-17688059,6,38,Bus 38: Av. Progreso → Av. Tahuantinsuyo,DF1995,3
-17688060,6,M,Bus M: Av. Paucarpata → Mansión,DF1995,3
-17688061,8,A: Alto Libertad,Bus A: Alto Libertad: Alto Libertad → Plaza de Armas,2F4F4F,3
-17688062,8,A: Pachacutec,Bus A: Pachacutec: Av. Estados Unidos → Semirural Pachacutec,2F4F4F,3
-17688063,8,B: Pachacutec,Bus B: Pachacutec: Av. Estados Unidos → Semirural Pachacutec,2F4F4F,3
-17688064,8,M,Bus M: Avelino → Pachacutec,2F4F4F,3
-17688065,8,Cural,Bus Cural: El Cural → La Isla,2F4F4F,3
-17688066,8,Uchumayo,Bus Uchumayo: La Estación de Uchumayo → Av. La Salle,2F4F4F,3
-17688180,9,A: San Jerónimo,Bus A: San Jerónimo: Estadio Melgar → San Jerónimo,FF0000,3
-17688206,1,4 de octubre: Feria Altiplano,Bus 4 de octubre: Feria Altiplano: Feria Altiplano → El Golf,10069f,3
-17688207,9,A: Señor de Huanca,Bus A: Señor de Huanca: Estadio Melgar → Señor de Huanca,FF0000,3
-17688208,6,Tahuaycani,Bus Tahuaycani: Calle Peral → Urb. Micaela Bastidas,DF1995,3
-17688209,8,Cural,Bus Cural: La Isla → El Cural,2F4F4F,3
-17688210,8,Uchumayo,Bus Uchumayo: Av. La Salle → La Estación de Uchumayo,2F4F4F,3
-17688229,6,D,Bus D: Av. Los Alpes → Av. Paisajista,DF1995,3
-21105225,3,4,Bus 4: Salaverry → Villa Los Milagros,DBD9D1,3
-21105226,3,4,Bus 4: Villa Los Milagros → Salaverry,DBD9D1,3
-21198645,3,N,Bus N: Terminal Terrestre → Chachani,DBD9D1,3
-21198646,3,T,Bus T: Chachani → Terminal Terrestre,DBD9D1,3
-21201201,3,T,Bus T: Villa Magisterial → Terminal Terrestre,DBD9D1,3
-21201202,3,M,Bus M: Terminal Terrestre → Villa Magisterial,DBD9D1,3
-21217878,3,H,Bus H: Villa Los Milagros → Huacsapata,DBD9D1,3
-21222665,3,H,Bus H: Huacsapata → Villa Los Milagros,DBD9D1,3
-21240657,7,B,Bus B: Yumina → Independencia,00C996,3
-21240658,7,B,Bus B: Independencia → Yumina,00C996,3
-21257623,1,4 de octubre: Terminal Terrestre,Bus 4 de octubre: Terminal Terrestre: El Golf → Feria Altiplano,10069f,3
-21261201,5,P: San José,Bus P: San José: San José → Plaza Paucarpata,8D4925,3
-21261202,5,P: San José,Bus P: San José: Plaza Paucarpata → San José,8D4925,3
-21261652,5,P: Los Portales de Chiguata,Bus P: Los Portales de Chiguata: Avelino → Los Portales de Chiguata,8D4925,3
-21261653,5,P: Los Portales de Chiguata,Bus P: Los Portales de Chiguata: Los Portales de Chiguata → Avelino,8D4925,3
-21261724,5,H C,Bus H C: Avelino → Huacsapata,8D4925,3
-21261725,5,H C,Bus H C: Huacsapata → Avelino,8D4925,3
-21270561,3,AJ,Bus AJ: Av. Salaverry → AMIFIV,DBD9D1,3
-21270562,3,AJ,Bus AJ: AMIFIV → Av. Salaverry,DBD9D1,3
-21272960,2,B: Miraflores (Tomasa),Bus B: Miraflores (Tomasa): Terminal Terrestre → Tomasa,FF6900,3
-21272961,2,B: Miraflores (Tomasa),Bus B: Miraflores (Tomasa): Tomasa → Terminal Terrestre,FF6900,3
-21278873,6,Avelino - 7 de junio,Bus Avelino - 7 de junio: Avelino → Urb. Micaela Bastidas,DF1995,3
-21278874,6,Avelino - 7 de junio,Bus Avelino - 7 de junio: Urb. Micaela Bastidas → Avelino,DF1995,3
-21279058,4,A,Bus A: Urb. Tahuaycani → Miguel Grau,AFA96E,3
-21279059,4,S,Bus S: Miguel Grau → Urb. Tahuaycani,AFA96E,3
-21290922,0,A000,Bus A000: Terminal Terrestre → El Azufral,FEDD00,3
-21290923,0,A000,Bus A000: El Azufral → Terminal Terrestre,FEDD00,3
-21297016,0,A5,Bus A5: Las Convenciones → Sector 7 Deán Valdivia,FEDD00,3
-21297017,0,A5,Bus A5: Sector 7 Deán Valdivia → Las Convenciones,FEDD00,3
-21311675,1,Alto de la luna,Bus Alto de la luna: Calle San Agustín → Simón Bolivar,10069f,3
-21311676,1,Alto de la luna,Bus Alto de la luna: Simón Bolivar → Calle San Agustín,10069f,3
-21416182,2,7A: Mirador,Bus 7A: Mirador: Av. Salaverry → El Mirador,FF6900,3
-21416183,2,7A: Mirador,Bus 7A: Mirador: El Mirador → Av. Salaverry,FF6900,3
-21416255,2,7A: Huarangal,Bus 7A: Huarangal: Av. Salaverry → Huarangal,FF6900,3
-21416256,2,7A: Huarangal,Bus 7A: Huarangal: Huarangal → Av. Salaverry,FF6900,3
-21416272,2,7B,Bus 7B: Av. Salaverry → El Mirador,FF6900,3
-21416273,2,7B,Bus 7B: El Mirador → Av. Salaverry,FF6900,3
-21417182,0,Casimiro (Terminal Terrestre),Bus Casimiro (Terminal Terrestre): Terminal Terrestre → Casimiro,FEDD00,3
-21417183,0,Casimiro (Terminal Terrestre),Bus Casimiro (Terminal Terrestre): Casimiro → Terminal Terrestre,FEDD00,3
-21420188,10,S: Terminal Terrestre,Bus S: Terminal Terrestre: Terminal Terrestre → Santa María,FFFFFF,3
-21420189,10,S: Terminal Terrestre,Bus S: Terminal Terrestre: Santa María → Terminal Terrestre,FFFFFF,3
-21421531,10,S: U. Católica,Bus S: U. Católica: U. Católica → Santa María,FFFFFF,3
-21421532,10,S: U. Católica,Bus S: U. Católica: Santa María → U. Católica,FFFFFF,3
-21424135,10,F2,Bus F2: Pachacutec → Santa María,FFFFFF,3
-21424136,10,F2,Bus F2: Santa María → Pachacutec,FFFFFF,3
-21424266,10,R,Bus R: Alto Libertad → Rosaspata,FFFFFF,3
-21424267,10,CB,Bus CB: Rosaspata → Alto Libertad,FFFFFF,3
-21427589,11,P,Bus P: Calle Espinar → Espiritu Santo,FFFFFF,3
-21427590,11,P,Bus P: Espiritu Santo → Calle Espinar,FFFFFF,3
+17445532,0,Enace,C-3 Bus Enace: Urbanización Deán Valdivia → Avenida Venezuela,FEDD00,3
+17445672,0,Enace,C-3 Bus Enace: Avenida Venezuela → Urbanización Deán Valdivia,FEDD00,3
+17511052,1,3 de octubre: B,"C-9 Bus ""3 de octubre: B"": La Campiña II → Parque Selva Alegre",10069f,3
+17511191,1,4 de octubre: Cayma,"C-9 Bus ""4 de octubre: Cayma"": El Golf → Enace",10069f,3
+17515510,0,San Miguel,"C-3 Bus ""San Miguel"": Sector 7 Deán Valdivia → Las Convenciones",FEDD00,3
+17518939,2,Gráficos: A,"C-4 Bus ""Gráficos: A"": San Luis → Av. Salaverry",FF6900,3
+17581799,2,C: Miraflores,"C-4 Bus ""C: Miraflores"": Cementerio de Miraflores → Av. Salaverry",FF6900,3
+17607753,3,Cettar,C-2 Bus Cettar: Ciudad Municipal → Terminal Terrestre,DBD9D1,3
+17608042,2,7A: Villa Ecológica,"C-4 Bus ""7A: Villa Ecológica"": Villa Ecológica → Av. Salaverry",FF6900,3
+17608045,3,BR,C-2 Bus BR: Apipa → Terminal Terrestre,DBD9D1,3
+17608051,3,P2,C-2 Bus P2: Peruarbo → Alameda Salaverry,DBD9D1,3
+17608055,3,A,C-2 Bus A: El Naranjal → Ángeles del Sur Zona A,DBD9D1,3
+17608077,3,C,C-2 Bus C: Ángeles del Sur Zona A → Los Ccoritos,DBD9D1,3
+17608110,3,Santa Clara: B,"C-2 Bus ""Santa Clara: B"": Fundo Cabrería → Villa Miguel Grau",DBD9D1,3
+17619994,2,B: Miraflores (Salvador),"C-4 Bus ""B: Miraflores (Salvador)"": El Salvador → Terminal Terrestre",FF6900,3
+17620010,3,4A,C-2 Bus 4A: Ciudad de Dios → Terminal Terrestre,DBD9D1,3
+17626535,2,Gráficos: B (San Luis),"C-4 Bus ""Gráficos: B (San Luis)"": San Luis → Avelino",FF6900,3
+17633924,2,D,C-4 Bus D: San Luis → Terminal Terrestre,FF6900,3
+17633927,2,Gráficos: Umacollo,"C-4 Bus ""Gráficos: Umacollo"": San Luis → Umacollo",FF6900,3
+17633932,2,Gráficos: B (P. Polanco),"C-4 Bus ""Gráficos: B (P. Polanco)"": El Mirador → Avelino",FF6900,3
+17633933,2,A1,C-4 Bus A1: El Mirador → Ruta del Sillar,FF6900,3
+17633936,2,A15,C-4 Bus A15: Tomasa → Plaza España,FF6900,3
+17633938,4,B2,C-6 Bus B2: Miguel Grau → Terminal Terrestre,AFA96E,3
+17634339,4,A,C-6 Bus A: Miguel Grau → La Merced,AFA96E,3
+17634360,5,3,C-7 Bus 3: Baños de Jesús → Aeropuerto,8D4925,3
+17636285,4,B2 A,"C-6 Bus ""B2 A"": Miguel Grau → Terminal Terrestre",AFA96E,3
+17636304,5,B,C-7 Bus B: Villa Santa Rosa → Terminal Terrestre,8D4925,3
+17636305,4,C,C-6 Bus C: Miguel Grau → Plaza Las Américas,AFA96E,3
+17636328,4,B,C-6 Bus B: Miguel Grau → Cementerio Apacheta,AFA96E,3
+17636366,6,A,C-10 Bus A: Ciudad Blanca → La Mansión del Fundador,DF1995,3
+17636375,7,LA,C-8 Bus LA: Juventud Characato → Av. La Paz,00C996,3
+17636635,4,H,C-6 Bus H: Miguel Grau → Alto de la Alianza,AFA96E,3
+17642932,7,T: San Antonio,"C-8 Bus ""T: San Antonio"": San Antonio → Terminal Terrestre",00C996,3
+17643025,7,A,C-8 Bus A: Santa Ana → Plaza Mayta Capac,00C996,3
+17643070,1,Monterrey - Dolores,"C-9 Bus ""Monterrey - Dolores"": La Campiña III → La Salle",10069f,3
+17644902,1,Ciudad Mi Trabajo: A,"C-9 Bus ""Ciudad Mi Trabajo: A"": El Pasto → Pachacutec",10069f,3
+17644912,1,Ciudad Mi Trabajo: M,"C-9 Bus ""Ciudad Mi Trabajo: M"": La Mansión → La Salle",10069f,3
+17644947,1,Alto Libertad,"C-9 Bus ""Alto Libertad"": Av. Paisajista → Alto Libertad",10069f,3
+17653490,3,4C,C-2 Bus 4C: Villa Milagros → Avenida Venezuela,DBD9D1,3
+17653560,3,4B,C-2 Bus 4B: Villa Hermosa → Terminal Terrestre,DBD9D1,3
+17653636,0,11 de Mayo,"C-3 Bus ""11 de mayo"": Mujeres con Esperanza → Terminal Terrestre",FEDD00,3
+17654231,1,Socabaya: B,"C-9 Bus ""Socabaya: B"": Horacio Zevallos → Pachacutec",10069f,3
+17654414,1,4 de octubre: Feria Altiplano,"C-9 Bus ""4 de octubre: Feria Altiplano"": El Golf → Feria Altiplano",10069f,3
+17658187,6,Sachaca - 7 de Junio,"C-10 Bus ""Sachaca - 7 de junio"": Alata → Av. Paucarpata",DF1995,3
+17658190,1,Monterrey - Corbacho,"C-9 Bus ""Monterrey - Corbacho"": Av. Paisajista → Av. La Paz",10069f,3
+17658204,6,13,C-10 Bus 13: San Hilarión → Av. Paucarpata,DF1995,3
+17658205,6,38,C-10 Bus 38: Av. Tahuantinsuyo → Av. Progreso,DF1995,3
+17658212,8,A: Pachacutec,"C-11 Bus ""A: Pachacutec"": Semirural Pachacutec → Av. Estados Unidos",2F4F4F,3
+17658213,8,B: Pachacutec,"C-11 Bus ""B: Pachacutec"": Semirural Pachacutec → Av. Estados Unidos",2F4F4F,3
+17658215,8,M,C-11 Bus M: Pachacutec → Avelino,2F4F4F,3
+17658252,6,M,C-10 Bus M: Mansión → Av. Paucarpata,DF1995,3
+17658522,3,CIMA C,"C-2 Bus ""CIMA C"": Sor Ana → Alto San Martín",DBD9D1,3
+17658549,3,CIMA S,"C-2 Bus ""CIMA S"": Alto San Martín → Sor Ana",DBD9D1,3
+17658550,3,CIMA,C-2 Bus CIMA: Ciudad Municipal → Ciudad Blanca,DBD9D1,3
+17658558,3,CIMA,C-2 Bus CIMA: Ciudad Blanca → Ciudad Municipal,DBD9D1,3
+17659544,0,Embajada,C-3 Bus Embajada: Los Pioneros → Terminal Terrestre,FEDD00,3
+17664509,0,Chapi,C-3 Bus Chapi: Mujeres con Esperanza → Av. Independencia,FEDD00,3
+17664511,0,Chapi,C-3 Bus Chapi: Av. Independencia → Mujeres con Esperanza,FEDD00,3
+17664629,0,Casimiro (Seguro Social),"C-3 Bus ""Casimiro (Seguro Social)"": Casimiro → Coliseo Arequipa",FEDD00,3
+17664645,0,Casimiro (Seguro Social),"C-3 Bus ""Casimiro (Seguro Social)"": Coliseo Arequipa → Casimiro",FEDD00,3
+17664646,2,Gráficos,C-4 Bus Gráficos: Av. Emancipación → Salaverry,FF6900,3
+17664647,2,Gráficos,C-4 Bus Gráficos: Salaverry → Av. Emancipación,FF6900,3
+17664648,2,B: Juan XXIII,"C-4 Bus ""B: Juan XXIII"": La Galaxia → Avelino",FF6900,3
+17664649,2,B: Juan XXIII,"C-4 Bus ""B: Juan XXIII"": Avelino → La Galaxia",FF6900,3
+17664775,2,Alto Selva Alegre: A,"C-4 Bus ""Alto Selva Alegre: A"": San Luis → Av. Salaverry",FF6900,3
+17664776,2,Alto Selva Alegre: A,"C-4 Bus ""Alto Selva Alegre: A"": Av. Salaverry → San Luis",FF6900,3
+17664787,9,C: Cenepa,"C-5 Bus ""C: Cenepa"": Héroes del Cenepa → Colegio Independencia",FF0000,3
+17664788,9,C: Cenepa,"C-5 Bus ""C: Cenepa"": Colegio Independencia → Héroes del Cenepa",FF0000,3
+17664789,9,C: Olivos (Terminal Terrestre),"C-5 Bus ""C: Olivos (Terminal Terrestre)"": San Miguel → Terminal Terrestre",FF0000,3
+17664790,9,C: Olivos (Terminal Terrestre),"C-5 Bus ""C: Olivos (Terminal Terrestre)"": Terminal Terrestre → San Miguel",FF0000,3
+17664791,9,Miguel Grau,"C-5 Bus ""Miguel Grau"": Miguel Grau → Estadio Melgar",FF0000,3
+17664792,9,Miguel Grau,"C-5 Bus ""Miguel Grau"": Estadio Melgar → Miguel Grau",FF0000,3
+17664793,9,C: Atalaya,"C-5 Bus ""C: Atalaya"": Atalaya → Terminal Terrestre",FF0000,3
+17664794,9,C: Atalaya,"C-5 Bus ""C: Atalaya"": Terminal Terrestre → Atalaya",FF0000,3
+17664795,9,Atalaya,C-5 Bus Atalaya: Atalaya → Estadio Melgar,FF0000,3
+17664821,9,Atalaya,C-5 Bus Atalaya: Estadio Melgar → Atalaya,FF0000,3
+17664822,9,C: Mirador Berlín,"C-5 Bus ""C: Mirador Berlín"": Berlín → Estadio Melgar",FF0000,3
+17664823,9,C: Mirador Berlín,"C-5 Bus ""C: Mirador Berlín"": Estadio Melgar → Berlín",FF0000,3
+17664826,9,C: Los Olivos (Estadio Melgar),"C-5 Bus ""C: Olivos (Estadio Melgar)"": San Miguel → Estadio Melgar",FF0000,3
+17664827,9,C: Los Olivos (Estadio Melgar),"C-5 Bus ""C: Olivos (Estadio Melgar)"": Estadio Melgar → San Miguel",FF0000,3
+17664828,5,P: Tío Chico,"C-7 Bus ""P: Tío Chico"": Plaza Paucarpata → Tío Chico",8D4925,3
+17664829,5,P: Tío Chico,"C-7 Bus ""P: Tío Chico"": Tío Chico → Plaza Paucarpata",8D4925,3
+17664971,5,5,C-7 Bus 5: Campo de Marte → Alto Libertad,8D4925,3
+17664972,5,5,C-7 Bus 5: Alto Libertad → Campo de Marte,8D4925,3
+17664981,1,3 de octubre: A,"C-9 Bus ""3 de octubre: A"": La Campiña II → Tahuantinsuyo",10069f,3
+17664982,1,3 de octubre: A,"C-9 Bus ""3 de octubre: A"": Tahuantinsuyo → La Campiña II",10069f,3
+17664983,1,3 de octubre: C,"C-9 Bus ""3 de octubre: C"": La Campiña II → Mariano Melgar",10069f,3
+17664984,1,3 de octubre: C,"C-9 Bus ""3 de octubre: C"": Mariano Melgar → La Campiña II",10069f,3
+17664985,1,3 de octubre: D,"C-9 Bus ""3 de octubre: D"": Alto Misti → La Campiña II",10069f,3
+17664986,1,3 de octubre: D,"C-9 Bus ""3 de octubre: D"": La Campiña II → Alto Misti",10069f,3
+17664987,1,Monterrey - San Martín,"C-9 Bus ""Monterrey - San Martín"": La Campiña III → La Salle",10069f,3
+17664988,1,Monterrey - San Martín,"C-9 Bus ""Monterrey - San Martín"": La Salle → La Campiña III",10069f,3
+17677829,5,C: Israel,"C-7 Bus ""C: Israel"": Israel → Terminal Terrestre",8D4925,3
+17677911,7,T: Quequeña,"C-8 Bus ""T: Quequeña"": Quequeña → Terminal Terrestre",00C996,3
+17678105,8,B: Alto Libertad,"C-11 Bus ""B: Alto Libertad"": Plaza de Armas → Alto Libertad",2F4F4F,3
+17681083,2,D (Huaranguillo),"C-4 Bus ""D (Huaranguillo)"": San Luis → Huaranguillo",FF6900,3
+17683264,0,11 de Mayo,"C-3 Bus ""11 de mayo"": Terminal Terrestre → Mujeres con Esperanza",FEDD00,3
+17683265,2,D,C-4 Bus D: Terminal Terrestre → San Luis,FF6900,3
+17683266,2,Gráficos: Umacollo,"C-4 Bus ""Gráficos: Umacollo"": Umacollo → San Luis",FF6900,3
+17683267,3,Cettar,C-2 Bus Cettar: Terminal Terrestre → Ciudad Municipal,DBD9D1,3
+17683268,3,P2,C-2 Bus P2: Alameda Salaverry → Peruarbo,DBD9D1,3
+17683269,3,4D,C-2 Bus 4D: Villa Los Milagros → Óvalo Avelino,DBD9D1,3
+17683270,3,4D,C-2 Bus 4D: Óvalo Avelino → Villa Los Milagros,DBD9D1,3
+17683271,3,CIMA Bustamante,"C-2 Bus ""CIMA Bustamante"": Apipa → Óvalo Mariscal Castilla",DBD9D1,3
+17683272,3,CIMA Bustamante,"C-2 Bus ""CIMA Bustamante"": Óvalo Mariscal Castilla → Apipa",DBD9D1,3
+17683273,3,4B,C-2 Bus 4B: Terminal Terrestre → Villa Hermosa,DBD9D1,3
+17683274,2,D (Huaranguillo),"C-4 Bus ""D (Huaranguillo)"": Huaranguillo → San Luis",FF6900,3
+17684885,3,Santa Clara: A,"C-2 Bus ""Santa Clara: A"": Villa Miguel Grau → Fundo Cabrería",DBD9D1,3
+17684886,3,A,C-2 Bus A: Ángeles del Sur Zona A → El Naranjal,DBD9D1,3
+17684887,3,C,C-2 Bus C: Los Ccoritos → Ángeles del Sur Zona A,DBD9D1,3
+17684888,3,4A,C-2 Bus 4A: Terminal Terrestre → Ciudad de Dios,DBD9D1,3
+17684889,3,BR,C-2 Bus BR: Terminal Terrestre → Apipa,DBD9D1,3
+17684890,3,4C,C-2 Bus 4C: Avenida Venezuela → Villa Milagros,DBD9D1,3
+17684891,7,LB: Mollebaya,"C-8 Bus ""LB: Mollebaya"": Calle Victor Lira → Mollebaya",00C996,3
+17684893,0,San Miguel,"C-3 Bus ""San Miguel"": Las Convenciones → Sector 7 Deán Valdivia",FEDD00,3
+17684894,2,Gráficos: A,"C-4 Bus ""Gráficos: A"": Av. Salaverry → San Luis",FF6900,3
+17684907,2,Gráficos: B (San Luis),"C-4 Bus ""Gráficos: B (San Luis)"": Avelino → San Luis",FF6900,3
+17686763,0,Embajada,C-3 Bus Embajada: Terminal Terrestre → Los Pioneros,FEDD00,3
+17687840,8,B: Alto Libertad,"C-11 Bus ""B: Alto Libertad"": Alto Libertad → Plaza de Armas",2F4F4F,3
+17687934,9,A: San Jerónimo,"C-5 Bus ""A: San Jerónimo"": San Jerónimo → Estadio Melgar",FF0000,3
+17687963,6,Congata,C-10 Bus Congata: Plaza Huayco → La Salle,DF1995,3
+17687966,6,Congata,C-10 Bus Congata: La Salle → Plaza Huayco,DF1995,3
+17687967,2,7A: Villa Ecológica,"C-4 Bus ""7A: Villa Ecológica"": Av. Salaverry → Villa Ecológica",FF6900,3
+17687970,8,A: Alto Libertad,"C-11 Bus ""A: Alto Libertad"": Plaza de Armas → Alto Libertad",2F4F4F,3
+17688012,2,A1,C-4 Bus A1: Ruta del Sillar → El Mirador,FF6900,3
+17688013,2,Gráficos: B (P. Polanco),"C-4 Bus ""Gráficos: B (P. Polanco)"": Avelino → El Mirador",FF6900,3
+17688014,2,A15,C-4 Bus A15: Plaza España → Tomasa,FF6900,3
+17688015,2,B: Miraflores (Salvador),"C-4 Bus ""B: Miraflores (Salvador)"": Terminal Terrestre → El Salvador",FF6900,3
+17688016,2,C: Miraflores,"C-4 Bus ""C: Miraflores"": Av. Salaverry → Cementerio de Miraflores",FF6900,3
+17688017,7,LB: Cerrillo,"C-8 Bus ""LB: Cerrillo"": Calle Victor Lira → Cerrillo",00C996,3
+17688018,9,A: Señor de Huanca,"C-5 Bus ""A: Señor de Huanca"": Señor de Huanca → Estadio Melgar",FF0000,3
+17688019,4,B2,C-6 Bus B2: Terminal Terrestre → Miguel Grau,AFA96E,3
+17688020,4,B2 A,"C-6 Bus ""B2 A"": Terminal Terrestre → Miguel Grau",AFA96E,3
+17688021,4,C,C-6 Bus C: Plaza Las Américas → Miguel Grau,AFA96E,3
+17688022,4,B,C-6 Bus B: Cementerio Apacheta → Miguel Grau,AFA96E,3
+17688023,4,H,C-6 Bus H: Alto de la Alianza → Miguel Grau,AFA96E,3
+17688024,4,A,C-6 Bus A: La Merced → Miguel Grau,AFA96E,3
+17688025,5,C: Goyeneche,"C-7 Bus ""C: Goyeneche"": Aeropuerto → Baños de Jesús",8D4925,3
+17688026,5,B,C-7 Bus B: Terminal Terrestre → Villa Santa Rosa,8D4925,3
+17688027,5,C: Israel,"C-7 Bus ""C: Israel"": Terminal Terrestre → Israel",8D4925,3
+17688028,7,LB: Mollebaya,"C-8 Bus ""LB: Mollebaya"": Mollebaya → Calle Victor Lira",00C996,3
+17688029,7,LB: Cerrillo,"C-8 Bus ""LB: Cerrillo"": Cerrillo → Calle Victor Lira",00C996,3
+17688030,7,LA,C-8 Bus LA: Av. La Paz → Juventud Characato,00C996,3
+17688031,7,T: San Antonio,"C-8 Bus ""T: San Antonio"": Terminal Terrestre → San Antonio",00C996,3
+17688038,7,T: Quequeña,"C-8 Bus ""T: Quequeña"": Terminal Terrestre → Quequeña",00C996,3
+17688039,7,A,C-8 Bus A: Plaza Mayta Capac → Santa Ana,00C996,3
+17688040,1,3 de octubre: B,"C-9 Bus ""3 de octubre: B"": Parque Selva Alegre → La Campiña II",10069f,3
+17688041,1,Monterrey - Dolores,"C-9 Bus ""Monterrey - Dolores"": La Salle → La Campiña III",10069f,3
+17688044,1,Ciudad Mi Trabajo: A,"C-9 Bus ""Ciudad Mi Trabajo: A"": Pachacutec → El Pasto",10069f,3
+17688045,1,Ciudad Mi Trabajo: M,"C-9 Bus ""Ciudad Mi Trabajo: M"": La Salle → La Mansión",10069f,3
+17688046,1,Alto Libertad,"C-9 Bus ""Alto Libertad"": Alto Libertad → Av. Paisajista",10069f,3
+17688047,1,Socabaya: B,"C-9 Bus ""Socabaya: B"": Pachacutec → Horacio Zevallos",10069f,3
+17688048,1,4 de octubre: Cayma,"C-9 Bus ""4 de octubre: Cayma"": Enace → El Golf",10069f,3
+17688049,1,Simon Bolivar,"C-9 Bus ""Simon Bolivar"": Cruce Sabandía → Av. Independencia → Cruce Sabandía",10069f,3
+17688050,1,Simon Bolivar,"C-9 Bus ""Simon Bolivar"": Cruce Sabandía → Av. Independencia → Cruce Sabandía",10069f,3
+17688051,1,Monterrey - Corbacho,"C-9 Bus ""Monterrey - Corbacho"": Av. La Paz → Av. Paisajista",10069f,3
+17688052,6,Tiabaya - Goyeneche,"C-10 Bus ""Tiabaya - Goyeneche"": Tiabaya → Av. Paucarpata",DF1995,3
+17688053,6,Tiabaya - Goyeneche,"C-10 Bus ""Tiabaya - Goyeneche"": Av. Paucarpata → Tiabaya",DF1995,3
+17688054,6,A,C-10 Bus A: La Mansión del Fundador → Ciudad Blanca,DF1995,3
+17688055,6,D,C-10 Bus D: Av. Paisajista → Av. Los Alpes,DF1995,3
+17688056,6,Sachaca - 7 de Junio,"C-10 Bus ""Sachaca - 7 de junio"": Av. Paucarpata → Alata",DF1995,3
+17688057,6,Tahuaycani,C-10 Bus Tahuaycani: Urb. Micaela Bastidas → Calle Peral,DF1995,3
+17688058,6,13,C-10 Bus 13: Av. Paucarpata → San Hilarión,DF1995,3
+17688059,6,38,C-10 Bus 38: Av. Progreso → Av. Tahuantinsuyo,DF1995,3
+17688060,6,M,C-10 Bus M: Av. Paucarpata → Mansión,DF1995,3
+17688061,8,A: Alto Libertad,"C-11 Bus ""A: Alto Libertad"": Alto Libertad → Plaza de Armas",2F4F4F,3
+17688062,8,A: Pachacutec,"C-11 Bus ""A: Pachacutec"": Av. Estados Unidos→ Semirural Pachacutec",2F4F4F,3
+17688063,8,B: Pachacutec,"C-11 Bus ""B: Pachacutec"": Av. Estados Unidos → Semirural Pachacutec",2F4F4F,3
+17688064,8,M,C-11 Bus M: Avelino → Pachacutec,2F4F4F,3
+17688065,8,Cural,C-11 Bus Cural: El Cural → La Isla,2F4F4F,3
+17688066,8,Uchumayo,C-11 Bus Uchumayo: La Estación de Uchumayo → Av. La Salle,2F4F4F,3
+17688180,9,A: San Jerónimo,"C-5 Bus ""A: San Jerónimo"": Estadio Melgar → San Jerónimo",FF0000,3
+17688206,1,4 de octubre: Feria Altiplano,"C-9 Bus ""4 de octubre: Feria Altiplano"": Feria Altiplano → El Golf",10069f,3
+17688207,9,A: Señor de Huanca,"C-5 Bus ""A: Señor de Huanca"": Estadio Melgar → Señor de Huanca",FF0000,3
+17688208,6,Tahuaycani,C-10 Bus Tahuaycani: Calle Peral → Urb. Micaela Bastidas,DF1995,3
+17688209,8,Cural,C-11 Bus Cural: La Isla → El Cural,2F4F4F,3
+17688210,8,Uchumayo,C-11 Bus Uchumayo: Av. La Salle → La Estación de Uchumayo,2F4F4F,3
+17688229,6,D,C-10 Bus D: Av. Los Alpes → Av. Paisajista,DF1995,3
+21105225,3,4,C-2 Bus 4: Salaverry → Villa Los Milagros,DBD9D1,3
+21105226,3,4,C-2 Bus 4: Villa Los Milagros → Salaverry,DBD9D1,3
+21198645,3,N,C-2 Bus N: Terminal Terrestre → Chachani,DBD9D1,3
+21198646,3,T,C-2 Bus T: Chachani → Terminal Terrestre,DBD9D1,3
+21201201,3,T,C-2 Bus T: Villa Magisterial → Terminal Terrestre,DBD9D1,3
+21201202,3,M,C-2 Bus M: Terminal Terrestre → Villa Magisterial,DBD9D1,3
+21217878,3,H,C-2 Bus H: Villa Los Milagros → Huacsapata,DBD9D1,3
+21222665,3,H,C-2 Bus H: Huacsapata → Villa Los Milagros,DBD9D1,3
+21240657,7,B,C-8 Bus B: Yumina → Independencia,00C996,3
+21240658,7,B,C-8 Bus B: Independencia → Yumina,00C996,3
+21257623,1,4 de octubre: Terminal Terrestre,"C-9 Bus ""4 de octubre: Terminal Terrestre"": El Golf → Feria Altiplano",10069f,3
+21261201,5,P: San José,"C-7 Bus ""P: San José"": San José → Plaza Paucarpata",8D4925,3
+21261202,5,P: San José,"C-7 Bus ""P: San José"": Plaza Paucarpata → San José",8D4925,3
+21261652,5,P: Los Portales de Chiguata,"C-7 Bus ""P: Los Portales de Chiguata"": Avelino → Los Portales de Chiguata",8D4925,3
+21261653,5,P: Los Portales de Chiguata,"C-7 Bus ""P: Los Portales de Chiguata"": Los Portales de Chiguata → Avelino",8D4925,3
+21261724,5,H C,"C-7 Bus ""H C"": Avelino → Huacsapata",8D4925,3
+21261725,5,H C,"C-7 Bus ""H C"": Huacsapata → Avelino",8D4925,3
+21270561,3,AJ,C-2 Bus AJ: Av. Salaverry → AMIFIV,DBD9D1,3
+21270562,3,AJ,C-2 Bus AJ: AMIFIV → Av. Salaverry,DBD9D1,3
+21272960,2,B: Miraflores (Tomasa),"C-4 Bus ""B: Miraflores (Tomasa)"": Terminal Terrestre → Tomasa",FF6900,3
+21272961,2,B: Miraflores (Tomasa),"C-4 Bus ""B: Miraflores (Tomasa)"": Tomasa → Terminal Terrestre",FF6900,3
+21278873,6,Avelino - 7 de junio,"C-10 Bus ""Avelino - 7 de junio"": Avelino → Urb. Micaela Bastidas",DF1995,3
+21278874,6,Avelino - 7 de junio,"C-10 Bus ""Avelino - 7 de junio"": Urb. Micaela Bastidas → Avelino",DF1995,3
+21279058,4,A,C-6 Bus A: Urb. Tahuaycani → Miguel Grau,AFA96E,3
+21279059,4,S,C-6 Bus S: Miguel Grau → Urb. Tahuaycani,AFA96E,3
+21290922,0,A000,C-3 Bus A000: Terminal Terrestre → El Azufral,FEDD00,3
+21290923,0,A000,C-3 Bus A000: El Azufral → Terminal Terrestre,FEDD00,3
+21297016,0,A5,C-3 Bus A5: Las Convenciones → Sector 7 Deán Valdivia,FEDD00,3
+21297017,0,A5,C-3 Bus A5: Sector 7 Deán Valdivia → Las Convenciones,FEDD00,3
+21311675,1,Alto de la luna,"C-9 Bus ""Alto de la luna"": Calle San Agustín → Simón Bolivar",10069f,3
+21311676,1,Alto de la luna,"C-9 Bus ""Alto de la luna"": Simón Bolivar → Calle San Agustín",10069f,3
+21416182,2,7A: Mirador,"C-4 Bus ""7A: Mirador"": Av. Salaverry → El Mirador",FF6900,3
+21416183,2,7A: Mirador,"C-4 Bus ""7A: Mirador"": El Mirador → Av. Salaverry",FF6900,3
+21416255,2,7A: Huarangal,"C-4 Bus ""7A: Huarangal"": Av. Salaverry → Huarangal",FF6900,3
+21416256,2,7A: Huarangal,"C-4 Bus ""7A: Huarangal"": Huarangal → Av. Salaverry",FF6900,3
+21416272,2,7B,C-4 Bus 7B: Av. Salaverry → El Mirador,FF6900,3
+21416273,2,7B,C-4 Bus 7B: El Mirador → Av. Salaverry,FF6900,3
+21417182,0,Casimiro (Terminal Terrestre),"C-3 Bus ""Casimiro (Terminal Terrestre)"": Terminal Terrestre → Casimiro",FEDD00,3
+21417183,0,Casimiro (Terminal Terrestre),"C-3 Bus ""Casimiro (Terminal Terrestre)"": Casimiro → Terminal Terrestre",FEDD00,3
+21420188,10,S: Terminal Terrestre,"C-Albotran Bus ""S: Terminal Terrestre"": Terminal Terrestre → Santa María",FFFFFF,3
+21420189,10,S: Terminal Terrestre,"C-Albotran Bus ""S: Terminal Terrestre"": Santa María → Terminal Terrestre",FFFFFF,3
+21421531,10,S: U. Católica,"C-Albotran Bus ""S: U. Católica"": U. Católica → Santa María",FFFFFF,3
+21421532,10,S: U. Católica,"C-Albotran Bus ""S: U. Católica"": Santa María → U. Católica",FFFFFF,3
+21424135,10,F2,C-Albotran Bus F2: Pachacutec → Santa María,FFFFFF,3
+21424136,10,F2,C-Albotran Bus F2: Santa María → Pachacutec,FFFFFF,3
+21424266,10,R,C-Albotran Bus R: Alto Libertad → Rosaspata,FFFFFF,3
+21424267,10,CB,C-Albotran Bus CB: Rosaspata → Alto Libertad,FFFFFF,3
+21427589,11,P,C-Chiguata Bus P: Calle Espinar → Espiritu Santo,FFFFFF,3
+21427590,11,P,C-Chiguata Bus P: Espiritu Santo → Calle Espinar,FFFFFF,3

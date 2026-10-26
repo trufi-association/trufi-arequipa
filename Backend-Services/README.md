@@ -89,9 +89,11 @@ cp .env.example .env
 | `POSTGRES_PASSWORD` | yes, `docker compose` refuses to start without it | -        | `postgres` (superuser password) and `updater` (connection string) |
 | `POSTGRES_USER`     | no                                         | `root`        | same                                                             |
 | `POSTGRES_DB`       | no                                         | `arequipa_db` | same                                                             |
-| `JWT_KEY`           | yes                                        | -             | `updater` (signs the admin JWT tokens, `JwtSettings:Key`)        |
+| `JWT_KEY`           | yes, at least 32 ASCII characters (HS256)  | -             | `updater` (signs the admin JWT tokens, `JwtSettings:Key`); a shorter key makes the admin login return 500 |
 
 The updater receives its connection string through the `ConnectionStrings__DefaultConnection` environment variable set in `docker-compose.yml`; it overrides the value in `updater/OTP-Updater/appsettings.json`, which deliberately carries no password. The same goes for `JwtSettings__Key` (the key that signs the updater's admin tokens): `appsettings*.json` leave it empty and the compose file sets it from `JWT_KEY`. To run the updater outside Docker, set that variable yourself (or use `dotnet user-secrets`).
+
+Values with `$` or `;` need care: Compose interpolates `$` inside `.env` (write `$$`) and `;` breaks the connection string. Plain letters and digits are safest.
 
 The `postgres` image only applies `POSTGRES_*` when it initialises an **empty** `postgres_data/` directory. Changing the password in `.env` does not change the password of an existing database: change it in the database first (`ALTER USER`), then update `.env` and recreate the `updater` container.
 

@@ -81,7 +81,7 @@ The compose file reads the database credentials from a `.env` file placed next t
 
 ```bash
 cp .env.example .env
-# edit .env and set POSTGRES_PASSWORD
+# edit .env and set POSTGRES_PASSWORD and JWT_KEY
 ```
 
 | Variable            | Required                                   | Default       | Used by                                                          |
@@ -89,8 +89,9 @@ cp .env.example .env
 | `POSTGRES_PASSWORD` | yes, `docker compose` refuses to start without it | -        | `postgres` (superuser password) and `updater` (connection string) |
 | `POSTGRES_USER`     | no                                         | `root`        | same                                                             |
 | `POSTGRES_DB`       | no                                         | `arequipa_db` | same                                                             |
+| `JWT_KEY`           | yes                                        | -             | `updater` (signs the admin JWT tokens, `JwtSettings:Key`)        |
 
-The updater receives its connection string through the `ConnectionStrings__DefaultConnection` environment variable set in `docker-compose.yml`; it overrides the value in `updater/OTP-Updater/appsettings.json`, which deliberately carries no password. To run the updater outside Docker, set that variable yourself (or use `dotnet user-secrets`).
+The updater receives its connection string through the `ConnectionStrings__DefaultConnection` environment variable set in `docker-compose.yml`; it overrides the value in `updater/OTP-Updater/appsettings.json`, which deliberately carries no password. The same goes for `JwtSettings__Key` (the key that signs the updater's admin tokens): `appsettings*.json` leave it empty and the compose file sets it from `JWT_KEY`. To run the updater outside Docker, set that variable yourself (or use `dotnet user-secrets`).
 
 The `postgres` image only applies `POSTGRES_*` when it initialises an **empty** `postgres_data/` directory. Changing the password in `.env` does not change the password of an existing database: change it in the database first (`ALTER USER`), then update `.env` and recreate the `updater` container.
 

@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   otp:
     build:
@@ -40,6 +38,8 @@ services:
       # Overrides ConnectionStrings:DefaultConnection from appsettings.json,
       # which carries no password (ASP.NET Core maps "__" to ":" in
       # environment variable names).
+      # Signs the updater's admin JWTs (JwtSettings:Key); value in ./.env.
+      JwtSettings__Key: "${JWT_KEY:?JWT_KEY is not set - copy .env.example to .env and fill it in}"
       ConnectionStrings__DefaultConnection: "Host=postgres;Database=${POSTGRES_DB:-arequipa_db};Username=${POSTGRES_USER:-root};Password=${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is not set - copy .env.example to .env and fill it in}"
     #ports:
     #  - 5000:5000

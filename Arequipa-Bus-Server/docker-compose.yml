@@ -1,0 +1,51 @@
+version: "3.9"
+
+services:
+  otp:
+    build:
+      context: otp
+      dockerfile: Dockerfile
+    volumes:
+      - ./log:/var/otp
+    #ports:
+    #  - 8080:8080
+    depends_on:
+      updater:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:16.4
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: arequipabus
+      POSTGRES_DB: arequipa_db
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    #ports:
+    #  - 5432:5432
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d arequipa_db -h postgres -p 5432 -U root"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  updater:
+    build: updater
+    restart: unless-stopped
+    #ports:
+    #  - 5000:5000
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5000/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+networks:
+  default:
+    name: trufi-server

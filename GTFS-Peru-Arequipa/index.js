@@ -43,6 +43,12 @@ osmToGtfs({
             return stops.join(" y ")
         },
         routePerRelation: true,
+        // attributions.txt (ODbL chain): the OpenStreetMap contributors row is written by the
+        // builder; these are the organisations behind this feed. LICENSE (ODbL 1.0) is the default.
+        attributions: [
+            { attribution_id: "trufi", organization_name: "Trufi Association", is_producer: 1, attribution_url: "https://www.trufi-association.org/" },
+            { attribution_id: "muni-arequipa", organization_name: "Municipalidad Provincial de Arequipa", is_authority: 1, attribution_url: "https://www.muniarequipa.gob.pe/" },
+        ],
         agencyTimezone: "America/Lima",
         agencyUrl: "https://arequipabus.muniarequipa.gob.pe/",
         defaultFares: { currencyType: "PEN" },

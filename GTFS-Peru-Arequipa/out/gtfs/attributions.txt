@@ -1,0 +1,4 @@
+attribution_id,organization_name,is_producer,is_authority,attribution_url
+osm,OpenStreetMap contributors,1,,https://www.openstreetmap.org/copyright
+trufi,Trufi Association,1,,https://www.trufi-association.org/
+muni-arequipa,Municipalidad Provincial de Arequipa,,1,https://www.muniarequipa.gob.pe/

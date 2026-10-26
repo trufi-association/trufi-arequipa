@@ -231,3 +231,13 @@
 [17688058](https://www.openstreetmap.org/relation/17688058) | C-10 Bus 13: Av. Paucarpata → San Hilarión | 13 | Av. Paucarpata | San Hilarión | ✅
 [17658205](https://www.openstreetmap.org/relation/17658205) | C-10 Bus 38: Av. Tahuantinsuyo → Av. Progreso | 38 | Av. Tahuantinsuyo | Av. Progreso | ✅
 [17688059](https://www.openstreetmap.org/relation/17688059) | C-10 Bus 38: Av. Progreso → Av. Tahuantinsuyo | 38 | Av. Progreso | Av. Tahuantinsuyo | ✅
+
+### License
+
+Data © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors, licensed under the Open Data Commons Open Database License (ODbL) v1.0. This feed is a derivative database of OpenStreetMap, published under the same license (<https://opendatacommons.org/licenses/odbl/1-0/>): the full text is in `LICENSE` next to the GTFS files and inside the zip. The organisations behind the data are listed in `attributions.txt`:
+
+| Organization | Role | Applies to | URL |
+| ------------ | ---- | ---------- | --- |
+| OpenStreetMap contributors | producer | whole feed | https://www.openstreetmap.org/copyright |
+| Trufi Association | producer | whole feed | https://www.trufi-association.org/ |
+| Municipalidad Provincial de Arequipa | authority | whole feed | https://www.muniarequipa.gob.pe/ |

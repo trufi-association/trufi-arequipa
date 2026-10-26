@@ -13,11 +13,11 @@ The **mobile application frontend** for Android and iOS. Built using the Flutter
 
 ### 🔹 [Backend-Services](Backend-Services/README.md)
 This project contains the **server-side services and configurations** required to power the app. It includes:
-- OpenTripPlanner (OTP) for routing
-- Photon for place search
-- Static map tile services
+- OpenTripPlanner (OTP) 1.5 for routing, built from the GTFS feed and an OpenStreetMap extract
+- PostgreSQL and the **updater**, a .NET service that stores the responses of the in-app survey
+- The `docker-compose.yml` that runs those three services together
 
-For full configuration steps, refer to the [Backend-Services README](Backend-Services/README.md).
+Photon (place search) and the static map tiles are **not** part of this folder: they run as separate Docker Compose projects on the production server, next to the NGINX reverse proxy. For full configuration steps, refer to the [Backend-Services README](Backend-Services/README.md).
 
 ### 🔹 [GTFS-Peru-Arequipa](GTFS-Peru-Arequipa/README.md)
 This subproject manages **GTFS data and tools** used to generate the official transit feed of Arequipa. It enables route mapping and feed updates, and the data can be shared with platforms such as **Google Maps**, **OpenStreetMap**, and **OpenTripPlanner**. See the [GTFS-Peru-Arequipa README](GTFS-Peru-Arequipa/README.md) for details.

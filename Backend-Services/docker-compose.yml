@@ -1,0 +1,58 @@
+services:
+  otp:
+    build:
+      context: otp
+      dockerfile: Dockerfile
+    volumes:
+      - ./log:/var/otp
+    #ports:
+    #  - 8080:8080
+    depends_on:
+      updater:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:16.4
+    container_name: postgres_db
+    environment:
+      # Values come from ./.env (copy .env.example). The postgres image only
+      # applies them the first time it initialises an empty postgres_data/.
+      POSTGRES_USER: "${POSTGRES_USER:-root}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is not set - copy .env.example to .env and fill it in}"
+      POSTGRES_DB: "${POSTGRES_DB:-arequipa_db}"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    #ports:
+    #  - 5432:5432
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d ${POSTGRES_DB:-arequipa_db} -h postgres -p 5432 -U ${POSTGRES_USER:-root}"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  updater:
+    build: updater
+    restart: unless-stopped
+    environment:
+      # Overrides ConnectionStrings:DefaultConnection from appsettings.json,
+      # which carries no password (ASP.NET Core maps "__" to ":" in
+      # environment variable names).
+      # Signs the updater's admin JWTs (JwtSettings:Key); value in ./.env.
+      JwtSettings__Key: "${JWT_KEY:?JWT_KEY is not set - copy .env.example to .env and fill it in}"
+      ConnectionStrings__DefaultConnection: "Host=postgres;Database=${POSTGRES_DB:-arequipa_db};Username=${POSTGRES_USER:-root};Password=${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is not set - copy .env.example to .env and fill it in}"
+    #ports:
+    #  - 5000:5000
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5000/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+networks:
+  default:
+    name: trufi-server

@@ -1,4 +1,4 @@
-# Arequipa Bus - Server
+# Arequipa Bus - Backend Services
 ## Introduction
 
 The server structure is based on Docker and NGINX due to their security management and scalability. For this reason, each service should be considered a Docker module/container that is added to the NGINX service.
@@ -7,11 +7,29 @@ The server structure is based on Docker and NGINX due to their security manageme
 
 <img src="./Diagram/structure.png" hspace="20"/>
 
+## What this folder contains
+
+| Path | What it is |
+|------|------------|
+| `docker-compose.yml` | Runs the three services below on one Docker network (`trufi-server`). |
+| `otp/` | OpenTripPlanner **1.5.0** (Java 8). `Dockerfile` (base image `eclipse-temurin:8-jre`), `run.sh` (builds `Graph.obj` on the first start and serves it afterwards) and `data/` with the inputs: `gtfs.zip`, `arequipa.osm.pbf`, `otp-config.json`, `router-config.json`. |
+| `updater/` | **Updater**, a .NET 8 web API (`OTP-Updater`) that stores the responses of the in-app survey in PostgreSQL (`/Survey/...`), has an admin login with JWT (`/Auth/...`) and exposes `/health`. Its EF Core migrations run automatically at start. |
+| `Diagram/` | The pictures used in this README. |
+| `.env.example` | Template for the secrets the compose file needs. See [Configuration and secrets](#configuration-and-secrets). |
+
+### What this folder does not contain
+
+The production server also runs, each one as its own Docker Compose project outside this repository:
+
+- the NGINX reverse proxy with TLS, built with [Trufi Server](https://github.com/trufi-association/trufi-server) (see [Configuration - Nginx](#configuration---nginx));
+- **Photon** for place search (`/photon`);
+- the **static map tiles** (`/static-maps/...`);
+- the WordPress site served at the root of the domain.
+
 ## Modules
 - OpenTripPlanner: It is the main service of the server; it calculates the most suitable route for a query.
-- Updater: It is responsible for handling queries for services with different purposes.
+- Updater: It is responsible for handling queries for services with different purposes (today, the in-app survey).
 - Postgres: It is the database that records the necessary data for the app.
-- Wordpress
 
 ### OpenTripPlanner
 
@@ -57,6 +75,25 @@ Use the approximate boundaries of Arequipa
 osmosis --read-pbf peru-latest.osm.pbf --bounding-box top=-16.28546234927424 left=-71.68530956865706 bottom=-16.577267400595446 right=-71.44366525499784 --write-pbf arequipa.osm.pbf
 ```
 
+## Configuration and secrets
+
+The compose file reads the database credentials from a `.env` file placed next to `docker-compose.yml`. The file is ignored by git: never commit it.
+
+```bash
+cp .env.example .env
+# edit .env and set POSTGRES_PASSWORD
+```
+
+| Variable            | Required                                   | Default       | Used by                                                          |
+|---------------------|--------------------------------------------|---------------|------------------------------------------------------------------|
+| `POSTGRES_PASSWORD` | yes, `docker compose` refuses to start without it | -        | `postgres` (superuser password) and `updater` (connection string) |
+| `POSTGRES_USER`     | no                                         | `root`        | same                                                             |
+| `POSTGRES_DB`       | no                                         | `arequipa_db` | same                                                             |
+
+The updater receives its connection string through the `ConnectionStrings__DefaultConnection` environment variable set in `docker-compose.yml`; it overrides the value in `updater/OTP-Updater/appsettings.json`, which deliberately carries no password. To run the updater outside Docker, set that variable yourself (or use `dotnet user-secrets`).
+
+The `postgres` image only applies `POSTGRES_*` when it initialises an **empty** `postgres_data/` directory. Changing the password in `.env` does not change the password of an existing database: change it in the database first (`ALTER USER`), then update `.env` and recreate the `updater` container.
+
 ## Configuration - Nginx
 
 For server configuration, we can use the application [Trufi Server](https://github.com/trufi-association/trufi-server) provided by Trufi to manage the different services, adding the necessary extensions to the NGINX configuration file.
@@ -76,7 +113,8 @@ To start the server installation, the only requirement is that Docker is install
 
 ### Preparation
 
-The files (GTFS and PBF) must be located in the directory `otp/data`.
+1. Create the `.env` file as described in [Configuration and secrets](#configuration-and-secrets).
+2. The files (GTFS and PBF) must be located in the directory `otp/data`.
 
 <img src="./Diagram/gtfs-pbf-folder.png" hspace="20"/>
 

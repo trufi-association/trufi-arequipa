@@ -52,3 +52,13 @@ To specify routes, operation times, and other local options, you can change the 
 - [ ] To build or add streets, type and inside the “return.stops.join" element.
 
 - [ ] You have a section in your code called “stops”. If a stop name is unknown, type unknown in this section so that the map does not output an incorrect street name. 
+
+### Running without Overpass
+
+`node index.js` downloads the OSM data from `www.overpass-api.de`, which answers 502 "at capacity" when loaded. To run offline (or in CI) point `OSM_PBF` at an `.osm.pbf` extract that covers the city with margin (for example a Geofabrik Peru extract clipped with `osmium extract -b -71.75,-16.65,-71.30,-16.20`):
+
+```bash
+OSM_PBF=/path/to/arequipa.osm.pbf node index.js
+```
+
+The output is the same as from Overpass as long as the extract is as recent as the relations you expect.

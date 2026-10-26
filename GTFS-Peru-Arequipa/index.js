@@ -1,50 +1,13 @@
 const { osmToGtfs, OSMOverpassDownloader } = require('trufi-gtfs-builder')
 
-// The default routeBuilder cuts the OSM relation `name` at the FIRST ":" to
-// build `route_long_name`. Arequipa route codes contain colons themselves,
-// so e.g. `C-9 Bus "3 de octubre: B": La Campiña II → Parque Selva Alegre`
-// was truncated to `C-9 Bus "3 de octubre`. We override the builder to use
-// `from`, `to` and `ref` properties to build the long name. The library 
-// exposes this through the supported `gtfsBuilders` config option, so 
-// no fork/patch is needed.
-const gtfsBuildersModule = require('trufi-gtfs-builder/dist/geojson_to_gtfs/gtfsBuilders')
-const { routeBuilder: defaultRouteBuilder } = gtfsBuildersModule.default || gtfsBuildersModule
-
-function splitRouteName(properties) {
-    const from = (properties.from || '').trim()
-    const to = (properties.to || '').trim()
-    const ref = (properties.ref || '').trim()
-
-    return `Bus ${ref}: ${from} → ${to}`
-}
-
-function routeBuilder(features, options) {
-    const routes = defaultRouteBuilder(features, options)
-
-    const longNameByKey = new Map()
-    for (const feature of features) {
-        const properties = feature[0].properties
-        const key = properties.id
-        if (!longNameByKey.has(key)) longNameByKey.set(key, splitRouteName(properties))
-    }
-
-    for (const route of routes) {
-        const key = route.route_id
-        if (longNameByKey.has(key)) route.route_long_name = longNameByKey.get(key)
-    }
-
-    return routes
-}
-
 osmToGtfs({
-    gtfsBuilders: { routeBuilder },
-    outputFiles: { outputDir: __dirname + '/out', trufiTPData: true, gtfs: true,routes: true,},
+    outputFiles: { outputDir: __dirname + '/out', trufiTPData: true, gtfs: true, gtfsZip: true, routes: true },
     geojsonOptions: {
         osmDataGetter: new OSMOverpassDownloader({
-            south: -16.489733,
-            west: -71.622937,
-            north: -16.303315,
-            east: -71.453335,
+            south: -16.489732,
+            west: -71.622936,
+            north: -16.303314,
+            east: -71.453334,
         }), skipRoute: (route) => {
             // Skip relations tagged as disused bus routes
             if (route.tags['disused:route'] === 'bus') {
@@ -58,7 +21,21 @@ osmToGtfs({
     },
     gtfsOptions: {
         stopsConfig: () => ({ mode: "fakeStops" }),
-        vehicleSpeed: () => 50,
+        // Fallback only: every relation carries duration=* in OSM (2.16 honors it).
+        // 50 is the library's uncalibrated placeholder; measured implied speed in Arequipa is ~13 km/h.
+        vehicleSpeed: () => 20,
+        // Trust OSM duration=* unless it implies a walking-pace bus (< 6 km/h): that is a
+        // tagging mistake (e.g. duration=120 on a 9 km line), not a running time. Those
+        // relations fall back to vehicleSpeed and are reported so the tag gets fixed in OSM.
+        tripDuration: (route, osmSeconds, lengthMeters) => {
+            if (osmSeconds === undefined) return undefined
+            const kmh = (lengthMeters / 1000) / (osmSeconds / 3600)
+            if (kmh < 6) {
+                console.warn(`duration=* on relation ${route.properties.id} (${route.properties.name}) implies ${kmh.toFixed(1)} km/h; ignoring it`)
+                return undefined
+            }
+            return osmSeconds
+        },
         stopNameBuilder: (stops) => {
             if (!stops || stops.length == 0) {
                 stops = ["Innominada"]
@@ -67,18 +44,21 @@ osmToGtfs({
         },
         routePerRelation: true,
         agencyTimezone: "America/Lima",
-        agencyUrl: "https://arequipabus.app/",
+        agencyUrl: "https://arequipabus.muniarequipa.gob.pe/",
         defaultFares: { currencyType: "PEN" },
         feed: {
-            publisherUrl: "https://arequipabus.app",
-            publisherName: "Arequipa Bus",
+            publisherUrl: "https://github.com/trufi-association/trufi-arequipa/tree/main/GTFS-Peru-Arequipa",
+            publisherName: "Trufi Association",
             lang: "es",
             version: new Date().toUTCString(),
-            contactEmail: "email@arequipabus.app",
-            contactUrl: "http://support.arequipabus.app",
+            contactEmail: "feedback@trufi.app",
+            contactUrl: "https://arequipabus.muniarequipa.gob.pe/form",
             startDate: "20000101",
             endDate: "21000101",
             id: "arequipa-pe"
         }
     }
-}).catch(error => console.error(error))
+}).catch(error => {
+    console.error(error)
+    process.exitCode = 1   // a failed run (e.g. Overpass at capacity) must not look like a success
+})

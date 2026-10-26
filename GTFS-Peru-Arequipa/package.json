@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "trufi-gtfs-builder": "github:trufi-association/trufi-gtfs-builder"
+    "trufi-gtfs-builder": "github:trufi-association/trufi-gtfs-builder#v2.16.0"
   }
 }

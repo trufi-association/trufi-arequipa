@@ -62,6 +62,12 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  # Pins the Swift Package Manager integration that ios/ already carries, so every
+  # machine resolves the same plugin split (SwiftPM where supported, CocoaPods
+  # fallback otherwise) regardless of its global `flutter config`.
+  config:
+    enable-swift-package-manager: true
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

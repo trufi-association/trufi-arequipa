@@ -99,86 +99,86 @@ abstract class ABAboutLocalization {
 
   /// A short marketing sentence that describes the app
   ///
-  /// In de, this message translates to:
-  /// **'Trufi Association is an international NGO that promotes easier access to public transport. Our apps help everyone find the best way to get from point A to point B within their cities.\n\nIn many cities there are no official maps, routes, apps or timetables. So we compile the available information, and sometimes even map routes from scratch working with local people who know the city.  An easy-to-use transportation system contributes to greater sustainability, cleaner air and a better quality of life.'**
+  /// In es, this message translates to:
+  /// **'Trufi Association es una ONG internacional que promueve un acceso más fácil al transporte público. Nuestras aplicaciones ayudan a que todos puedan encontrar la mejor manera de ir de un punto A a un punto B dentro de sus ciudades.\n\nEn muchas ciudades no existen mapas, aplicaciones ni horarios oficiales. Nosotros nos encargamos de completarlos, y a veces incluso trazamos rutas desde cero. Un sistema de transporte bien diseñado contribuye a una mayor sostenibilidad, un aire más limpio y una mejor calidad de vida.'**
   String get aboutCollapseContent;
 
   /// No description provided for @aboutCollapseContentFoot.
   ///
-  /// In de, this message translates to:
-  /// **'We need mappers, developers, planners, testers, and many other hands.'**
+  /// In es, this message translates to:
+  /// **'Forma parte de nuestro equipo de voluntarios. Necesitamos mapeadores, desarrolladores, planificadores, testers y otras manos más.'**
   String get aboutCollapseContentFoot;
 
   /// No description provided for @aboutCollapseTitle.
   ///
-  /// In de, this message translates to:
-  /// **'More About Trufi Association'**
+  /// In es, this message translates to:
+  /// **'Más sobre Trufi Association'**
   String get aboutCollapseTitle;
 
   /// Text displayed on the about page
   ///
-  /// In de, this message translates to:
-  /// **'Du musst irgendwo hin und weißt nicht, welchen Trufi oder Bus Du nehmen sollst?\nDie {appName} macht es einfach!\n\nDie Trufi Association ist ein Team aus Bolivien und aus aller Welt. Wir lieben La Llajta und die öffentlichen Verkehrsmittel, deshalb haben wir diese Anwendung entwickelt, um den ÖPNV zugänglicher zu machen. Unser Ziel ist es, Dir ein praktisches Werkzeug an die Hand zu geben, mit dem Du Dich sicher bewegen kannst.\n\nWir sind bestrebt, die {appName} ständig zu verbessern, um Dir immer richtige und nützliche Informationen bereitstellen zu können. Wir wissen, dass das Verkehrssystem in {city} aus verschiedenen Gründen ständig im Wandel ist und es so möglich ist, dass einige Routen nicht ganz aktuell sind.\n\nUm die {appName} zu einem effektiven Werkzeug zu machen, sind wir auf Deine Mitarbeit angewiesen. Wenn Dir Änderungen an einigen Routen oder Haltestellen bekannt sind, bitten wir Dich, diese Informationen mit uns zu teilen. Dein Beitrag trägt nicht nur dazu bei, die App auf dem neuesten Stand zu halten, sondern kommt auch anderen Nutzern zugute, die sich auf die {appName} verlassen.\n\nVielen Dank, dass Du die {appName} dazu nutzt, um Dich in {city} fortzubewegen. Wir hoffen, dass Du Deine Zeit mit uns genießt!'**
+  /// In es, this message translates to:
+  /// **'¿Necesitas ir a algún lugar y no sabes qué ruta de bus tomar? ¡Con Arequipa Bus, es más fácil!\n\nArequipa Bus es un aplicativo desarrollado por la Municipalidad de Arequipa en colaboración con la Oficina de Cooperación Internacional GIZ y con datos proporcionados por la Gerencia de Transporte. Utilizamos la tecnología de la Asociación Trufi de Alemania para que moverse por nuestra ciudad sea sencillo y cómodo. Nuestro objetivo es ofrecerte una herramienta práctica que te permita navegar por Arequipa con confianza.\n\nEstamos comprometidos con la mejora continua de Arequipa Bus para brindarte información cada vez más precisa y útil. Sabemos que el sistema de transporte en Arequipa puede experimentar cambios debido a diversas razones, por lo que es posible que algunas rutas no estén completamente actualizadas.\n\nPara hacer de Arequipa Bus una herramienta aún más efectiva, confiamos en la colaboración de nuestros usuarios. Si conoces cambios en algunas rutas o paradas, te animamos a compartir esta información con nosotros. Tu contribución no solo ayudará a mantener la aplicación al día, sino que también beneficiará a otros usuarios que dependen de Arequipa Bus para moverse por la ciudad.\n\nGracias por elegir Arequipa Bus para tus desplazamientos en Arequipa. ¡Esperamos que disfrutes de la experiencia con nosotros!'**
   String aboutContent(Object appName, Object city);
 
   /// Button label to show licenses
   ///
-  /// In de, this message translates to:
-  /// **'Lizenzen'**
+  /// In es, this message translates to:
+  /// **'Licencias'**
   String get aboutLicenses;
 
   /// A note about open source
   ///
-  /// In de, this message translates to:
-  /// **'Diese App ist als Open Source auf GitHub veröffentlicht. Wir freuen uns, wenn Du zum Code beiträgst oder eine App für Deine eigene Stadt entwickelst.'**
+  /// In es, this message translates to:
+  /// **'Esta aplicación está publicada como código abierto en GitHub. Siéntase libre de contribuir  o utilizarlo para su propia ciudad.'**
   String get aboutOpenSource;
 
   /// Title of the disclaimer section in the About page
   ///
-  /// In de, this message translates to:
-  /// **'Zu den angezeigten Informationen'**
+  /// In es, this message translates to:
+  /// **'Sobre la información mostrada'**
   String get disclaimerTitle;
 
   /// Body of the disclaimer section: estimates, deviations, closed streets
   ///
-  /// In de, this message translates to:
-  /// **'Die Fahrzeiten sind Schätzungen auf Basis der geplanten Routen.\nFahrzeuge können von ihrer Route abweichen oder Haltestellen auslassen.\nStraßen können ohne Vorankündigung gesperrt oder blockiert sein (Baustellen, Sperrungen durch Anwohner).\nNutze die Ergebnisse als Orientierung und plane einen Zeitpuffer ein.'**
+  /// In es, this message translates to:
+  /// **'Los tiempos de viaje son estimados a partir de las rutas planificadas.\nLos vehículos pueden desviarse de su ruta o no detenerse en todas las paradas.\nLas calles pueden estar cerradas u obstruidas (obras, cierres vecinales) sin previo aviso.\nUsa los resultados como referencia y considera un margen de tiempo para tu viaje.'**
   String get disclaimerContent;
 
   /// One-line notice under the list of itineraries
   ///
-  /// In de, this message translates to:
-  /// **'Geschätzte Zeiten. Routen können abweichen und Straßen gesperrt sein.'**
+  /// In es, this message translates to:
+  /// **'Tiempos estimados. Las rutas pueden tener desvíos y las calles pueden estar cerradas.'**
   String get resultsDisclaimer;
 
   /// Menu item that shows the about page
   ///
-  /// In de, this message translates to:
-  /// **'Über Uns'**
+  /// In es, this message translates to:
+  /// **'Sobre nosotros'**
   String get menuAbout;
 
   /// A short marketing sentence that describes the app
   ///
-  /// In de, this message translates to:
-  /// **'Öffentliche Verkehrsmittel in {city}'**
+  /// In es, this message translates to:
+  /// **'Transporte público en {city}'**
   String tagline(Object city);
 
   /// No description provided for @trufiWebsite.
   ///
-  /// In de, this message translates to:
-  /// **'Trufi Association Website'**
+  /// In es, this message translates to:
+  /// **'Sitio web de Trufi Association'**
   String get trufiWebsite;
 
   /// The application's version
   ///
-  /// In de, this message translates to:
-  /// **'Version {version}'**
+  /// In es, this message translates to:
+  /// **'Versión {version}'**
   String version(Object version);
 
   /// No description provided for @volunteerTrufi.
   ///
-  /// In de, this message translates to:
-  /// **'Volunteer For Trufi'**
+  /// In es, this message translates to:
+  /// **'Voluntariados para Trufi'**
   String get volunteerTrufi;
 }
 

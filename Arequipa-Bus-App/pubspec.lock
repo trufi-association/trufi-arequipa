@@ -878,8 +878,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "1.0.1-arequipa-lts"
-      resolved-ref: fa88607ea6b73673ab8958314dadc86134ec64d6
+      ref: "24199662175171634762fb1eda631d80be7bed7e"
+      resolved-ref: "24199662175171634762fb1eda631d80be7bed7e"
       url: "https://github.com/trufi-association/trufi-core.git"
     source: git
     version: "4.2.0"

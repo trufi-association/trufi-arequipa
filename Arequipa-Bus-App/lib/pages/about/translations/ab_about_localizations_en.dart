@@ -1,4 +1,8 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ab_about_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for English (`en`).
 class ABAboutLocalizationEn extends ABAboutLocalization {
@@ -23,6 +27,15 @@ class ABAboutLocalizationEn extends ABAboutLocalization {
 
   @override
   String get aboutOpenSource => 'This app is released as open source on GitHub. Feel free to contribute to the code, or bring an app to your own city.';
+
+  @override
+  String get disclaimerTitle => 'About the information shown';
+
+  @override
+  String get disclaimerContent => 'Travel times are estimates calculated from the planned routes.\nVehicles may deviate from their route or skip stops.\nStreets can be closed or obstructed (works, neighbourhood closures) without notice.\nUse the results as a guide and allow extra time for your trip.';
+
+  @override
+  String get resultsDisclaimer => 'Estimated times. Routes may deviate and streets may be closed.';
 
   @override
   String get menuAbout => 'About us';

@@ -39,7 +39,9 @@ dependencies:
     git:
       url: https://github.com/trufi-association/trufi-core.git
       # LTS de Arequipa + fixes de compatibilidad con Flutter 3.44
-      ref: 1.0.1-arequipa-lts
+      # arequipa-lts/56 (HomePage.itinerariesFooterBuilder, #56); retag as
+      # 1.0.2-arequipa-lts once the core PR is merged
+      ref: "24199662175171634762fb1eda631d80be7bed7e"
   # trufi_core:
   #   path: ../../trufi-core
   flutter_bloc: ^8.1.6

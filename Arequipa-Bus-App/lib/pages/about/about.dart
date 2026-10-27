@@ -96,6 +96,19 @@ class ABAboutPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 24),
+                // #56: what the rider should not take for granted.
+                TrufiExpansionTile(
+                  title: localizationA.disclaimerTitle,
+                  typeTitle: ExpansionTileTitleType.secondary,
+                  body: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 4),
+                    child: Text(
+                      '${localizationA.disclaimerContent}\n',
+                      style: TrufiExpansionTile.styleTextContent,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 24),
                 TrufiExpansionTile(
                   title: localizationA.aboutCollapseTitle,
                   typeTitle: ExpansionTileTitleType.secondary,

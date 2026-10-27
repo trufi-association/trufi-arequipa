@@ -9,11 +9,16 @@ class SurveyHiveLocalRepository {
   static const _surveyKey = '_surveyKey';
   static const _countKey = '_count';
   static const String path = "SurveyHiveLocalRepository";
-  late Box _box;
 
-  Future<void> loadRepository() async {
-    _box = Hive.box(path);
-  }
+  /// The box is opened once in main() (initHiveForFlutter); every instance
+  /// reads it on demand. A `late` field assigned by loadRepository() threw
+  /// LateInitializationError on each cold start, because the post-frame
+  /// callback that reads the survey counter never called it (#71).
+  Box get _box => Hive.box(path);
+
+  /// Kept for callers that still open the repository explicitly; the box is
+  /// resolved lazily so there is nothing left to do here.
+  Future<void> loadRepository() async {}
 
   Future<void> saveSurvey(Map<String, dynamic> data) async {
     await _box.put(_surveyKey, jsonEncode(data));

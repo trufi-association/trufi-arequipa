@@ -31,12 +31,19 @@ class LifecycleReactorNotifications2 implements LifecycleReactorHandler {
         .then((value) => null)
         .catchError((error) {});
 
+    // Survey prompt: count this start and ask only on starts 2 to
+    // maxSurveyPrompts + 1, never once the survey was submitted (rule and cap
+    // in SurveyHiveLocalRepository.shouldShowSurvey).
     WidgetsBinding.instance.addPostFrameCallback(
       (_) async {
-        var currentCount = await SurveyHiveLocalRepository().getCount();
-        if (currentCount == 0) {
-          await SurveyHiveLocalRepository().saveCount(currentCount + 1);
-        } else {
+        final repository = SurveyHiveLocalRepository();
+        final startCount = await repository.getCount() + 1;
+        await repository.saveCount(startCount);
+        final shouldShow = SurveyHiveLocalRepository.shouldShowSurvey(
+          startCount: startCount,
+          completed: await repository.isCompleted(),
+        );
+        if (shouldShow && context.mounted) {
           SurveyModal.showAdvancedModal(context);
         }
       },

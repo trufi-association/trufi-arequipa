@@ -8,17 +8,32 @@ import 'package:hive/hive.dart';
 class SurveyHiveLocalRepository {
   static const _surveyKey = '_surveyKey';
   static const _countKey = '_count';
+  static const _completedKey = '_completed';
   static const String path = "SurveyHiveLocalRepository";
 
+  /// How many cold starts open the survey modal on their own. The first start
+  /// never asks; the next [maxSurveyPrompts] starts do; after that the survey
+  /// is only reachable from its button. This is a default: change it here if
+  /// the municipality wants the survey offered more or fewer times.
+  static const int maxSurveyPrompts = 3;
+
   /// The box is opened once in main() (initHiveForFlutter); every instance
-  /// reads it on demand. A `late` field assigned by loadRepository() threw
-  /// LateInitializationError on each cold start, because the post-frame
+  /// reads it on demand. A `late` field assigned by a loadRepository() call
+  /// threw LateInitializationError on each cold start, because the post-frame
   /// callback that reads the survey counter never called it (#71).
   Box get _box => Hive.box(path);
 
-  /// Kept for callers that still open the repository explicitly; the box is
-  /// resolved lazily so there is nothing left to do here.
-  Future<void> loadRepository() async {}
+  /// Whether the start-up reactor should open the survey modal on this start.
+  /// [startCount] is the number of cold starts including the current one (the
+  /// reactor increments it before asking); [completed] is [isCompleted].
+  /// Pure, so the rule can be tested without Hive.
+  static bool shouldShowSurvey({
+    required int startCount,
+    required bool completed,
+  }) {
+    if (completed) return false;
+    return startCount >= 2 && startCount <= maxSurveyPrompts + 1;
+  }
 
   Future<void> saveSurvey(Map<String, dynamic> data) async {
     await _box.put(_surveyKey, jsonEncode(data));
@@ -38,6 +53,17 @@ class SurveyHiveLocalRepository {
       return 0;
     }
     return _box.get(_countKey) as int;
+  }
+
+  /// True once the last question reached the server (SurveyCubit.updateSurvey
+  /// sets it); from then on the reactor never opens the modal again.
+  Future<bool> isCompleted() async {
+    if (!_box.containsKey(_completedKey)) return false;
+    return _box.get(_completedKey) as bool;
+  }
+
+  Future<void> markCompleted() async {
+    await _box.put(_completedKey, true);
   }
 
   static Future<void> migrationSurveyOldData() async {

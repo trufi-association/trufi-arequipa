@@ -153,6 +153,7 @@ class _SurveyModalState extends State<SurveyModal> {
           surveyQuestion: currentQuestion,
           nextSurveyQuestion: isLast ? currentQuestion : questions[index + 1],
           surveyOptions: selectedOptions,
+          completesSurvey: isLast,
         );
         if (isLast) {
           Navigator.of(context).pop();

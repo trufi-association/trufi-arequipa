@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node --test tools/**/*.test.js",
+    "test": "node --test \"tools/**/*.test.js\"",
     "stops-review": "node tools/stops-review.js"
   },
   "author": "",

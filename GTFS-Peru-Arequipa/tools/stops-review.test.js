@@ -103,11 +103,27 @@ test('buildRows: one row per node and per way, nodes first, with route membershi
     assert.equal(byId[1245983469].lon, -71.5417543)
     assert.equal(byId[1245983469].osm_url, 'https://www.openstreetmap.org/way/1245983469')
     assert.equal(byId[1245983469].operator, 'TransCayma S.A.C.')
-    assert.equal(byId[10866662527].name, 'Grifo "San Fernando", esq. Av. Dolores')
+    assert.equal(byId[10866662527].name, 'Grifo San Fernando')
     assert.equal(byId[10866662527].operator, 'Integra Arequipa S.A.C.')
     assert.equal(byId[10866662527].osm_url, 'https://www.openstreetmap.org/node/10866662527')
     assert.equal(byId[5777925904].highway, '')
     assert.equal(byId[5777925904].name, '')
+})
+
+test('buildRows: malformed elements (no tags, no members, no centre) produce rows, not exceptions', () => {
+    const rows = buildRows([
+        { type: 'node', id: 1, lat: -16.4, lon: -71.5 },
+        { type: 'relation', id: 2, tags: { type: 'route', route: 'bus', ref: 'X' } },
+        { type: 'relation', id: 3 },
+        { type: 'way', id: 4, tags: { public_transport: 'platform', bus: 'yes' } },
+    ])
+    assert.equal(rows.length, 2)
+    assert.deepEqual(rows.map((r) => [r.osm_type, r.osm_id, r.class, r.route_relations]), [['node', 1, CLASSES.UNKNOWN, 0], ['way', 4, CLASSES.UNKNOWN, 0]])
+    assert.equal(rows[1].lat, undefined, 'a way without centre has no coordinates')
+    const csvLines = toCsv(rows).slice(1).split('\n')
+    assert.equal(csvLines[2], '4,way,,,sin clasificar,,,platform,yes,,,,,,,,,,0,,https://www.openstreetmap.org/way/4')
+    const fc = JSON.parse(toGeoJson(rows))
+    assert.equal(fc.features[1].geometry, null, 'RFC 7946 allows a null geometry rather than a made-up point')
 })
 
 test('toCsv: header, one line per row, RFC 4180 quoting, UTF-8 kept', () => {
@@ -118,8 +134,9 @@ test('toCsv: header, one line per row, RFC 4180 quoting, UTF-8 kept', () => {
     assert.equal(lines[0], 'osm_id,osm_type,lat,lon,class,name,highway,public_transport,bus,shelter,bench,sign,traffic_sign,covered,lit,bin,operator,network,route_relations,routes,osm_url')
     assert.equal(lines.length, rows.length + 2, 'header + rows + trailing newline')
     assert.equal(lines.at(-1), '')
-    const quoted = lines.find((l) => l.startsWith('10866662527,'))
-    assert.ok(quoted.includes(',"Grifo ""San Fernando"", esq. Av. Dolores",'), 'comma and quotes force quoting, quotes doubled')
+    const synthetic = toCsv([{ ...rows[0], name: 'Grifo "San Fernando", esq. Av. Dolores', operator: 'line\nbreak' }]).slice(1).split('\n')
+    assert.ok(synthetic[1].includes(',"Grifo ""San Fernando"", esq. Av. Dolores",'), 'comma and quotes force quoting, quotes doubled')
+    assert.ok(synthetic[1].includes(',"line\nbreak",') || synthetic.join('\n').includes(',"line\nbreak",'), 'a line break is quoted too')
     const signed = lines.find((l) => l.startsWith('4058968456,'))
     assert.equal(signed, '4058968456,node,-16.3982259,-71.5239466,señalizada,Muñoz Najar,bus_stop,stop_position,yes,no,no,yes,,,no,no,,,2,C-3; Línea sin ref: Terminal → Centro,https://www.openstreetmap.org/node/4058968456', 'a semicolon needs no quoting')
     const bare = lines.find((l) => l.startsWith('4709194470,'))

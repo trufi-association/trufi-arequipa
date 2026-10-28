@@ -162,10 +162,19 @@ function csvField(value) {
     return /[",\r\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s
 }
 
+// The BOM makes Excel open the file as UTF-8 on double-click (otherwise "Muñoz" becomes "MuÃ±oz"
+// on Windows); LibreOffice and every GIS tool ignore it.
+const UTF8_BOM = '﻿'
+
 function toCsv(rows) {
     const lines = [CSV_COLUMNS.join(',')]
     for (const row of rows) lines.push(CSV_COLUMNS.map((c) => csvField(row[c])).join(','))
-    return lines.join('\n') + '\n'
+    return UTF8_BOM + lines.join('\n') + '\n'
+}
+
+// RFC 7946 §5: bbox is a reserved member, a numeric array [west, south, east, north].
+function geoJsonBbox(b = bounds) {
+    return [b.west, b.south, b.east, b.north]
 }
 
 // One feature per line: readable diffs when the inventory is regenerated.
@@ -365,7 +374,8 @@ async function run(argv, { env = process.env, write = (s) => process.stdout.writ
     const csvPath = path.join(outDir, 'stops-review.csv')
     const geojsonPath = path.join(outDir, 'stops-review.geojson')
     fs.writeFileSync(csvPath, toCsv(rows))
-    fs.writeFileSync(geojsonPath, toGeoJson(rows, { osm_base: osmBase, bbox: bboxString(bounds), generated: new Date().toISOString() }))
+    // No run timestamp in the header: osm_base dates the data, and a rerun on unchanged data must diff empty.
+    fs.writeFileSync(geojsonPath, toGeoJson(rows, { osm_base: osmBase, bbox: geoJsonBbox(bounds) }))
     const summary = summarize(rows)
     write(formatSummary(summary, { osmBase, source }))
     write(`\nEscrito ${csvPath} y ${geojsonPath}\n`)
@@ -380,7 +390,7 @@ if (require.main === module) {
 }
 
 module.exports = {
-    CLASSES, CLASS_ORDER, CSV_COLUMNS, DEFAULT_OVERPASS_URLS, OverpassQueryError,
-    buildQuery, classify, indexRouteMembership, buildRows, toCsv, toGeoJson,
+    CLASSES, CLASS_ORDER, CSV_COLUMNS, DEFAULT_OVERPASS_URLS, OverpassQueryError, UTF8_BOM,
+    buildQuery, classify, indexRouteMembership, buildRows, toCsv, toGeoJson, geoJsonBbox,
     summarize, formatSummary, fetchOverpass, endpointsFromEnv, baseAgeDays, STALE_AFTER_DAYS, run,
 }

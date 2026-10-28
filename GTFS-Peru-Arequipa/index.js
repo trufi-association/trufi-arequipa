@@ -1,15 +1,11 @@
 const { osmToGtfs, OSMOverpassDownloader, OSMPBFReader } = require('trufi-gtfs-builder')
+const bounds = require('./bbox')
 
 // Source of the OSM data. Overpass (live) by default; set OSM_PBF=<path to an .osm.pbf
 // extract covering the city> to run offline or when www.overpass-api.de is at capacity.
 const osmDataGetter = process.env.OSM_PBF
     ? new OSMPBFReader(process.env.OSM_PBF)
-    : new OSMOverpassDownloader({
-        south: -16.489732,
-        west: -71.622936,
-        north: -16.303314,
-        east: -71.453334,
-    })
+    : new OSMOverpassDownloader(bounds)
 
 osmToGtfs({
     outputFiles: { outputDir: __dirname + '/out', trufiTPData: true, gtfs: true, gtfsZip: true, routes: true },

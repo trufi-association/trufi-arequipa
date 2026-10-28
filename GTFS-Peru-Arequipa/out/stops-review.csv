@@ -1,0 +1,384 @@
+osm_id,lat,lon,class,name,highway,public_transport,bus,shelter,bench,sign,traffic_sign,covered,lit,bin,operator,network,route_relations,routes,osm_url
+4055499733,-16.4041229,-71.5272475,infraestructura,Paucarpata,bus_stop,platform,yes,yes,yes,,,,yes,yes,,,0,,https://www.openstreetmap.org/node/4055499733
+4058234279,-16.4199782,-71.516805,infraestructura,,bus_stop,platform,yes,yes,yes,yes,,,yes,no,,,0,,https://www.openstreetmap.org/node/4058234279
+4058968456,-16.3982259,-71.5239466,señalizada,Muñoz Najar,bus_stop,stop_position,yes,no,no,yes,,,no,no,,,0,,https://www.openstreetmap.org/node/4058968456
+4071921655,-16.3732141,-71.5369885,sin clasificar,,bus_stop,,,,,,,,,,,,0,,https://www.openstreetmap.org/node/4071921655
+4073461209,-16.3889674,-71.5260418,infraestructura,,bus_stop,platform,yes,yes,yes,no,,,,,,,0,,https://www.openstreetmap.org/node/4073461209
+4096497571,-16.4019873,-71.5286614,señalizada,Goyeneche,bus_stop,stop_position,yes,no,no,yes,,,,,,,0,,https://www.openstreetmap.org/node/4096497571
+4096508393,-16.4123982,-71.5385288,infraestructura,,bus_stop,platform,,yes,yes,yes,,,,,,,0,,https://www.openstreetmap.org/node/4096508393
+4096522855,-16.4078901,-71.5390018,sin clasificar,,bus_stop,,,,,,,,,,,,0,,https://www.openstreetmap.org/node/4096522855
+4106720367,-16.4082508,-71.5159813,sin clasificar,,bus_stop,,,,,,,,,,,,0,,https://www.openstreetmap.org/node/4106720367
+4106850936,-16.3935752,-71.5374955,sin clasificar,,bus_stop,,,,,,,,,,,,0,,https://www.openstreetmap.org/node/4106850936
+4110493662,-16.3914048,-71.5303798,infraestructura,Selva Alegre,bus_stop,platform,,yes,yes,no,,,,,,,0,,https://www.openstreetmap.org/node/4110493662
+4110493663,-16.3919593,-71.5326934,señalizada,Parque Selva Alegre,bus_stop,stop_position,yes,no,no,yes,,,no,no,,,0,,https://www.openstreetmap.org/node/4110493663
+4110755395,-16.3955779,-71.5339042,señalizada,Melgar,bus_stop,stop_position,yes,no,no,yes,,,no,no,,,0,,https://www.openstreetmap.org/node/4110755395
+4145006805,-16.4286509,-71.5594863,infraestructura,Prescott,bus_stop,platform,yes,yes,yes,no,,,,,,,0,,https://www.openstreetmap.org/node/4145006805
+4195856507,-16.4019369,-71.5399031,señalizada,7 Esquinas,bus_stop,stop_position,yes,no,no,yes,,,,,,,0,,https://www.openstreetmap.org/node/4195856507
+4197540334,-16.3943366,-71.5365233,sin clasificar,Paradero turístico exclusivo,bus_stop,platform,yes,,,,,,,,,,0,,https://www.openstreetmap.org/node/4197540334
+4197540366,-16.3936906,-71.535662,señalizada,,bus_stop,stop_position,yes,no,no,yes,,,,,,,0,,https://www.openstreetmap.org/node/4197540366
+4232843020,-16.4058607,-71.5222113,señalizada,Estadio Monumental de la UNSA,bus_stop,platform,yes,no,no,yes,,,,no,Unión AQP S.A.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/4232843020
+4232900330,-16.4112077,-71.5217706,infraestructura,Lambramani,bus_stop,platform,yes,yes,yes,yes,,,yes,,,,0,,https://www.openstreetmap.org/node/4232900330
+4232929129,-16.4136576,-71.5280916,sin clasificar,,bus_stop,,,,,,,,,,,,0,,https://www.openstreetmap.org/node/4232929129
+4279240630,-16.443891,-71.517953,infraestructura,Cruce Simón,bus_stop,stop_position,yes,yes,yes,yes,,,,,,SIT,0,,https://www.openstreetmap.org/node/4279240630
+4359443035,-16.4513018,-71.5890662,infraestructura,,bus_stop,platform,no,yes,yes,no,,,,,,,0,,https://www.openstreetmap.org/node/4359443035
+4405570294,-16.3983746,-71.5395176,sin clasificar,Puente Bolognesi,bus_stop,platform,yes,,,,,,,,COTUM Express S.A.C.;TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/4405570294
+4442247990,-16.3941205,-71.5752624,infraestructura,,bus_stop,platform,yes,yes,yes,no,,,yes,no,,,0,,https://www.openstreetmap.org/node/4442247990
+4454044491,-16.4199611,-71.4739479,sin clasificar,Zoo Mundo,bus_stop,platform,yes,,,,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/4454044491
+4557442783,-16.392722,-71.5373828,sin clasificar,Puente Grau,bus_stop,platform,yes,,,,,,,,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/4557442783
+4709194470,-16.4471296,-71.5282974,sin señal ni infraestructura,,bus_stop,stop_position,yes,no,no,no,,,,,,,0,,https://www.openstreetmap.org/node/4709194470
+4736100771,-16.4151229,-71.5426429,infraestructura,,bus_stop,platform,yes,yes,yes,yes,,,,,,,0,,https://www.openstreetmap.org/node/4736100771
+4750096521,-16.3168797,-71.6046655,infraestructura,Entrada Apipa,bus_stop,platform,yes,yes,yes,no,,,yes,no,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/4750096521
+4783450633,-16.4158987,-71.5188164,infraestructura,,bus_stop,platform,yes,yes,yes,yes,,,yes,no,,,0,,https://www.openstreetmap.org/node/4783450633
+4783452656,-16.4220937,-71.5438983,infraestructura,Terminal Flores Hermanos,bus_stop,platform,yes,yes,yes,no,,,yes,no,Unión Grau S.A.C.;Bus Characato S.A.;Emarsistran S.A.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/4783452656
+4783453059,-16.4178983,-71.5177671,infraestructura,,bus_stop,platform,yes,yes,yes,no,,,yes,no,,,0,,https://www.openstreetmap.org/node/4783453059
+4824040775,-16.430955,-71.5328845,infraestructura,La Apacheta,bus_stop,platform,yes,yes,yes,yes,,,yes,no,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/4824040775
+4833236421,-16.4117824,-71.5209852,infraestructura,Parada de autobuses lambramani,bus_stop,platform,yes,yes,yes,yes,,,yes,no,,,0,,https://www.openstreetmap.org/node/4833236421
+4833689170,-16.4213111,-71.5413122,infraestructura,Ambrosio Vucetich,bus_stop,platform,yes,yes,yes,no,,,,,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/4833689170
+4833689424,-16.4199506,-71.5465422,infraestructura,SENATI,bus_stop,platform,yes,yes,yes,no,,,yes,yes,Megabus AQP,,0,,https://www.openstreetmap.org/node/4833689424
+4890680323,-16.3271218,-71.5947384,sin clasificar,,bus_stop,platform,yes,,,,,,,,Trasandino,,0,,https://www.openstreetmap.org/node/4890680323
+5008542090,-16.4278015,-71.566734,infraestructura,,bus_stop,platform,yes,yes,yes,no,,,yes,,,,0,,https://www.openstreetmap.org/node/5008542090
+5207402321,-16.4220801,-71.5430002,señalizada,Terminal Flores Hermanos,bus_stop,stop_position,yes,no,no,yes,,,,,TransCayma S.A.C.;Unión AQP S.A.;AQP Masivo S.A.C.;Emarsistran S.A.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/5207402321
+5213633529,-16.4196306,-71.489224,infraestructura,Parque de los sentidos,bus_stop,platform,yes,yes,yes,yes,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/5213633529
+5213716514,-16.4185219,-71.4868558,infraestructura,Virgen de Chapi,bus_stop,platform,yes,yes,yes,yes,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/5213716514
+5317191824,-16.4490418,-71.5840032,infraestructura,,bus_stop,platform,yes,yes,yes,no,,,,,,,0,,https://www.openstreetmap.org/node/5317191824
+5465823238,-16.4149036,-71.5192554,infraestructura,,bus_stop,platform,yes,yes,yes,no,,,yes,no,,,0,,https://www.openstreetmap.org/node/5465823238
+5499242406,-16.3701327,-71.5599814,infraestructura,,bus_stop,platform,yes,yes,yes,no,,,yes,no,,,0,,https://www.openstreetmap.org/node/5499242406
+5499246748,-16.3666616,-71.560808,infraestructura,Campo Verde,bus_stop,platform,yes,yes,yes,yes,,,yes,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/5499246748
+5602935846,-16.4161307,-71.5155483,señalizada,,bus_stop,stop_position,yes,no,no,yes,,,yes,,,,0,,https://www.openstreetmap.org/node/5602935846
+5777925904,-16.4047647,-71.5322196,sin clasificar,,,stop_position,yes,,,,,,,,,,0,,https://www.openstreetmap.org/node/5777925904
+6509465887,-16.4024927,-71.5405672,sin clasificar,Peru Hop Station,bus_stop,stop_position,yes,,no,,,,yes,no,,,0,,https://www.openstreetmap.org/node/6509465887
+6836080087,-16.3274703,-71.594509,sin clasificar,Cruce Ciudad Municipal,bus_stop,platform,yes,,,,,,,,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/6836080087
+8777444364,-16.307343,-71.5501605,sin clasificar,Estadio de Los Ángeles del Sur,bus_stop,platform,yes,,,,,,,,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/8777444364
+9091711184,-16.4604815,-71.4916978,señalizada,,bus_stop,stop_position,yes,no,no,yes,,,,,,,0,,https://www.openstreetmap.org/node/9091711184
+9091755336,-16.4590911,-71.4922626,señalizada,,bus_stop,stop_position,yes,no,no,yes,,,,,,,0,,https://www.openstreetmap.org/node/9091755336
+9091755342,-16.4582345,-71.4932122,señalizada,,bus_stop,stop_position,yes,no,no,yes,,,,,,,0,,https://www.openstreetmap.org/node/9091755342
+9091755355,-16.4577859,-71.4935616,señalizada,,bus_stop,stop_position,yes,no,no,yes,,,,,,,0,,https://www.openstreetmap.org/node/9091755355
+9091755356,-16.4569003,-71.4941968,señalizada,,bus_stop,stop_position,yes,no,no,yes,,,,,,,0,,https://www.openstreetmap.org/node/9091755356
+9091755361,-16.4562202,-71.4945899,señalizada,,bus_stop,stop_position,yes,no,no,yes,,,,,,,0,,https://www.openstreetmap.org/node/9091755361
+9816323161,-16.4330013,-71.56746,señalizada,,bus_stop,stop_position,yes,no,no,yes,,,,,,,0,,https://www.openstreetmap.org/node/9816323161
+10857391415,-16.4297654,-71.5267482,infraestructura,Presto,bus_stop,platform,yes,yes,yes,yes,,,yes,no,,,0,,https://www.openstreetmap.org/node/10857391415
+10864072714,-16.4306928,-71.5324352,infraestructura,Apacheta,bus_stop,platform,yes,yes,yes,yes,,,yes,no,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10864072714
+10864072715,-16.4304689,-71.5324927,señalizada,Apacheta,bus_stop,stop_position,yes,no,no,yes,,,,,,Sistema InteGrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10864072715
+10864072721,-16.4313124,-71.5327419,infraestructura,San José Obrero,bus_stop,platform,yes,yes,yes,no,,,yes,no,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10864072721
+10864072726,-16.4305717,-71.5332751,infraestructura,Óvalo Apacheta,bus_stop,platform,yes,yes,yes,yes,,,yes,no,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10864072726
+10864072729,-16.4262925,-71.53311,señalizada,Centro Comercial La Isla (Norte),bus_stop,platform,yes,no,no,yes,,,no,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10864072729
+10866662411,-16.4337882,-71.5318583,infraestructura,13 de Enero,bus_stop,platform,yes,yes,yes,yes,,,no,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10866662411
+10866662412,-16.4339137,-71.531602,sin clasificar,13 de Enero,bus_stop,platform,yes,,,,,,,,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10866662412
+10866662431,-16.4369086,-71.5305456,infraestructura,Plaza de Poesía,bus_stop,platform,yes,yes,yes,yes,,,yes,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte,0,,https://www.openstreetmap.org/node/10866662431
+10866662483,-16.4391324,-71.529962,infraestructura,Centro de Salud San Martín de Socabaya,bus_stop,platform,yes,yes,yes,yes,,,yes,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10866662483
+10866662484,-16.4384875,-71.5301724,señalizada,Centro de Salud San Martín de Socabaya,bus_stop,stop_position,yes,no,no,yes,,,,,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10866662484
+10866662527,-16.4423642,-71.5288415,infraestructura,Grifo San Fernando,bus_stop,platform,yes,yes,yes,yes,,,yes,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10866662527
+10866662552,-16.4418115,-71.5291037,infraestructura,Grifo Repsol San Fernando,bus_stop,platform,yes,yes,yes,yes,,,yes,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10866662552
+10869895546,-16.4500905,-71.5327022,infraestructura,Lara,bus_stop,platform,yes,yes,yes,no,,,no,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10869895546
+10869917230,-16.4331335,-71.5260045,sin clasificar,Colegio Jorge Basadre Grohmann,bus_stop,platform,yes,,,,,,,,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10869917230
+10869917239,-16.4298201,-71.5283069,infraestructura,Guatemala,bus_stop,platform,yes,yes,yes,yes,,,yes,no,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10869917239
+10869917242,-16.4302193,-71.5310344,infraestructura,Fecia,bus_stop,platform,yes,yes,yes,yes,,,yes,no,,,0,,https://www.openstreetmap.org/node/10869917242
+10877022735,-16.429313,-71.5238991,infraestructura,Grifo Monterrey,bus_stop,platform,yes,yes,yes,yes,,,,,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10877022735
+10877022736,-16.4292068,-71.5246505,infraestructura,Pedro D. Canseco,bus_stop,platform,yes,yes,yes,no,,,,yes,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10877022736
+10880129335,-16.429026,-71.5234491,infraestructura,Grifo Monterrey,bus_stop,platform,yes,yes,yes,yes,,,yes,yes,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10880129335
+10880129336,-16.4287073,-71.5220736,infraestructura,Residencial Monterrey,bus_stop,platform,yes,yes,yes,yes,,,yes,,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10880129336
+10880129339,-16.4281036,-71.5205834,infraestructura,Tecsup,bus_stop,platform,yes,yes,yes,yes,,,,no,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10880129339
+10880129340,-16.4277494,-71.5202792,infraestructura,Tecsup,bus_stop,platform,yes,yes,yes,yes,,,yes,yes,,SIstema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10880129340
+10880129356,-16.4274353,-71.5189557,infraestructura,Los Ccoritos,bus_stop,platform,yes,yes,yes,no,,,yes,,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10880129356
+10880129509,-16.4284138,-71.5219123,infraestructura,La Melgariana,bus_stop,platform,yes,yes,yes,yes,,,yes,yes,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10880129509
+10882611211,-16.4249679,-71.5330511,sin clasificar,Andrés Avelino Cáceres,bus_stop,platform,yes,no,no,,,,no,no,Integra Arequipa S.A.C.,Sistema Intetrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10882611211
+10882611333,-16.4154403,-71.5340187,sin clasificar,Hospital Regional Honorio Delgado,bus_stop,platform,yes,,,,,,,,Integra Arequipa S.AC.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10882611333
+10882611346,-16.4110942,-71.5358112,infraestructura,Independencia,bus_stop,platform,yes,yes,yes,yes,,,yes,,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10882611346
+10882611347,-16.4103422,-71.5360165,señalizada,Estadio IV Centenario,bus_stop,stop_position,yes,no,no,yes,,,,,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10882611347
+10885702023,-16.407774,-71.5387715,sin clasificar,Quiroz,bus_stop,platform,yes,,,,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10885702023
+10885702024,-16.4073426,-71.5390335,sin clasificar,Ormeño,bus_stop,platform,yes,,,,,,,,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10885702024
+10885702032,-16.4050942,-71.5376644,sin clasificar,La Barraca,bus_stop,platform,yes,,,,,,,,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10885702032
+10885702033,-16.4020024,-71.536387,sin señal ni infraestructura,San Camilo,bus_stop,platform,yes,no,no,no,,,no,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10885702033
+10885702042,-16.3989361,-71.5351703,infraestructura,Mercaderes,bus_stop,platform,yes,no,yes,yes,,,no,yes,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10885702042
+10885702046,-16.3958565,-71.5339305,señalizada,Melgar,bus_stop,stop_position,yes,no,no,yes,,,no,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10885702046
+10885702057,-16.3921446,-71.5324675,sin clasificar,Parque Selva Alegre,bus_stop,platform,yes,,,,,,,,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10885702057
+10885702077,-16.3933318,-71.535251,infraestructura,San Lázaro,bus_stop,platform,yes,no,yes,no,,,yes,yes,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10885702077
+10885702156,-16.3922601,-71.5407835,infraestructura,La Recoleta,bus_stop,platform,yes,yes,yes,no,,,no,yes,Integra Arequipa S.A.C.,SIstema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10885702156
+10885702172,-16.3910431,-71.5433793,infraestructura,Comisaría de Yanahuara,bus_stop,platform,yes,yes,no,no,,,,,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10885702172
+10885702204,-16.3914935,-71.5428668,infraestructura,Emmel,bus_stop,platform,yes,yes,yes,yes,,,,,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10885702204
+10888840260,-16.3891448,-71.5475324,infraestructura,Scotiabank,bus_stop,platform,yes,yes,yes,yes,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10888840260
+10888850406,-16.3889322,-71.5492756,infraestructura,Real Plaza,bus_stop,platform,yes,yes,yes,no,,,,,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10888850406
+10888850411,-16.3887582,-71.5503375,infraestructura,Clínica San Juan de Dios,bus_stop,platform,yes,yes,yes,yes,,,yes,yes,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10888850411
+10892532424,-16.3903984,-71.545888,infraestructura,Mall Plaza Cayma,bus_stop,platform,yes,yes,yes,yes,,,yes,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10892532424
+10892532434,-16.3887175,-71.5499132,infraestructura,Clínica San Juan de Dios,bus_stop,platform,yes,yes,yes,no,,,yes,,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10892532434
+10892532495,-16.3866359,-71.5536877,señalizada,Chopería,bus_stop,platform,yes,no,no,yes,,,yes,,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10892532495
+10892532524,-16.3828907,-71.5563115,infraestructura,Socosani,bus_stop,platform,yes,yes,yes,no,,,yes,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10892532524
+10892532546,-16.3819141,-71.5566368,señalizada,Hospital Moisés Heresi,bus_stop,platform,yes,no,no,yes,,,,,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10892532546
+10892532612,-16.3786711,-71.5570455,infraestructura,Cerro Viejo,bus_stop,stop_position,yes,yes,yes,yes,,,,,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10892532612
+10892532613,-16.3788849,-71.5571023,señalizada,Pumacahua,bus_stop,stop_position,yes,no,no,yes,,,,,Cotum Express S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10892532613
+10892532614,-16.3799071,-71.5567095,señalizada,Cerro Viejo,bus_stop,stop_position,yes,no,no,yes,,,,,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10892532614
+10892532615,-16.3796647,-71.5566891,señalizada,Pumacahua,bus_stop,stop_position,yes,no,no,yes,,,yes,,Coutm Express S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10892532615
+10895366145,-16.3733576,-71.5591964,infraestructura,La Fonda,bus_stop,platform,yes,yes,yes,no,,,yes,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10895366145
+10895366146,-16.3725852,-71.5591971,infraestructura,La Fonda,bus_stop,platform,yes,yes,yes,yes,,,yes,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10895366146
+10895366195,-16.3665388,-71.5605806,señalizada,Campo Verde,bus_stop,stop_position,yes,no,no,yes,,,yes,,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10895366195
+10895371486,-16.3540983,-71.5674734,infraestructura,Zamácola,bus_stop,platform,yes,yes,yes,yes,,,yes,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10895371486
+10895371487,-16.3540909,-71.5678171,infraestructura,Zamácola,bus_stop,platform,yes,yes,yes,yes,,,no,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10895371487
+10895371488,-16.3539043,-71.5669683,infraestructura,Parque Zamácola,bus_stop,platform,yes,yes,yes,yes,,,yes,no,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10895371488
+10897940714,-16.3501421,-71.5713032,infraestructura,Plaza de Río Seco,bus_stop,platform,yes,yes,yes,yes,,,no,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10897940714
+10897940715,-16.3500793,-71.5710573,infraestructura,Plaza de Río Seco,bus_stop,platform,yes,yes,yes,no,,,no,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10897940715
+10897940766,-16.3438376,-71.5768768,infraestructura,Río Seco,bus_stop,platform,yes,yes,yes,yes,,,no,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10897940766
+10897940790,-16.3429451,-71.5789295,infraestructura,Estación Norte Terminal Pesquero Río Seco,bus_stop,platform,yes,yes,yes,no,,,no,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10897940790
+10897940917,-16.3429122,-71.5798994,infraestructura,Estación Norte Terminal Pesquero Río Seco,bus_stop,platform,yes,yes,yes,no,,,no,no,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10897940917
+10897940923,-16.342888,-71.5805841,infraestructura,Estación Norte Río Seco,bus_stop,platform,yes,yes,yes,no,,,no,no,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10897940923
+10897940954,-16.3425614,-71.5807661,señalizada,Estación Norte Río Seco,bus_stop,stop_position,yes,no,no,yes,,,,,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10897940954
+10904424563,-16.420244,-71.5469505,infraestructura,SENATI,bus_stop,platform,yes,yes,yes,yes,,,,,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10904424563
+10920891129,-16.4060431,-71.5399515,señalizada,Parra,bus_stop,stop_position,yes,no,no,yes,,,no,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10920891129
+10920891170,-16.4043509,-71.5431539,infraestructura,Vallecito,bus_stop,platform,yes,yes,yes,yes,,,no,yes,TransCayma S.A.C.;Unión AQP S.A.;COTUM Express S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10920891170
+10920891171,-16.4042088,-71.5431604,infraestructura,Vallecito,bus_stop,platform,yes,yes,yes,yes,,,yes,,TransCayma S.A.C.;Unión AQP S.A.;COTUM Express S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10920891171
+10920891218,-16.4042114,-71.5464265,señalizada,San Jerónimo,bus_stop,platform,yes,no,no,yes,,,,,TransCayma S.A.C.;COTUM Express S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10920891218
+10920891226,-16.4034587,-71.5476457,señalizada,Parque Libertad de Expresión,bus_stop,stop_position,yes,no,no,yes,,,,,TransCayma S.A.C.;Megabus AQP S.A.C.;COTUM Express S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10920891226
+10923337579,-16.4011828,-71.5468127,sin clasificar,Cevichería Mares,bus_stop,platform,yes,,,,,,,,TransCayma S.A.C.;COTUM Express S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10923337579
+10927903747,-16.4367794,-71.5211821,infraestructura,Prolongación Dolores,bus_stop,platform,yes,yes,yes,yes,,,,,Emarsistran S.A.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10927903747
+10927910733,-16.4362874,-71.5217355,infraestructura,DEMUNA,bus_stop,platform,yes,yes,yes,no,,,,,Emarsistran S.A.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10927910733
+10927910734,-16.4364075,-71.5214751,infraestructura,América,bus_stop,platform,yes,yes,yes,no,,,,yes,Emarsistran S.A.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10927910734
+10931048541,-16.4356278,-71.525283,sin clasificar,Juan Pablo Vizcardo y Guzmán,bus_stop,platform,yes,,,,,,,,Emarsistran S.A.;AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10931048541
+10931048542,-16.4356218,-71.5254029,sin clasificar,Juan Pablo Vizcardo y Guzmán,bus_stop,platform,yes,,,,,,,,Emarsistran S.A.;AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10931048542
+10931048580,-16.4332059,-71.5224922,infraestructura,Monterrico,bus_stop,platform,yes,yes,yes,no,,,,,Emarsistran S.A.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10931048580
+10931048591,-16.432248,-71.5228193,infraestructura,Santa María II,bus_stop,platform,yes,yes,yes,no,,,yes,,Emarsistran S.A.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10931048591
+10931048592,-16.431682,-71.5233753,sin clasificar,Santa María II,bus_stop,platform,yes,,,,,,,,Emarsistran S.A.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10931048592
+10931048649,-16.4331224,-71.5230579,sin clasificar,Monterrico,bus_stop,platform,yes,,,,,,,,Emarsistran S.A.;AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10931048649
+10933342759,-16.4342228,-71.5258242,sin clasificar,Francisco de Miranda,bus_stop,platform,yes,,,,,,,,Emarsistran S.A.;AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10933342759
+10933342760,-16.434084,-71.5259611,sin clasificar,Mechita,bus_stop,platform,yes,,,,,,,,Emarsistran S.A.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10933342760
+10933342762,-16.4329481,-71.5261141,sin clasificar,Colegio Jorge Basadre Grohmann,bus_stop,platform,yes,,,,,,,,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10933342762
+10933342778,-16.4294996,-71.5265099,sin clasificar,Presto,bus_stop,platform,yes,no,,,,,,,,Sistema Integrado de Trnasporte (SIT),0,,https://www.openstreetmap.org/node/10933342778
+10936160709,-16.4310019,-71.5326676,sin señal ni infraestructura,Estados Unidos,bus_stop,stop_position,yes,no,no,no,,,yes,,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10936160709
+10941257775,-16.4475869,-71.5316656,infraestructura,El Triángulo,bus_stop,platform,yes,yes,yes,yes,,,no,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10941257775
+10941257790,-16.4486073,-71.5331749,señalizada,Ciudad Mi Trabajo,bus_stop,stop_position,yes,no,no,yes,,,yes,,Emarsistran S.A.;Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10941257790
+10941261007,-16.4474546,-71.5317901,señalizada,El Triángulo,bus_stop,platform,yes,no,no,yes,,,,,Emarsistran S.A.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10941261007
+10941261008,-16.4513596,-71.5317586,infraestructura,Lara,bus_stop,platform,yes,yes,yes,yes,,,no,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10941261008
+10943422700,-16.4331449,-71.5387009,señalizada,Colegio Néstor Cáceres Velásquez,bus_stop,stop_position,yes,no,no,yes,,,,,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10943422700
+10945557613,-16.43029,-71.5335275,señalizada,La Apacheta,bus_stop,stop_position,yes,no,no,yes,,,,,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10945557613
+10945557645,-16.4284782,-71.538133,señalizada,Las Convenciones,bus_stop,stop_position,yes,no,no,yes,,,,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10945557645
+10945557646,-16.4286589,-71.5377499,infraestructura,Las Convenciones,bus_stop,platform,yes,yes,yes,yes,,,no,no,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10945557646
+10945557670,-16.4251399,-71.5377024,sin clasificar,Asociación Comercial Siglo XX,bus_stop,platform,yes,,,,,,,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10945557670
+10951071773,-16.4268031,-71.5178109,infraestructura,Los Ccoritos,bus_stop,platform,yes,yes,yes,no,,,yes,no,Unión Grau S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10951071773
+10951071774,-16.4267107,-71.517217,señalizada,Casablanca,bus_stop,stop_position,yes,no,no,yes,,,no,no,Unión Grau S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10951071774
+10951071794,-16.426092,-71.51607,infraestructura,7 de Agosto,bus_stop,platform,yes,yes,yes,no,,,yes,no,Unión Grau S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10951071794
+10951071795,-16.4261655,-71.5158103,infraestructura,7 de Agosto,bus_stop,platform,yes,yes,yes,yes,,,yes,,Unión Grau S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10951071795
+10951074890,-16.4255243,-71.5215427,infraestructura,UAP,bus_stop,platform,yes,yes,yes,yes,,,yes,no,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10951074890
+10951074891,-16.4252948,-71.5210309,sin señal ni infraestructura,UAP,bus_stop,stop_position,yes,no,no,no,,,,,,,0,,https://www.openstreetmap.org/node/10951074891
+10951075035,-16.4223564,-71.5076616,infraestructura,Gobierno Regional de Arequipa,bus_stop,platform,yes,yes,yes,yes,,,,,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10951075035
+10951075036,-16.4225792,-71.5086363,infraestructura,MTC,bus_stop,platform,yes,yes,yes,yes,,,,,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10951075036
+10956490903,-16.421421,-71.5078767,infraestructura,MTC,bus_stop,platform,yes,yes,yes,yes,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10956490903
+10956491177,-16.4261048,-71.504412,infraestructura,Malecón Arica,bus_stop,platform,yes,yes,yes,yes,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10956491177
+10956491191,-16.427209,-71.5032516,infraestructura,Centro de Salud Ampliaciación Paucarpata,bus_stop,platform,yes,yes,yes,yes,,,yes,,,,0,,https://www.openstreetmap.org/node/10956491191
+10956491192,-16.4270665,-71.503557,infraestructura,Centro de Salud Ampliaciación Paucarpata,bus_stop,platform,yes,yes,yes,yes,,,yes,,,,0,,https://www.openstreetmap.org/node/10956491192
+10956491222,-16.4281878,-71.5027451,infraestructura,Colonial,bus_stop,platform,yes,yes,yes,yes,,,,,,,0,,https://www.openstreetmap.org/node/10956491222
+10972469025,-16.4224707,-71.4952715,infraestructura,Entrada a Campo de Marte,bus_stop,platform,yes,yes,yes,yes,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10972469025
+10972469033,-16.4229257,-71.4935213,infraestructura,Alto Jesús,bus_stop,platform,yes,yes,yes,no,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10972469033
+10975890551,-16.4165164,-71.4847183,infraestructura,Colegio José María Arguedas,bus_stop,platform,yes,yes,yes,yes,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10975890551
+10975957062,-16.420051,-71.4738149,sin clasificar,Zoo Mundo,bus_stop,platform,yes,,,,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10975957062
+10988350349,-16.4279619,-71.4796208,sin clasificar,Cementerio El Cebollar,bus_stop,platform,yes,,,,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10988350349
+10988350361,-16.4279832,-71.479754,sin clasificar,Cementerio El Cebollar,bus_stop,platform,yes,,,,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10988350361
+10988350407,-16.4269245,-71.479248,sin clasificar,"Cerrito Huacsapata, Zn. A",bus_stop,platform,yes,,,,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10988350407
+10988350408,-16.4268744,-71.4791418,sin clasificar,"Cerrito Huacsapata, Zn. A",bus_stop,platform,yes,,,,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/10988350408
+11001027726,-16.4137465,-71.4707969,sin clasificar,Los Portales,bus_stop,platform,yes,,,,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11001027726
+11009517232,-16.4216006,-71.4988406,infraestructura,Badén,bus_stop,platform,yes,yes,yes,yes,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11009517232
+11009517236,-16.4209983,-71.4995177,infraestructura,Ricardo Palma,bus_stop,platform,yes,yes,yes,yes,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11009517236
+11009517240,-16.4200313,-71.5009703,infraestructura,Los Geranios,bus_stop,platform,yes,yes,yes,yes,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11009517240
+11009517241,-16.4200469,-71.5011449,infraestructura,Los Geranios,bus_stop,platform,yes,yes,yes,yes,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11009517241
+11009517255,-16.4195374,-71.5019291,infraestructura,Mercado Alto Porongoche,bus_stop,platform,yes,yes,yes,yes,,,yes,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11009517255
+11009517260,-16.419453,-71.5018175,infraestructura,Mercado Alto Porongoche,bus_stop,platform,yes,yes,yes,yes,,,yes,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11009517260
+11013354637,-16.4082546,-71.5595643,señalizada,,bus_stop,stop_position,yes,no,no,yes,,,,,,,0,,https://www.openstreetmap.org/node/11013354637
+11013403996,-16.4203698,-71.5383393,infraestructura,El Altiplano (Los Incas),bus_stop,platform,yes,yes,yes,yes,,,,,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11013403996
+11013404101,-16.4174674,-71.5344669,infraestructura,Parque Pablo VI,bus_stop,platform,yes,yes,yes,yes,,,,,Unión Grau S.A.C.;AQP Masivo S.A.C.;Emarsistran S.A.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11013404101
+11013404102,-16.4178023,-71.534826,sin clasificar,Parque Pablo VI,bus_stop,platform,yes,,,,,,,,Unión Grau S.A.C.;AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11013404102
+11014310362,-16.4005142,-71.5227973,señalizada,,bus_stop,stop_position,yes,no,no,yes,,,yes,no,,,0,,https://www.openstreetmap.org/node/11014310362
+11014310363,-16.4017633,-71.5243206,sin clasificar,,bus_stop,platform,yes,no,no,,,,yes,no,,,0,,https://www.openstreetmap.org/node/11014310363
+11014310375,-16.4089149,-71.532778,infraestructura,Colegio Independencia,bus_stop,platform,yes,yes,yes,yes,,,no,no,ETRABUS S.A.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11014310375
+11014310380,-16.4072283,-71.5308534,señalizada,,bus_stop,stop_area,yes,no,no,yes,,,,,,,0,,https://www.openstreetmap.org/node/11014310380
+11019063336,-16.4101042,-71.5331495,infraestructura,SEDAPAR,bus_stop,platform,yes,no,yes,no,,,,,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11019063336
+11021360732,-16.4053873,-71.5212782,infraestructura,Campus Sociales de la UNSA,bus_stop,platform,yes,yes,yes,yes,,,no,no,Unión AQP S.A.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11021360732
+11021360893,-16.4052396,-71.5214398,sin clasificar,Campus Sociales de la UNSA,bus_stop,platform,yes,,,,,,,,Unión AQP S.A.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11021360893
+11021360899,-16.4055982,-71.5221219,sin clasificar,Estadio Monumental de la UNSA,bus_stop,platform,yes,,,,,,,,Unión AQP S.A.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11021360899
+11024162721,-16.4027228,-71.5169125,señalizada,Óvalo Mariscal Castilla,bus_stop,platform,yes,no,no,yes,,,yes,yes,Unión Grau S.A.C.;AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11024162721
+11024162787,-16.4017069,-71.5179561,sin señal ni infraestructura,Mercado de Miraflores N°1,bus_stop,stop_position,yes,no,no,no,,,yes,no,Unión Grau S.A.C.;AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11024162787
+11024162788,-16.4018787,-71.5182241,señalizada,Mercado de Miraflores N°1,bus_stop,stop_position,yes,no,no,yes,,,yes,no,Unión Grau S.A.C.;AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11024162788
+11027011575,-16.4339954,-71.4910713,infraestructura,Institución Educativa Santa María de la Paz,bus_stop,platform,yes,yes,yes,no,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11027011575
+11027011576,-16.4341423,-71.4910445,infraestructura,Centro de Salud Nueva Alborada,bus_stop,platform,yes,yes,yes,no,,,,,AQP Masivo S.A.C.,Sistema Integado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11027011576
+11027011577,-16.4342659,-71.4895148,sin clasificar,Estadio de Nueva Alborada,bus_stop,platform,yes,,,,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11027011577
+11027011578,-16.4341937,-71.4893349,sin clasificar,Estadio de Nueva Alborada,bus_stop,platform,yes,,,,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11027011578
+11027011579,-16.4331066,-71.4919359,sin clasificar,Nueva Alborada,bus_stop,platform,yes,,,,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11027011579
+11027011580,-16.4329507,-71.4920075,sin clasificar,Nueva Alborada,bus_stop,platform,yes,,,,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11027011580
+11027066624,-16.4319875,-71.4908081,señalizada,Comité N°1,bus_stop,stop_position,yes,no,no,yes,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11027066624
+11027066685,-16.4267978,-71.4900075,infraestructura,Naciones Unidas,bus_stop,platform,yes,yes,yes,no,,,,yes,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11027066685
+11027066686,-16.4269627,-71.4901741,infraestructura,Naciones Unidas,bus_stop,platform,yes,yes,yes,no,,,,yes,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11027066686
+11035107331,-16.4347006,-71.4860926,sin clasificar,Institución Educativa Inicial Santa María,bus_stop,platform,yes,,,,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11035107331
+11035107332,-16.4348416,-71.4858329,sin clasificar,Institución Educativa Inicial Santa María,bus_stop,platform,yes,,,,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11035107332
+11035107333,-16.4348257,-71.4833558,sin clasificar,Reservorio Nº 33,bus_stop,platform,yes,,,,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11035107333
+11035107334,-16.4349199,-71.4835316,sin clasificar,Reservorio Nº 33,bus_stop,platform,yes,,,,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11035107334
+11035107336,-16.4346348,-71.4820889,sin clasificar,Estadio de Santa María,bus_stop,platform,yes,,,,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11035107336
+11035107337,-16.4347361,-71.4822165,sin clasificar,Estadio de Santa María,bus_stop,platform,yes,,,,,,,,AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11035107337
+11060842987,-16.4323075,-71.5136226,sin clasificar,La Alborada,bus_stop,platform,yes,,,,,,,,Emarsistran S.A.;AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11060842987
+11061124916,-16.4356441,-71.5191521,infraestructura,Puente La Florida,bus_stop,platform,yes,yes,yes,yes,,,,,Emarsistran S.A. ;AQP Masivo S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11061124916
+11062740269,-16.436785,-71.5214765,infraestructura,Malecón Dolores,bus_stop,platform,yes,yes,yes,no,,,,,Emarsistran S.A.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11062740269
+11084954215,-16.3424862,-71.5837515,infraestructura,Arequipa Norte,bus_stop,platform,yes,yes,yes,no,,,yes,no,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11084954215
+11084954223,-16.342648,-71.5845864,infraestructura,Arequipa Norte,bus_stop,platform,yes,yes,yes,no,,,no,no,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11084954223
+11098390737,-16.3204701,-71.6053168,infraestructura,APPIAR (Zona 2),bus_stop,platform,yes,yes,yes,no,,,yes,yes,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11098390737
+11098390738,-16.3232824,-71.6008472,infraestructura,Apipa Sector 2,bus_stop,platform,yes,yes,yes,yes,,,yes,yes,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11098390738
+11098390739,-16.3247891,-71.5983842,infraestructura,Héroes de La Breña,bus_stop,platform,yes,yes,yes,no,,,,,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11098390739
+11098390740,-16.3256907,-71.5982045,infraestructura,Eduardo de La Piniella,bus_stop,platform,yes,yes,yes,no,,,yes,yes,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11098390740
+11195207560,-16.4556477,-71.5980896,infraestructura,Virgen de las Peñas,bus_stop,platform,yes,yes,yes,no,,,yes,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11195207560
+11195207566,-16.4558025,-71.5981674,infraestructura,Virgen de las Peñas,bus_stop,platform,yes,yes,yes,no,,,yes,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11195207566
+11195207576,-16.4548976,-71.6012375,infraestructura,Virgen de las Peñas,bus_stop,platform,yes,yes,yes,no,,,yes,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11195207576
+11195207577,-16.4547988,-71.6012154,infraestructura,Virgen de las Peñas,bus_stop,platform,yes,yes,yes,no,,,yes,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11195207577
+11195207627,-16.4528383,-71.6128035,sin clasificar,Alto Cerro Verde,bus_stop,platform,yes,,,,,,,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11195207627
+11195207628,-16.453014,-71.6128874,sin clasificar,Alto Cerro Verde,bus_stop,platform,yes,,,,,,,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11195207628
+11195209265,-16.4527409,-71.6142801,infraestructura,Jirón Toquepala,bus_stop,platform,yes,,yes,,,yes,,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11195209265
+11195209266,-16.4528184,-71.6145517,sin clasificar,Parque La Madre,bus_stop,platform,yes,,,,,,,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11195209266
+11195209316,-16.4507792,-71.6142201,sin clasificar,Pisicina de Cerro Verde,bus_stop,platform,yes,,,,,,,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11195209316
+11195209317,-16.4508021,-71.6139964,sin clasificar,Pisicina de Cerro Verde,bus_stop,platform,yes,,,,,,,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11195209317
+11195209326,-16.4512121,-71.6150791,infraestructura,Insitución Educativa Inicial Cerro Verde,bus_stop,platform,yes,,yes,yes,,yes,,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11195209326
+11195209328,-16.4513894,-71.615121,sin clasificar,Insitución Educativa Inicial Cerro Verde,bus_stop,platform,yes,,,,,,,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11195209328
+11195209329,-16.4520115,-71.615823,infraestructura,Estadio de Cerro Verde,bus_stop,platform,yes,,yes,,,yes,,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11195209329
+11195209330,-16.452146,-71.6157493,infraestructura,Estadio de Cerro Verde,bus_stop,platform,yes,,yes,,,no,,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11195209330
+11198968447,-16.4476397,-71.6178621,infraestructura,Plaza Cívica de Álvarez Thomas,bus_stop,platform,yes,yes,yes,yes,,,,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11198968447
+11201484638,-16.4465329,-71.6193162,infraestructura,Estadio Municipal de Congata,bus_stop,platform,yes,yes,yes,yes,,,,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11201484638
+11201484639,-16.4453059,-71.6206284,infraestructura,Institución Educativa Alma Mater de Congata,bus_stop,platform,yes,yes,yes,yes,,,,yes,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11201484639
+11204042282,-16.4446926,-71.6212995,infraestructura,Institución Educativa Alma Mater de Congata,bus_stop,platform,yes,yes,yes,yes,,,,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11204042282
+11204042324,-16.4445054,-71.6211673,infraestructura,Plaza El Carmen de Congata,bus_stop,platform,yes,yes,yes,yes,,,,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11204042324
+11204042325,-16.4445612,-71.6212643,infraestructura,Plaza El Carmen de Congata,bus_stop,platform,yes,yes,yes,yes,,,,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11204042325
+11206900749,-16.4421478,-71.6228058,infraestructura,Manzana V,bus_stop,platform,yes,yes,yes,yes,,,,,Megabus AQP S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11206900749
+11245021127,-16.3137819,-71.6084077,infraestructura,APIAAR,bus_stop,platform,yes,yes,yes,no,,,no,no,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Trnasporte (SIT),0,,https://www.openstreetmap.org/node/11245021127
+11245021388,-16.3154123,-71.6066308,infraestructura,Los Ccoritos 2,bus_stop,platform,yes,yes,yes,yes,,,no,no,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11245021388
+11250334940,-16.3759972,-71.5297193,sin clasificar,,bus_stop,platform,yes,,,,,,,,,,0,,https://www.openstreetmap.org/node/11250334940
+11252184480,-16.3213235,-71.6050137,sin clasificar,Apipa Sector 1,bus_stop,platform,yes,,,,,,,,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11252184480
+11278693688,-16.3175774,-71.6033589,infraestructura,Entrada Apipa,bus_stop,platform,yes,yes,yes,yes,,,no,yes,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11278693688
+11282616564,-16.3265749,-71.5952689,sin clasificar,Cruce Ciudad Municipal,bus_stop,platform,yes,,,,,,,,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11282616564
+11291703593,-16.3729008,-71.5369455,sin clasificar,,bus_stop,,,,,,,,,,,,0,,https://www.openstreetmap.org/node/11291703593
+11296657793,-16.3227072,-71.5834383,sin clasificar,I.E. Sor Ana de Los Ángeles y Monteagudo,bus_stop,platform,yes,,,,,,,,Consorcio Empresarial Cono Norte S.A.C.,SIstema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11296657793
+11296657794,-16.3223149,-71.5834585,sin clasificar,I.E. Sor Ana de Los Ángeles y Monteagudo,bus_stop,platform,yes,,,,,,,,Consorcio Empresarial Cono Norte S.A.C.,SIstema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11296657794
+11296657859,-16.3239554,-71.5842244,sin clasificar,La Isla 54,bus_stop,platform,yes,,,,,,,,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11296657859
+11296657860,-16.3244045,-71.5838282,sin clasificar,Cruce Sor Ana de Los Ángeles y Monteagudo,bus_stop,platform,yes,,,,,,,,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11296657860
+11330366861,-16.3370361,-71.5557161,infraestructura,Estadio Villa Paraíso,bus_stop,platform,yes,yes,yes,no,,,no,no,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11330366861
+11330366895,-16.3373029,-71.555573,sin clasificar,Estadio Villa Paraíso,bus_stop,platform,yes,,,,,,,,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11330366895
+11345685218,-16.3070147,-71.5509516,sin clasificar,Estadio de Los Ángeles del Sur,bus_stop,platform,yes,,,,,,,,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11345685218
+11365557494,-16.339871,-71.5557066,señalizada,Cruce de Villa Paraíso y Enace,bus_stop,stop_position,yes,no,no,yes,,,,,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11365557494
+11365557495,-16.3399633,-71.5555633,infraestructura,Cruce de Villa Paraíso y Enace,bus_stop,platform,yes,yes,yes,no,,,yes,yes,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11365557495
+11390928307,-16.3462767,-71.5964186,infraestructura,Italia,bus_stop,platform,yes,yes,yes,no,,,yes,yes,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11390928307
+11390928308,-16.3468831,-71.596715,infraestructura,Italia,bus_stop,platform,yes,yes,yes,no,,,yes,yes,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11390928308
+11390928309,-16.3470466,-71.5970452,infraestructura,Reservorio de Peruarbo,bus_stop,platform,yes,yes,yes,no,,,yes,yes,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11390928309
+11390928342,-16.3507248,-71.5999059,infraestructura,Paradero 13,bus_stop,platform,yes,yes,yes,yes,,,yes,yes,Consrocio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11390928342
+11390928343,-16.3536005,-71.6021967,infraestructura,Transmdicas,bus_stop,platform,yes,yes,yes,yes,,,yes,,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11390928343
+11390928344,-16.3532585,-71.6017265,infraestructura,La Cata,bus_stop,platform,yes,yes,yes,no,,,yes,yes,Consorcio Empresarial Cono Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11390928344
+11524039468,-16.3467611,-71.5546339,sin clasificar,Parque de Villa Continental,bus_stop,platform,yes,,,,,,,,,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11524039468
+11529862165,-16.3487704,-71.5530192,infraestructura,Comisaría de Casimiro Cuadros,bus_stop,platform,yes,yes,yes,no,,,yes,no,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11529862165
+11533103658,-16.3404218,-71.5453326,sin clasificar,Parque Virgen de Chapi,bus_stop,platform,yes,,,,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11533103658
+11533103659,-16.3402913,-71.5450059,sin clasificar,Parque Virgen de Chapi,bus_stop,platform,yes,,,,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11533103659
+11539125822,-16.3435297,-71.5466636,sin clasificar,Amazonas,bus_stop,platform,yes,,,,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11539125822
+11539125824,-16.343645,-71.5464479,sin clasificar,Garcilaso de la Vega,bus_stop,platform,yes,,,,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11539125824
+11548877106,-16.3446699,-71.5428233,infraestructura,Estadio de Francisco Bolognesi,bus_stop,platform,yes,yes,yes,no,,,no,no,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11548877106
+11548877109,-16.3449311,-71.541408,sin clasificar,Estadio Francisco Bolognesi,bus_stop,platform,yes,,,,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11548877109
+11548877110,-16.3450183,-71.5409756,sin clasificar,Estadio Francisco Bolognesi,bus_stop,platform,yes,,,,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11548877110
+11548877190,-16.3442906,-71.5445515,infraestructura,Cruce de Amazonas,bus_stop,platform,yes,yes,yes,no,,,yes,no,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11548877190
+11548877254,-16.3441753,-71.5443364,infraestructura,Parque José Olaya,bus_stop,platform,yes,yes,yes,yes,,,yes,no,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11548877254
+11553093543,-16.3501812,-71.5487832,infraestructura,Mercado,bus_stop,platform,yes,yes,yes,no,,,yes,no,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11553093543
+11578158699,-16.363924,-71.544201,infraestructura,Estadio La Tomilla,bus_stop,platform,yes,yes,yes,yes,,,yes,no,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11578158699
+11578158725,-16.3585708,-71.5438358,infraestructura,Plaza La Tomilla,bus_stop,platform,yes,yes,yes,no,,,no,no,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11578158725
+11578158726,-16.3582618,-71.54364,infraestructura,Plaza la Tomilla,bus_stop,stop_position,yes,yes,yes,yes,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11578158726
+11578158727,-16.3616756,-71.544052,señalizada,Mercado La Tomilla,bus_stop,stop_position,yes,no,no,yes,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11578158727
+11578158728,-16.3619206,-71.5438934,sin clasificar,Mercado La Tomilla,bus_stop,platform,yes,,,,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11578158728
+11578158729,-16.3641239,-71.544043,sin clasificar,Estadio La Tomilla,bus_stop,platform,yes,,,,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11578158729
+11583592996,-16.3525197,-71.5417264,infraestructura,Plaza Francisco Bolognesi,bus_stop,platform,yes,yes,yes,no,,,no,yes,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11583592996
+11583593007,-16.3523162,-71.5422012,infraestructura,Plaza Francisco Bolognesi,bus_stop,platform,yes,yes,yes,no,,,yes,no,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11583593007
+11583593057,-16.3497924,-71.5419491,infraestructura,Mercado 24 de Junio,bus_stop,platform,yes,yes,yes,yes,,,no,no,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11583593057
+11583593059,-16.3496151,-71.5414073,sin clasificar,Mercado 24 de Junio,bus_stop,platform,yes,,,,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11583593059
+11662027290,-16.3235735,-71.5529487,infraestructura,Villa Esperanza,bus_stop,platform,yes,yes,yes,no,,,yes,no,Consorcio Empresarial Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11662027290
+11662027291,-16.3237735,-71.5528867,infraestructura,Villa Esperanza,bus_stop,platform,yes,yes,yes,no,,,yes,no,Consorcio Empresarial Norte S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11662027291
+11683498128,-16.3364005,-71.5517297,infraestructura,Colegio El Pionero,bus_stop,platform,yes,yes,yes,no,,,no,no,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11683498128
+11683498130,-16.3389298,-71.5522554,infraestructura,Enace Sector 2,bus_stop,platform,yes,yes,yes,no,,,yes,no,,,0,,https://www.openstreetmap.org/node/11683498130
+11683498131,-16.3391207,-71.5521455,infraestructura,Enace Sector 2,bus_stop,platform,yes,yes,yes,no,,,yes,no,,,0,,https://www.openstreetmap.org/node/11683498131
+11802595224,-16.406224,-71.5229836,infraestructura,UNSA Ingenierias,bus_stop,platform,yes,yes,yes,yes,,,no,yes,Integra Arequipa S.A.C.,SIstema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11802595224
+11802595226,-16.400928,-71.5165758,infraestructura,Feria del Altiplano,bus_stop,platform,yes,yes,yes,yes,,,no,yes,Integra Arequipa S.A.C.,SIstema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11802595226
+11802595228,-16.396684,-71.5221639,infraestructura,Avenida Goyeneche,bus_stop,platform,yes,yes,yes,yes,,,no,yes,Integra Arequipa S.A.C.,SIstema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11802595228
+11802595229,-16.394676,-71.5259837,infraestructura,Parque San Antonio,bus_stop,platform,yes,yes,yes,yes,,,no,yes,Integra Arequipa S.A.C.,SIstema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11802595229
+11802595230,-16.39343,-71.5289455,infraestructura,Municipalidad Provincial de Arequipa,bus_stop,platform,yes,yes,yes,yes,,,no,yes,Integra Arequipa S.A.C.,SIstema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11802595230
+11802595233,-16.3931784,-71.5350918,infraestructura,San Lazaro,bus_stop,platform,yes,yes,yes,no,,,no,yes,Integra Arequipa S.A.C.,SIstema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11802595233
+11802595235,-16.3907789,-71.544796,infraestructura,Metro Yanahuara,bus_stop,platform,yes,yes,yes,no,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11802595235
+11802595239,-16.3632527,-71.5441248,sin clasificar,Estadio La Tomilla,bus_stop,platform,yes,,,,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11802595239
+11802595241,-16.3468385,-71.5411288,sin clasificar,Coliseo Cerrado Francisco Bolognesi,bus_stop,platform,yes,,,,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11802595241
+11802595243,-16.33846,-71.5401189,señalizada,Cementerio Bolognesi,bus_stop,stop_position,yes,no,no,yes,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11802595243
+11802595245,-16.3324843,-71.5475476,infraestructura,Colegio Calasanz,bus_stop,platform,yes,yes,yes,yes,,,yes,yes,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11802595245
+11802595247,-16.3377091,-71.5520863,infraestructura,Parada Custer Transcayma -Enace,bus_stop,platform,yes,yes,yes,yes,,,yes,yes,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11802595247
+11802595248,-16.4011477,-71.5165024,sin clasificar,Altiplano,bus_stop,platform,yes,,,,,,,,,,0,,https://www.openstreetmap.org/node/11802595248
+11802703186,-16.3383519,-71.5399191,sin clasificar,Cementerio Bolognesi,bus_stop,platform,yes,,,,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11802703186
+11802703190,-16.3633557,-71.5440027,sin clasificar,Estadio La Tomilla,bus_stop,platform,yes,,,,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11802703190
+11802703192,-16.3900597,-71.546119,infraestructura,Saga Falabella,bus_stop,platform,yes,yes,yes,no,,,no,yes,Integra Arequipa S.A.C.,SIstema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11802703192
+11802703193,-16.3906181,-71.5445311,infraestructura,Metro de Yanahuara,bus_stop,platform,yes,yes,yes,no,,,no,yes,Integra Arequipa S.A.C.,SIstema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11802703193
+11802703194,-16.3935496,-71.5366716,infraestructura,Calle Simón Bolívar,bus_stop,platform,yes,yes,yes,yes,,,no,yes,Integra Arequipa S.A.C.,SIstema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11802703194
+11802703195,-16.3953515,-71.5310276,infraestructura,EsSalud Arequipa,bus_stop,platform,yes,yes,yes,yes,,,no,yes,Integra Arequipa S.A.C.,SIstema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11802703195
+11802703200,-16.4059615,-71.5291996,señalizada,Coliseo Arequipa,bus_stop,stop_position,yes,no,no,yes,,,no,no,Integra Arequipa S.A.C.,SIstema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/11802703200
+11842916020,-16.3583206,-71.6007848,sin clasificar,,bus_stop,platform,yes,,,,,,,,,,0,,https://www.openstreetmap.org/node/11842916020
+12087720761,-16.4605428,-71.5231576,señalizada,Los Jardines,bus_stop,stop_position,yes,no,no,yes,,,no,no,,SIT,0,,https://www.openstreetmap.org/node/12087720761
+12087753641,-16.4599395,-71.5225545,sin clasificar,Colegio,bus_stop,stop_position,yes,,,,,,,,,SIT,0,,https://www.openstreetmap.org/node/12087753641
+12087761831,-16.4611414,-71.5237393,sin clasificar,Paradero,bus_stop,stop_position,yes,,,,,,,,,SIT,0,,https://www.openstreetmap.org/node/12087761831
+12087766333,-16.4600063,-71.520919,sin clasificar,Antena,bus_stop,stop_position,yes,,,,,,,,,SIT,0,,https://www.openstreetmap.org/node/12087766333
+12087779488,-16.4598018,-71.5207198,sin clasificar,Los Jacintos,bus_stop,platform,yes,,,,,,,,,SIT,0,,https://www.openstreetmap.org/node/12087779488
+12087784760,-16.4604652,-71.5216267,sin clasificar,Begonias,bus_stop,stop_position,yes,,,,,,,,,SIT,0,,https://www.openstreetmap.org/node/12087784760
+12087793169,-16.4603665,-71.5212777,sin clasificar,Los lirios,bus_stop,stop_position,yes,,,,,,,,,SIT,0,,https://www.openstreetmap.org/node/12087793169
+12095627752,-16.4541832,-71.5300995,infraestructura,La Paloma,bus_stop,stop_position,yes,yes,yes,yes,,,,,,SIT,0,,https://www.openstreetmap.org/node/12095627752
+12095658641,-16.4616837,-71.5280322,sin señal ni infraestructura,Cruce El Bosque,bus_stop,stop_position,yes,no,no,no,,,,,,,0,,https://www.openstreetmap.org/node/12095658641
+12095658642,-16.4616844,-71.5278264,señalizada,Cruce El Bosque,bus_stop,stop_position,yes,no,no,yes,,,,,,,0,,https://www.openstreetmap.org/node/12095658642
+12095658651,-16.4547536,-71.5296771,sin señal ni infraestructura,Club La campiña,bus_stop,stop_position,yes,no,no,no,,,,,,,0,,https://www.openstreetmap.org/node/12095658651
+12095663673,-16.4429179,-71.5288241,infraestructura,Unión,bus_stop,platform,yes,yes,yes,yes,,,,no,,SIT,0,,https://www.openstreetmap.org/node/12095663673
+12095677293,-16.4521941,-71.5313588,infraestructura,Lara,bus_stop,stop_position,yes,yes,yes,yes,,,,,,SIT,0,,https://www.openstreetmap.org/node/12095677293
+12095725410,-16.4464872,-71.5172115,infraestructura,Juan Velazco A.,bus_stop,stop_position,yes,yes,yes,yes,,,,,,SIT,0,,https://www.openstreetmap.org/node/12095725410
+12095728519,-16.4472499,-71.5161333,infraestructura,La Breña,bus_stop,stop_position,yes,yes,yes,yes,,,,,,SIT,0,,https://www.openstreetmap.org/node/12095728519
+12095741556,-16.4592922,-71.5254787,sin clasificar,Los Olivos,bus_stop,stop_position,yes,,,,,,,,,SIT,0,,https://www.openstreetmap.org/node/12095741556
+12095752912,-16.4494944,-71.5143777,infraestructura,Colegio Esmeraldas,bus_stop,stop_position,yes,yes,yes,yes,,,,,,SIT,0,,https://www.openstreetmap.org/node/12095752912
+12095752913,-16.4492365,-71.5151234,sin clasificar,Esmeraldas,bus_stop,stop_position,yes,,,,,,,,,,0,,https://www.openstreetmap.org/node/12095752913
+12095755474,-16.45818,-71.5239992,sin clasificar,Eucaliptos,bus_stop,stop_position,yes,,,,,,,,,SIT,0,,https://www.openstreetmap.org/node/12095755474
+12095761275,-16.458443,-71.524375,sin clasificar,Los Fresnos,bus_stop,stop_position,yes,,,,,,,,,SIT,0,,https://www.openstreetmap.org/node/12095761275
+12095762870,-16.4552874,-71.5150724,sin clasificar,El Sol,bus_stop,stop_position,yes,,,,,,,,,SIT,0,,https://www.openstreetmap.org/node/12095762870
+12095775438,-16.4568855,-71.5224328,sin clasificar,San Martín,bus_stop,stop_position,yes,,,,,,,,,,0,,https://www.openstreetmap.org/node/12095775438
+12095775439,-16.4575524,-71.522643,sin clasificar,Colegio,bus_stop,stop_position,yes,,,,,,,,,,0,,https://www.openstreetmap.org/node/12095775439
+12095785356,-16.4581601,-71.5240759,sin clasificar,Eucaliptos,bus_stop,stop_position,yes,,,,,,,,,SIT,0,,https://www.openstreetmap.org/node/12095785356
+12095785542,-16.4553157,-71.5204395,sin clasificar,Palizada,bus_stop,stop_position,yes,,,,,,,,,SIT,0,,https://www.openstreetmap.org/node/12095785542
+12095796602,-16.4546996,-71.5192822,sin clasificar,Colegio,bus_stop,stop_position,yes,,,,,,,,,SIT,0,,https://www.openstreetmap.org/node/12095796602
+12095808764,-16.4550375,-71.5180536,sin clasificar,Terminal Correcaminos,bus_stop,stop_position,yes,,,,,,,,,,0,,https://www.openstreetmap.org/node/12095808764
+12095808765,-16.4544064,-71.5179116,sin clasificar,Los Bosques,bus_stop,stop_position,yes,,,,,,,,,SIT,0,,https://www.openstreetmap.org/node/12095808765
+12108640156,-16.4435295,-71.5143791,infraestructura,Comisaría Simón Bolviar,bus_stop,stop_position,yes,yes,yes,yes,,,,,,SIT,0,,https://www.openstreetmap.org/node/12108640156
+12108651044,-16.4729362,-71.528745,infraestructura,Alto Buena Vista,bus_stop,platform,yes,yes,yes,yes,,,,,,SIT,0,,https://www.openstreetmap.org/node/12108651044
+12108755082,-16.399379,-71.528456,infraestructura,La Paz,bus_stop,stop_position,yes,yes,yes,yes,,,,,,SIT,0,,https://www.openstreetmap.org/node/12108755082
+12108774672,-16.3979291,-71.5264262,infraestructura,Don Bosco,bus_stop,stop_position,yes,yes,yes,yes,,,,,,SIT,0,,https://www.openstreetmap.org/node/12108774672
+12108774797,-16.4021007,-71.5245876,infraestructura,La Salle,bus_stop,stop_position,yes,yes,yes,yes,,,,no,,SIT,0,,https://www.openstreetmap.org/node/12108774797
+12108775110,-16.4054167,-71.5288489,señalizada,Coliseo Arequipa,bus_stop,stop_position,yes,no,no,yes,,,yes,,,,0,,https://www.openstreetmap.org/node/12108775110
+12108785285,-16.4018221,-71.5244005,infraestructura,La Salle,bus_stop,stop_position,yes,yes,yes,no,,,,,,,0,,https://www.openstreetmap.org/node/12108785285
+12108799267,-16.3934177,-71.5227348,sin clasificar,EsSalud Arequipa,bus_stop,stop_position,yes,,,,,,,,,SIT,0,,https://www.openstreetmap.org/node/12108799267
+12158757719,-16.3940096,-71.5752679,infraestructura,,bus_stop,platform,yes,yes,yes,no,,,yes,no,,,0,,https://www.openstreetmap.org/node/12158757719
+12159067811,-16.3826281,-71.5456624,señalizada,,bus_stop,stop_position,yes,no,no,yes,,,,,,,0,,https://www.openstreetmap.org/node/12159067811
+12159067812,-16.3823785,-71.5455396,infraestructura,,bus_stop,platform,yes,yes,yes,no,,,yes,no,,,0,,https://www.openstreetmap.org/node/12159067812
+12159239074,-16.4584443,-71.4930582,señalizada,,bus_stop,stop_position,yes,no,no,yes,,,,,,,0,,https://www.openstreetmap.org/node/12159239074
+12160347986,-16.3898982,-71.5273496,infraestructura,,bus_stop,platform,yes,yes,yes,yes,,,yes,,,,0,,https://www.openstreetmap.org/node/12160347986
+12160500401,-16.4398489,-71.5930751,infraestructura,,bus_stop,platform,yes,yes,yes,yes,,,,,,,0,,https://www.openstreetmap.org/node/12160500401
+12160500402,-16.4395762,-71.59357,infraestructura,,bus_stop,platform,yes,yes,yes,no,,,,,,,0,,https://www.openstreetmap.org/node/12160500402
+12160500403,-16.4395144,-71.5936746,infraestructura,,bus_stop,platform,yes,yes,yes,yes,,,,,,,0,,https://www.openstreetmap.org/node/12160500403
+12160500404,-16.4438401,-71.5923469,infraestructura,,bus_stop,platform,yes,yes,yes,no,,,,,,,0,,https://www.openstreetmap.org/node/12160500404
+12160500405,-16.4476513,-71.5926996,señalizada,,bus_stop,,yes,no,no,yes,,,,,,,0,,https://www.openstreetmap.org/node/12160500405
+12160500406,-16.4484931,-71.591388,infraestructura,,bus_stop,platform,yes,yes,yes,no,,,,,,,0,,https://www.openstreetmap.org/node/12160500406
+12160500407,-16.449168,-71.589727,infraestructura,,bus_stop,platform,yes,yes,yes,yes,,,,,,,0,,https://www.openstreetmap.org/node/12160500407
+12160500408,-16.449533,-71.5887232,infraestructura,,bus_stop,platform,yes,yes,yes,yes,,,yes,,,,0,,https://www.openstreetmap.org/node/12160500408
+12160500409,-16.4498648,-71.589092,señalizada,,bus_stop,stop_position,yes,no,no,yes,,,,,,,0,,https://www.openstreetmap.org/node/12160500409
+12160500410,-16.4505478,-71.5892006,infraestructura,,bus_stop,platform,yes,yes,yes,no,,,,,,,0,,https://www.openstreetmap.org/node/12160500410
+12160832102,-16.4211249,-71.4910533,infraestructura,,bus_stop,platform,yes,yes,yes,yes,,,,,,,0,,https://www.openstreetmap.org/node/12160832102
+12160832103,-16.4423725,-71.5288469,infraestructura,,bus_stop,platform,yes,yes,yes,yes,,,,,,,0,,https://www.openstreetmap.org/node/12160832103
+12160832104,-16.4415454,-71.5291245,infraestructura,,bus_stop,platform,yes,yes,yes,yes,,,yes,,,,0,,https://www.openstreetmap.org/node/12160832104
+12160832105,-16.4390198,-71.5299708,infraestructura,,bus_stop,platform,yes,yes,yes,yes,,,,,,,0,,https://www.openstreetmap.org/node/12160832105
+12160832106,-16.438852,-71.5300211,infraestructura,,bus_stop,platform,yes,yes,no,yes,,,yes,,,,0,,https://www.openstreetmap.org/node/12160832106
+12160839157,-16.4341827,-71.5222219,infraestructura,,bus_stop,platform,yes,yes,yes,no,,,,,,,0,,https://www.openstreetmap.org/node/12160839157
+12253381766,-16.4557029,-71.5180597,infraestructura,Mirador la campiña,bus_stop,stop_position,yes,yes,yes,yes,,,,,,SIT,0,,https://www.openstreetmap.org/node/12253381766
+12360463456,-16.4466814,-71.5523055,sin clasificar,,bus_stop,,,,no,,,,,,,,0,,https://www.openstreetmap.org/node/12360463456
+12879823701,-16.4055607,-71.5449213,sin clasificar,PeruHop drop-off,bus_stop,,,,,,,,,,,,0,,https://www.openstreetmap.org/node/12879823701
+12913027038,-16.3151803,-71.5486675,sin clasificar,AQP AMBIENTAL S.A.C,bus_stop,platform,yes,,,,,,,,,,0,,https://www.openstreetmap.org/node/12913027038
+13073335719,-16.4484151,-71.5434243,sin clasificar,,bus_stop,platform,yes,,,,,,,,,,0,,https://www.openstreetmap.org/node/13073335719
+13076051306,-16.4118494,-71.5025482,infraestructura,,bus_stop,platform,yes,yes,,,,,,,,,0,,https://www.openstreetmap.org/node/13076051306
+13988836823,-16.4407428,-71.5254573,sin clasificar,Tasahuayo,bus_stop,platform,yes,no,,,,,,,,,0,,https://www.openstreetmap.org/node/13988836823
+13988854563,-16.4484189,-71.5216928,sin clasificar,Esquina Las Américas,bus_stop,platform,yes,,,,,,,,,,0,,https://www.openstreetmap.org/node/13988854563
+13988854564,-16.4508402,-71.525781,sin clasificar,Villa El Golf,bus_stop,platform,yes,,,,,,,,,,0,,https://www.openstreetmap.org/node/13988854564
+13988854565,-16.4480038,-71.5200002,sin clasificar,San Agusto,bus_stop,platform,yes,,,,,,,,,,0,,https://www.openstreetmap.org/node/13988854565
+13988854573,-16.4510033,-71.5156244,sin clasificar,El Golf,bus_stop,platform,yes,,,,,,,,,,0,,https://www.openstreetmap.org/node/13988854573
+13988859213,-16.4404536,-71.5292303,sin clasificar,Mercado,bus_stop,platform,yes,,,,,,,,,,0,,https://www.openstreetmap.org/node/13988859213
+13988866060,-16.4256293,-71.5334212,señalizada,Centro Comercial La Isla (Sur),bus_stop,platform,yes,no,no,yes,,,no,no,Integra Arequipa S.A.C.,Sistema Integrado de Transporte (SIT),0,,https://www.openstreetmap.org/node/13988866060
+13988926556,-16.4042811,-71.527672,infraestructura,Paucarpata,bus_stop,platform,yes,yes,yes,,,,yes,yes,,,0,,https://www.openstreetmap.org/node/13988926556
+13988926557,-16.4046362,-71.5276023,infraestructura,Paucarpata,bus_stop,platform,yes,yes,yes,,,,yes,yes,,,0,,https://www.openstreetmap.org/node/13988926557
+14107933702,-16.3460875,-71.6008714,sin clasificar,Paradero 19,bus_stop,,,,,,,,,,,,0,,https://www.openstreetmap.org/node/14107933702

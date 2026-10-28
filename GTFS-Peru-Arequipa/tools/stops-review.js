@@ -84,8 +84,11 @@ function hasInfrastructure(tags) {
         || tags.covered === 'yes'
 }
 
+// traffic_sign=no / none are common explicit negatives (taginfo: thousands of uses), not a sign.
+const NOT_A_SIGN = new Set(['', 'no', 'none'])
+
 function isSigned(tags) {
-    return tags.sign === 'yes' || (typeof tags.traffic_sign === 'string' && tags.traffic_sign !== '')
+    return tags.sign === 'yes' || (typeof tags.traffic_sign === 'string' && !NOT_A_SIGN.has(tags.traffic_sign))
 }
 
 function classify(tags = {}) {
@@ -203,7 +206,7 @@ function countBy(rows, key) {
     }
     return [...counts.entries()]
         .map(([value, entry]) => ({ value, ...entry }))
-        .sort((a, b) => b.total - a.total || a.value.localeCompare(b.value))
+        .sort((a, b) => b.total - a.total || a.value.localeCompare(b.value, 'es'))   // explicit locale: same order on every machine
 }
 
 function summarize(rows) {
@@ -274,20 +277,39 @@ function excerpt(text) {
     return String(text).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 200)
 }
 
+// The OSM wiki asks for a 30 s pause after a 429/406 before the next request.
+const DEFAULT_BASE_DELAY_MS = 30_000
+
+// Retry-After is either delay-seconds or an HTTP-date (RFC 9110 §10.2.3); 0 when absent or unparsable.
+function parseRetryAfter(value, nowMs = Date.now()) {
+    if (value === undefined || value === null || value === '') return 0
+    const seconds = Number(value)
+    if (Number.isFinite(seconds)) return Math.max(0, seconds * 1000)
+    const at = Date.parse(value)
+    return Number.isNaN(at) ? 0 : Math.max(0, at - nowMs)
+}
+
+function headerOf(response, name) {
+    return response.headers && typeof response.headers.get === 'function' ? response.headers.get(name) : undefined
+}
+
 // POSTs the query to each endpoint in turn; on 429/5xx, timeouts, network errors or non-JSON
-// bodies it waits with exponential backoff and tries again. HTTP 400 is a query error: fatal.
+// bodies it waits with exponential backoff (never less than a Retry-After the server sent) and
+// tries again. HTTP 400 is a query error: fatal.
 async function fetchOverpass(query, {
     urls = DEFAULT_OVERPASS_URLS,
     attempts = 5,
     timeoutMs = 180_000,
-    baseDelayMs = 15_000,
+    baseDelayMs = DEFAULT_BASE_DELAY_MS,
     maxDelayMs = 120_000,
     fetchImpl = globalThis.fetch,
     sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms)),
     log = (msg) => console.error(msg),
+    now = () => Date.now(),
 } = {}) {
     if (!urls.length) throw new Error('No Overpass endpoint configured')
     let delay = baseDelayMs
+    let retryAfterMs = 0
     let lastError
     for (let attempt = 1; attempt <= attempts; attempt++) {
         for (const url of urls) {
@@ -305,7 +327,10 @@ async function fetchOverpass(query, {
                 })
                 const text = await response.text()
                 if (response.status === 400) throw new OverpassQueryError(`Overpass rejected the query (HTTP 400): ${excerpt(text)}`)
-                if (!response.ok) throw new Error(`HTTP ${response.status} from ${url}: ${excerpt(text)}`)
+                if (!response.ok) {
+                    retryAfterMs = Math.max(retryAfterMs, parseRetryAfter(headerOf(response, 'retry-after'), now()))
+                    throw new Error(`HTTP ${response.status} from ${url}: ${excerpt(text)}`)
+                }
                 let json
                 try {
                     json = JSON.parse(text)
@@ -322,8 +347,10 @@ async function fetchOverpass(query, {
             }
         }
         if (attempt < attempts) {
-            log(`[overpass] waiting ${delay / 1000}s before retrying`)
-            await sleep(delay)
+            const wait = Math.max(delay, retryAfterMs)
+            log(`[overpass] waiting ${wait / 1000}s before retrying${retryAfterMs > delay ? ' (Retry-After)' : ''}`)
+            await sleep(wait)
+            retryAfterMs = 0
             delay = Math.min(delay * 2, maxDelayMs)
         }
     }
@@ -369,6 +396,8 @@ async function run(argv, { env = process.env, write = (s) => process.stdout.writ
             + 'Rerun later or with OVERPASS_URL=https://overpass-api.de/api/interpreter if you need current data.')
     }
     const rows = buildRows(data.elements)
+    // Zero objects is a wrong endpoint or bbox far more often than a city without stops.
+    if (!rows.length) throw new Error('The answer carries 0 stops: not overwriting the inventory (wrong endpoint or bbox?)')
     const outDir = args.out || path.join(__dirname, '..', 'stops-review')
     fs.mkdirSync(outDir, { recursive: true })
     const csvPath = path.join(outDir, 'stops-review.csv')
@@ -390,7 +419,7 @@ if (require.main === module) {
 }
 
 module.exports = {
-    CLASSES, CLASS_ORDER, CSV_COLUMNS, DEFAULT_OVERPASS_URLS, OverpassQueryError, UTF8_BOM,
+    CLASSES, CLASS_ORDER, CSV_COLUMNS, DEFAULT_OVERPASS_URLS, DEFAULT_BASE_DELAY_MS, OverpassQueryError, UTF8_BOM, parseRetryAfter,
     buildQuery, classify, indexRouteMembership, buildRows, toCsv, toGeoJson, geoJsonBbox,
     summarize, formatSummary, fetchOverpass, endpointsFromEnv, baseAgeDays, STALE_AFTER_DAYS, run,
 }

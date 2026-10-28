@@ -63,6 +63,8 @@ test('classify: without inventory tags the stop is "sin clasificar"', () => {
     assert.equal(classify({ highway: 'bus_stop', sign: 'no' }), CLASSES.UNKNOWN, 'sign=no alone: furniture not surveyed')
     assert.equal(classify({ highway: 'bus_stop', shelter: 'no', bench: 'no' }), CLASSES.UNKNOWN, 'no sign tag: sign not surveyed')
     assert.equal(classify({ highway: 'bus_stop', covered: 'no', traffic_sign: '' }), CLASSES.UNKNOWN)
+    assert.equal(classify({ highway: 'bus_stop', traffic_sign: 'no' }), CLASSES.UNKNOWN, 'traffic_sign=no is an explicit negative')
+    assert.equal(classify({ highway: 'bus_stop', traffic_sign: 'none' }), CLASSES.UNKNOWN)
     assert.equal(classify({}), CLASSES.UNKNOWN)
     assert.equal(classify(), CLASSES.UNKNOWN)
 })
@@ -192,7 +194,8 @@ function fakeFetch(responses) {
         const next = responses.shift()
         if (!next) throw new Error('fakeFetch: no response left')
         if (next instanceof Error) throw next
-        return { ok: next.status >= 200 && next.status < 300, status: next.status, text: async () => next.body }
+        const headers = Object.fromEntries(Object.entries(next.headers || {}).map(([k, v]) => [k.toLowerCase(), v]))
+        return { ok: next.status >= 200 && next.status < 300, status: next.status, text: async () => next.body, headers: { get: (k) => headers[k.toLowerCase()] ?? null } }
     }
     return { impl, calls }
 }
@@ -241,6 +244,28 @@ test('fetchOverpass: exponential backoff across rounds, capped', async () => {
     assert.deepEqual(waits, [10, 20, 25], 'doubles and caps at maxDelayMs')
     assert.ok(logs.some((m) => /non-JSON response/.test(m)))
     assert.ok(logs.some((m) => /runtime error/.test(m)))
+})
+
+test('fetchOverpass: the default pause is the 30 s the Overpass wiki asks for, and Retry-After raises it', async () => {
+    assert.equal(review.DEFAULT_BASE_DELAY_MS, 30_000)
+    const fixedNow = Date.parse('2026-10-28T22:00:00Z')
+    assert.equal(review.parseRetryAfter('45', fixedNow), 45_000)
+    assert.equal(review.parseRetryAfter(new Date(fixedNow + 7_000).toUTCString(), fixedNow), 7_000)
+    assert.equal(review.parseRetryAfter('garbage', fixedNow), 0)
+    assert.equal(review.parseRetryAfter(undefined, fixedNow), 0)
+
+    const { impl, calls } = fakeFetch([
+        { status: 429, body: 'slow down', headers: { 'Retry-After': '45' } },
+        { status: 503, body: 'busy', headers: { 'Retry-After': new Date(fixedNow + 7_000).toUTCString() } },
+        { status: 502, body: 'at capacity' },
+        { status: 200, body: okBody },
+    ])
+    const { waits, sleep } = noSleep()
+    const logs = []
+    await fetchOverpass('q', { urls: ['https://a/api'], baseDelayMs: 10, maxDelayMs: 1_000, fetchImpl: impl, sleep, log: (m) => logs.push(m), now: () => fixedNow })
+    assert.equal(calls.length, 4)
+    assert.deepEqual(waits, [45_000, 7_000, 40], 'Retry-After is a floor for that wait only; the backoff keeps doubling underneath')
+    assert.ok(logs.some((m) => /waiting 45s before retrying \(Retry-After\)/.test(m)))
 })
 
 test('fetchOverpass: a timeout is retried like any other failure', async () => {
@@ -322,6 +347,17 @@ test('run --from: writes both files into --out and prints the summary', async ()
     assert.equal(fc.generated, undefined)
     assert.match(printed, /\| \*\*total\*\* \| \*\*12\*\* \| 100 % \|/)
     assert.match(printed, new RegExp(`Escrito ${result.csvPath.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`))
+    fs.rmSync(outDir, { recursive: true, force: true })
+})
+
+test('run: an answer with zero stops does not overwrite the inventory', async () => {
+    const outDir = fs.mkdtempSync(path.join(os.tmpdir(), 'stops-review-'))
+    const { impl } = fakeFetch([{ status: 200, body: JSON.stringify({ osm3s: { timestamp_osm_base: '2026-10-28T21:40:20Z' }, elements: [] }) }])
+    await assert.rejects(
+        run(['--out', outDir], { env: { OVERPASS_URL: 'https://local/api' }, write: () => {}, warn: () => {}, fetchImpl: impl }),
+        /0 stops: not overwriting/,
+    )
+    assert.deepEqual(fs.readdirSync(outDir), [], 'nothing written')
     fs.rmSync(outDir, { recursive: true, force: true })
 })
 

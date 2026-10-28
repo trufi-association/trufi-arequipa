@@ -1,0 +1,30 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-28T21:40:20Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {"type": "node", "id": 11195209265, "lat": -16.4527409, "lon": -71.6142801, "tags": {"bench": "yes", "bus": "yes", "covered": "yes", "highway": "bus_stop", "name": "Jirón Toquepala", "network": "Sistema Integrado de Transporte (SIT)", "operator": "Megabus AQP S.A.C.", "public_transport": "platform"}},
+    {"type": "node", "id": 4058234279, "lat": -16.4199782, "lon": -71.516805, "tags": {"bench": "yes", "bin": "no", "bus": "yes", "highway": "bus_stop", "lit": "yes", "public_transport": "platform", "shelter": "yes", "sign": "yes"}},
+    {"type": "node", "id": 4058968456, "lat": -16.3982259, "lon": -71.5239466, "tags": {"bench": "no", "bin": "no", "bus": "yes", "highway": "bus_stop", "lit": "no", "name": "Muñoz Najar", "public_transport": "stop_position", "shelter": "no", "sign": "yes"}},
+    {"type": "node", "id": 4073461209, "lat": -16.3889674, "lon": -71.5260418, "tags": {"bench": "yes", "bus": "yes", "highway": "bus_stop", "public_transport": "platform", "shelter": "yes", "sign": "no"}},
+    {"type": "node", "id": 4197540334, "lat": -16.3943366, "lon": -71.5365233, "tags": {"bus": "yes", "description": "Paradero según Ordenanza Municipal Nº 798", "highway": "bus_stop", "name": "Paradero turístico exclusivo", "public_transport": "platform", "toilets:wheelchair": "no", "wheelchair": "no"}},
+    {"type": "node", "id": 4709194470, "lat": -16.4471296, "lon": -71.5282974, "tags": {"bench": "no", "bus": "yes", "highway": "bus_stop", "public_transport": "stop_position", "shelter": "no", "sign": "no"}},
+    {"type": "node", "id": 10882611211, "lat": -16.4249679, "lon": -71.5330511, "tags": {"bench": "no", "bin": "no", "bus": "yes", "highway": "bus_stop", "lit": "no", "name": "Andrés Avelino Cáceres", "network": "Sistema Intetrado de Transporte (SIT)", "operator": "Integra Arequipa S.A.C.", "public_transport": "platform", "shelter": "no"}},
+    {"type": "node", "id": 10866662527, "lat": -16.4423642, "lon": -71.5288415, "tags": {"bench": "yes", "bin": "no", "bus": "yes", "flag:type": "yes", "highway": "bus_stop", "lit": "yes", "name": "Grifo \"San Fernando\", esq. Av. Dolores", "network": "Sistema Integrado de Transporte (SIT)", "operator": "Integra Arequipa S.A.C.", "public_transport": "platform", "shelter": "yes", "sign": "yes"}},
+    {"type": "node", "id": 5777925904, "lat": -16.4047647, "lon": -71.5322196, "tags": {"bus": "yes", "public_transport": "stop_position"}},
+    {"type": "node", "id": 11014310380, "lat": -16.4072283, "lon": -71.5308534, "tags": {"bench": "no", "bus": "yes", "highway": "bus_stop", "public_transport": "stop_area", "shelter": "no", "sign": "yes"}},
+    {"type": "relation", "id": 900000001, "members": [
+      {"type": "node", "ref": 4058968456, "role": "stop"},
+      {"type": "node", "ref": 4058234279, "role": "platform"},
+      {"type": "node", "ref": 999999999, "role": "stop"},
+      {"type": "way", "ref": 800000001, "role": ""}
+    ], "tags": {"type": "route", "route": "bus", "ref": "C-3", "name": "C-3 Bus \"11 de mayo\": Mujeres con Esperanza → Terminal Terrestre", "network": "SIT"}},
+    {"type": "relation", "id": 900000002, "members": [
+      {"type": "node", "ref": 4058968456, "role": "stop"},
+      {"type": "way", "ref": 800000002, "role": ""}
+    ], "tags": {"type": "route", "route": "bus", "name": "Línea sin ref: Terminal → Centro"}}
+  ]
+}

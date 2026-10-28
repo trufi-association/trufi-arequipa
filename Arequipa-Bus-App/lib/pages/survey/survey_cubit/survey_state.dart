@@ -42,6 +42,27 @@ class SurveyState extends Equatable {
     SurveyQuestionEnum.availability_of_information,
   ];
 
+  /// Whether the answers reach the last question of the branch they belong
+  /// to: the woman's or the disability branch by their last question, the
+  /// short branch when gender and disability are answered and lead nowhere
+  /// longer. Lets a survey completed before the completion flag existed
+  /// (trufi-arequipa#71) count as completed on the next start.
+  bool get isComplete {
+    final answered = {
+      for (final q in surveyQuestions) q.surveyQuestionEnum: q.surveyAnswer,
+    };
+    if (answered.containsKey(surveyForWoman.last) ||
+        answered.containsKey(surveyForDisability.last)) {
+      return true;
+    }
+    final disability = answered[SurveyQuestionEnum.disability];
+    if (disability == null) return false;
+    final gender = answered[SurveyQuestionEnum.gender] ?? const [];
+    final longerBranch = gender.contains(SurveyOptionEnum.gender_female) ||
+        disability.contains(SurveyOptionEnum.disability_yes);
+    return !longerBranch;
+  }
+
   const SurveyState({
     required this.isPresentation,
     required this.currentQuestion,

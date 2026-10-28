@@ -2,10 +2,11 @@
 'use strict'
 // Inventory of the bus stops mapped in OpenStreetMap inside the Arequipa bounding box
 // (trufi-association/trufi-arequipa#40). Queries Overpass for every bus-stop node, classifies
-// each one by what the mappers recorded on it, and writes out/stops-review.csv and
-// out/stops-review.geojson plus a summary on stdout. Plain Node (>= 20), no dependencies.
+// each one by what the mappers recorded on it, and writes stops-review/stops-review.csv and
+// stops-review/stops-review.geojson plus a summary on stdout. Plain Node (>= 20), no dependencies.
+// The output folder is deliberately not out/: the GTFS builder deletes out/ on every run.
 //
-//   node tools/stops-review.js                 query Overpass, write out/, print the summary
+//   node tools/stops-review.js                 query Overpass, write stops-review/, print the summary
 //   node tools/stops-review.js --from f.json   same, from a saved Overpass JSON (offline)
 //   node tools/stops-review.js --raw f.json    also save the raw Overpass response
 //   node tools/stops-review.js --out <dir>     write the files somewhere else
@@ -336,7 +337,7 @@ async function run(argv, { env = process.env, write = (s) => process.stdout.writ
             + 'Rerun later or with OVERPASS_URL=https://overpass-api.de/api/interpreter if you need current data.')
     }
     const rows = buildRows(data.elements)
-    const outDir = args.out || path.join(__dirname, '..', 'out')
+    const outDir = args.out || path.join(__dirname, '..', 'stops-review')
     fs.mkdirSync(outDir, { recursive: true })
     const csvPath = path.join(outDir, 'stops-review.csv')
     const geojsonPath = path.join(outDir, 'stops-review.geojson')

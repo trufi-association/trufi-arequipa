@@ -9,6 +9,8 @@ const bounds = require('../bbox')
 const review = require('./stops-review')
 const { CLASSES, classify, buildQuery, buildRows, toCsv, toGeoJson, summarize, formatSummary, fetchOverpass, endpointsFromEnv, run } = review
 
+// 11 real nodes and 1 real way of the Arequipa inventory (as in OSM on 2026-10-28) plus two
+// synthetic route relations (ids 9000000xx) that reference some of them.
 const FIXTURE = path.join(__dirname, 'fixtures', 'overpass-sample.json')
 const fixture = () => JSON.parse(fs.readFileSync(FIXTURE, 'utf8'))
 
@@ -18,13 +20,15 @@ test('bbox: shared with index.js and well formed', () => {
     assert.match(indexSource, /require\('\.\/bbox'\)/, 'index.js must take the bbox from bbox.js')
 })
 
-test('buildQuery: the three stop selectors in the bbox, then the relations that reference them', () => {
+test('buildQuery: stop nodes, mode-less stop positions and platform ways in the bbox, then the relations that reference them', () => {
     const q = buildQuery({ south: -1, west: -2, north: 1, east: 2 })
     assert.match(q, /^\[out:json\]\[timeout:\d+\];/)
     assert.match(q, /node\["highway"="bus_stop"\]\(-1,-2,1,2\);/)
     assert.match(q, /node\["public_transport"="platform"\]\["bus"="yes"\]\(-1,-2,1,2\);/)
     assert.match(q, /node\["public_transport"="stop_position"\]\["bus"="yes"\]\(-1,-2,1,2\);/)
-    assert.match(q, /\)->\.stops;\n\.stops out body;\nrel\(bn\.stops\)\["type"="route"\];\nout body;$/)
+    assert.match(q, /node\["public_transport"="stop_position"\]\[!"bus"\]\[!"train"\]\[!"tram"\]\[!"subway"\]\[!"light_rail"\]\[!"ferry"\]\[!"railway"\]\(-1,-2,1,2\);/)
+    assert.match(q, /way\["public_transport"="platform"\]\["bus"="yes"\]\(-1,-2,1,2\);/)
+    assert.match(q, /\)->\.stops;\n\.stops out body center;\n\(rel\(bn\.stops\)\["type"="route"\]; rel\(bw\.stops\)\["type"="route"\];\);\nout body;$/)
 })
 
 test('classify: infrastructure tags win, in any combination', () => {
@@ -55,6 +59,7 @@ test('classify: without inventory tags the stop is "sin clasificar"', () => {
     assert.equal(classify({ highway: 'bus_stop' }), CLASSES.UNKNOWN)
     assert.equal(classify({ highway: 'bus_stop', public_transport: 'platform', bus: 'yes', name: 'x' }), CLASSES.UNKNOWN)
     assert.equal(classify({ public_transport: 'stop_position', bus: 'yes' }), CLASSES.UNKNOWN)
+    assert.equal(classify({ public_transport: 'platform', bus: 'yes', surface: 'asphalt' }), CLASSES.UNKNOWN, 'a platform way with no inventory tags')
     assert.equal(classify({ highway: 'bus_stop', sign: 'no' }), CLASSES.UNKNOWN, 'sign=no alone: furniture not surveyed')
     assert.equal(classify({ highway: 'bus_stop', shelter: 'no', bench: 'no' }), CLASSES.UNKNOWN, 'no sign tag: sign not surveyed')
     assert.equal(classify({ highway: 'bus_stop', covered: 'no', traffic_sign: '' }), CLASSES.UNKNOWN)
@@ -62,19 +67,23 @@ test('classify: without inventory tags the stop is "sin clasificar"', () => {
     assert.equal(classify(), CLASSES.UNKNOWN)
 })
 
-test('buildRows: one row per node, sorted by id, with route membership from the relations', () => {
+test('buildRows: one row per node and per way, nodes first, with route membership from the relations', () => {
     const rows = buildRows(fixture().elements)
-    assert.equal(rows.length, 10)
-    assert.deepEqual(rows.map((r) => r.osm_id), [...rows.map((r) => r.osm_id)].sort((a, b) => a - b))
+    assert.equal(rows.length, 12)
+    assert.deepEqual(rows.map((r) => r.osm_type), [...Array(11).fill('node'), 'way'])
+    const nodeIds = rows.filter((r) => r.osm_type === 'node').map((r) => r.osm_id)
+    assert.deepEqual(nodeIds, [...nodeIds].sort((a, b) => a - b))
     const byId = Object.fromEntries(rows.map((r) => [r.osm_id, r]))
 
     assert.equal(byId[4058968456].route_relations, 2)
     assert.equal(byId[4058968456].routes, 'C-3; Línea sin ref: Terminal → Centro', 'ref first, name when there is no ref')
     assert.equal(byId[4058234279].route_relations, 1)
     assert.equal(byId[4058234279].routes, 'C-3')
+    assert.equal(byId[1245983469].route_relations, 1, 'a way member counts too')
+    assert.equal(byId[1245983469].routes, 'C-3')
     assert.equal(byId[4073461209].route_relations, 0)
     assert.equal(byId[4073461209].routes, '')
-    assert.ok(!byId[999999999], 'relation members that are not stops are not rows')
+    assert.ok(!byId[999999999] && !byId[800000001], 'relation members that are not stops are not rows')
 
     assert.equal(byId[11195209265].class, CLASSES.INFRA, 'bench + covered')
     assert.equal(byId[4058234279].class, CLASSES.INFRA)
@@ -85,7 +94,13 @@ test('buildRows: one row per node, sorted by id, with route membership from the 
     assert.equal(byId[10882611211].class, CLASSES.UNKNOWN, 'shelter=no, bench=no but no sign tag')
     assert.equal(byId[5777925904].class, CLASSES.UNKNOWN)
     assert.equal(byId[11014310380].class, CLASSES.SIGNED)
+    assert.equal(byId[11954185166].class, CLASSES.UNKNOWN, 'stop position without a mode')
+    assert.equal(byId[1245983469].class, CLASSES.UNKNOWN, 'platform way without inventory tags')
 
+    assert.equal(byId[1245983469].lat, -16.3525147, 'a way is placed at its centre')
+    assert.equal(byId[1245983469].lon, -71.5417543)
+    assert.equal(byId[1245983469].osm_url, 'https://www.openstreetmap.org/way/1245983469')
+    assert.equal(byId[1245983469].operator, 'TransCayma S.A.C.')
     assert.equal(byId[10866662527].name, 'Grifo "San Fernando", esq. Av. Dolores')
     assert.equal(byId[10866662527].operator, 'Integra Arequipa S.A.C.')
     assert.equal(byId[10866662527].osm_url, 'https://www.openstreetmap.org/node/10866662527')
@@ -97,15 +112,17 @@ test('toCsv: header, one line per row, RFC 4180 quoting, UTF-8 kept', () => {
     const rows = buildRows(fixture().elements)
     const csv = toCsv(rows)
     const lines = csv.split('\n')
-    assert.equal(lines[0], 'osm_id,lat,lon,class,name,highway,public_transport,bus,shelter,bench,sign,traffic_sign,covered,lit,bin,operator,network,route_relations,routes,osm_url')
+    assert.equal(lines[0], 'osm_id,osm_type,lat,lon,class,name,highway,public_transport,bus,shelter,bench,sign,traffic_sign,covered,lit,bin,operator,network,route_relations,routes,osm_url')
     assert.equal(lines.length, rows.length + 2, 'header + rows + trailing newline')
     assert.equal(lines.at(-1), '')
     const quoted = lines.find((l) => l.startsWith('10866662527,'))
     assert.ok(quoted.includes(',"Grifo ""San Fernando"", esq. Av. Dolores",'), 'comma and quotes force quoting, quotes doubled')
     const signed = lines.find((l) => l.startsWith('4058968456,'))
-    assert.equal(signed, '4058968456,-16.3982259,-71.5239466,señalizada,Muñoz Najar,bus_stop,stop_position,yes,no,no,yes,,,no,no,,,2,C-3; Línea sin ref: Terminal → Centro,https://www.openstreetmap.org/node/4058968456', 'a semicolon needs no quoting')
+    assert.equal(signed, '4058968456,node,-16.3982259,-71.5239466,señalizada,Muñoz Najar,bus_stop,stop_position,yes,no,no,yes,,,no,no,,,2,C-3; Línea sin ref: Terminal → Centro,https://www.openstreetmap.org/node/4058968456', 'a semicolon needs no quoting')
     const bare = lines.find((l) => l.startsWith('4709194470,'))
-    assert.equal(bare, '4709194470,-16.4471296,-71.5282974,sin señal ni infraestructura,,bus_stop,stop_position,yes,no,no,no,,,,,,,0,,https://www.openstreetmap.org/node/4709194470')
+    assert.equal(bare, '4709194470,node,-16.4471296,-71.5282974,sin señal ni infraestructura,,bus_stop,stop_position,yes,no,no,no,,,,,,,0,,https://www.openstreetmap.org/node/4709194470')
+    const way = lines.find((l) => l.startsWith('1245983469,'))
+    assert.equal(way, '1245983469,way,-16.3525147,-71.5417543,sin clasificar,,,platform,yes,,,,,,,,TransCayma S.A.C.,Sistema Integrado de Transporte (SIT),1,C-3,https://www.openstreetmap.org/way/1245983469')
 })
 
 test('toGeoJson: a FeatureCollection of points with [lon, lat] and the row as properties', () => {
@@ -116,46 +133,53 @@ test('toGeoJson: a FeatureCollection of points with [lon, lat] and the row as pr
     assert.equal(fc.osm_base, '2026-10-28T21:40:20Z')
     assert.equal(fc.bbox, '1,2,3,4')
     assert.equal(fc.features.length, rows.length)
-    const f = fc.features.find((x) => x.id === 4058968456)
+    const f = fc.features.find((x) => x.id === 'node/4058968456')
     assert.deepEqual(f.geometry, { type: 'Point', coordinates: [-71.5239466, -16.3982259] })
     assert.equal(f.properties.class, 'señalizada')
     assert.equal(f.properties.name, 'Muñoz Najar')
     assert.equal(f.properties.route_relations, 2)
     assert.equal(f.properties.lat, undefined, 'coordinates only in the geometry')
+    const w = fc.features.find((x) => x.id === 'way/1245983469')
+    assert.deepEqual(w.geometry, { type: 'Point', coordinates: [-71.5417543, -16.3525147] }, 'a way becomes a point at its centre')
+    assert.equal(w.properties.osm_type, 'way')
     assert.equal(text.split('\n').length, rows.length + 3, 'one feature per line')
 })
 
-test('summarize: totals add up per class, operator, network and route membership', () => {
+test('summarize: totals add up per class, type, operator, network and route membership', () => {
     const rows = buildRows(fixture().elements)
     const s = summarize(rows)
-    assert.equal(s.total, 10)
+    assert.equal(s.total, 12)
+    assert.deepEqual(s.byType, { node: 11, way: 1 })
     assert.deepEqual(s.byClass, {
         [CLASSES.INFRA]: 4,
         [CLASSES.SIGNED]: 2,
         [CLASSES.BARE]: 1,
-        [CLASSES.UNKNOWN]: 3,
+        [CLASSES.UNKNOWN]: 5,
     })
     assert.equal(Object.values(s.byClass).reduce((a, b) => a + b, 0), s.total)
-    assert.equal(s.inRouteRelations, 2)
+    assert.equal(s.inRouteRelations, 3)
     assert.equal(s.byOperator[0].value, '', 'most stops have no operator in the fixture')
-    assert.equal(s.byOperator[0].total, 7)
+    assert.equal(s.byOperator[0].total, 8)
     const integra = s.byOperator.find((g) => g.value === 'Integra Arequipa S.A.C.')
     assert.deepEqual(integra, { value: 'Integra Arequipa S.A.C.', total: 2, classes: { [CLASSES.INFRA]: 1, [CLASSES.SIGNED]: 0, [CLASSES.BARE]: 0, [CLASSES.UNKNOWN]: 1 } })
+    assert.equal(s.byOperator.find((g) => g.value === 'TransCayma S.A.C.').total, 1, 'the way counts for its operator')
     assert.equal(s.byNetwork.map((g) => g.value).filter(Boolean).length, 2, 'misspelt network values stay separate (that is a finding)')
-    assert.deepEqual(s.dataQuality, { withoutPublicTransport: 0, unexpectedPublicTransport: 1, busNo: 0, withoutName: 5 })
+    assert.deepEqual(s.dataQuality, { withoutPublicTransport: 0, unexpectedPublicTransport: 1, stopPositionWithoutMode: 1, busNo: 0, withoutName: 6 })
 })
 
 test('formatSummary: markdown tables with the class counts and the membership line', () => {
     const text = formatSummary(summarize(buildRows(fixture().elements)), { osmBase: '2026-10-28T21:40:20Z', source: 'fixture' })
     assert.match(text, /^# Paradas de bus en OSM — Arequipa \(2026-10-28T21:40:20Z\)/)
-    assert.match(text, /\| infraestructura \| 4 \| 40\.0 % \|/)
-    assert.match(text, /\| señalizada \| 2 \| 20\.0 % \|/)
-    assert.match(text, /\| sin señal ni infraestructura \| 1 \| 10\.0 % \|/)
-    assert.match(text, /\| sin clasificar \| 3 \| 30\.0 % \|/)
-    assert.match(text, /\| \*\*total\*\* \| \*\*10\*\* \| 100 % \|/)
-    assert.match(text, /Miembros de alguna relación de ruta \(type=route\): \*\*2\*\* de 10\./)
+    assert.match(text, /· 11 nodos \+ 1 ways/)
+    assert.match(text, /\| infraestructura \| 4 \| 33\.3 % \|/)
+    assert.match(text, /\| señalizada \| 2 \| 16\.7 % \|/)
+    assert.match(text, /\| sin señal ni infraestructura \| 1 \| 8\.3 % \|/)
+    assert.match(text, /\| sin clasificar \| 5 \| 41\.7 % \|/)
+    assert.match(text, /\| \*\*total\*\* \| \*\*12\*\* \| 100 % \|/)
+    assert.match(text, /Miembros de alguna relación de ruta \(type=route\): \*\*3\*\* de 12\./)
     assert.match(text, /\| Integra Arequipa S\.A\.C\. \| 2 \| 1 \| 0 \| 0 \| 1 \|/)
-    assert.match(text, /\| \(sin operator\) \| 7 \|/)
+    assert.match(text, /\| \(sin operator\) \| 8 \|/)
+    assert.match(text, /1 stop_position sin modo/)
 })
 
 function fakeFetch(responses) {
@@ -286,12 +310,12 @@ test('run --from: writes both files into --out and prints the summary', async ()
     const outDir = fs.mkdtempSync(path.join(os.tmpdir(), 'stops-review-'))
     let printed = ''
     const result = await run(['--from', FIXTURE, '--out', outDir], { write: (s) => { printed += s } })
-    assert.equal(result.rows.length, 10)
+    assert.equal(result.rows.length, 12)
     assert.equal(fs.readFileSync(result.csvPath, 'utf8'), toCsv(result.rows))
     const fc = JSON.parse(fs.readFileSync(result.geojsonPath, 'utf8'))
-    assert.equal(fc.features.length, 10)
+    assert.equal(fc.features.length, 12)
     assert.equal(fc.osm_base, '2026-10-28T21:40:20Z')
-    assert.match(printed, /\| \*\*total\*\* \| \*\*10\*\* \| 100 % \|/)
+    assert.match(printed, /\| \*\*total\*\* \| \*\*12\*\* \| 100 % \|/)
     assert.match(printed, new RegExp(`Escrito ${result.csvPath.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`))
     fs.rmSync(outDir, { recursive: true, force: true })
 })
@@ -304,7 +328,7 @@ test('run: queries Overpass through the injected fetch and honours OVERPASS_URL'
     assert.equal(calls.length, 1)
     assert.equal(calls[0].url, 'https://local/api')
     assert.equal(decodeURIComponent(calls[0].init.body.slice('data='.length)), buildQuery(bounds))
-    assert.equal(result.summary.total, 10)
+    assert.equal(result.summary.total, 12)
     assert.equal(JSON.parse(fs.readFileSync(rawPath, 'utf8')).elements.length, fixture().elements.length)
     fs.rmSync(outDir, { recursive: true, force: true })
 })

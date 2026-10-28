@@ -36,7 +36,7 @@ const CLASSES = Object.freeze({
 const CLASS_ORDER = [CLASSES.INFRA, CLASSES.SIGNED, CLASSES.BARE, CLASSES.UNKNOWN]
 
 const CSV_COLUMNS = [
-    'osm_id', 'lat', 'lon', 'class', 'name', 'highway', 'public_transport', 'bus',
+    'osm_id', 'osm_type', 'lat', 'lon', 'class', 'name', 'highway', 'public_transport', 'bus',
     'shelter', 'bench', 'sign', 'traffic_sign', 'covered', 'lit', 'bin',
     'operator', 'network', 'route_relations', 'routes', 'osm_url',
 ]
@@ -45,8 +45,10 @@ function bboxString(b) {
     return `${b.south},${b.west},${b.north},${b.east}`
 }
 
-// Every node that can stand for a bus stop in the bbox, then the route relations that list any
-// of them as a member (so we can tell which stops are already wired to a line).
+// Every object that can stand for a bus stop in the bbox: the bus-stop nodes, the stop positions
+// that carry no mode at all (the mappers left bus=* off two of them; rail ones carry train=yes),
+// and the platforms mapped as ways (a linear waiting area; placed at their centre), then the
+// route relations that list any of them as a member (so we can tell which stops are wired to a line).
 function buildQuery(b = bounds) {
     const bbox = bboxString(b)
     return [
@@ -55,9 +57,11 @@ function buildQuery(b = bounds) {
         `  node["highway"="bus_stop"](${bbox});`,
         `  node["public_transport"="platform"]["bus"="yes"](${bbox});`,
         `  node["public_transport"="stop_position"]["bus"="yes"](${bbox});`,
+        `  node["public_transport"="stop_position"][!"bus"][!"train"][!"tram"][!"subway"][!"light_rail"][!"ferry"][!"railway"](${bbox});`,
+        `  way["public_transport"="platform"]["bus"="yes"](${bbox});`,
         ')->.stops;',
-        '.stops out body;',
-        'rel(bn.stops)["type"="route"];',
+        '.stops out body center;',
+        '(rel(bn.stops)["type"="route"]; rel(bw.stops)["type"="route"];);',
         'out body;',
     ].join('\n')
 }
@@ -91,32 +95,45 @@ function classify(tags = {}) {
     return CLASSES.UNKNOWN
 }
 
-// node id -> route relations (type=route) that list the node as a member
+const STOP_TYPES = new Set(['node', 'way'])
+
+// "node/123" or "way/456" -> route relations (type=route) that list that object as a member
 function indexRouteMembership(elements) {
-    const byNode = new Map()
+    const byMember = new Map()
     for (const el of elements) {
         if (el.type !== 'relation') continue
         const tags = el.tags || {}
         for (const m of el.members || []) {
-            if (m.type !== 'node') continue
-            if (!byNode.has(m.ref)) byNode.set(m.ref, [])
-            byNode.get(m.ref).push({ id: el.id, ref: tags.ref, name: tags.name, route: tags.route, role: m.role })
+            if (!STOP_TYPES.has(m.type)) continue
+            const key = `${m.type}/${m.ref}`
+            if (!byMember.has(key)) byMember.set(key, [])
+            byMember.get(key).push({ id: el.id, ref: tags.ref, name: tags.name, route: tags.route, role: m.role })
         }
     }
-    return byNode
+    return byMember
+}
+
+// A node has lat/lon; a way answers with its centre (out center).
+function coordinatesOf(el) {
+    const point = el.type === 'way' ? el.center : el
+    return point && typeof point.lat === 'number' && typeof point.lon === 'number'
+        ? { lat: point.lat, lon: point.lon }
+        : { lat: undefined, lon: undefined }
 }
 
 function buildRows(elements) {
     const membership = indexRouteMembership(elements)
     return elements
-        .filter((el) => el.type === 'node')
+        .filter((el) => STOP_TYPES.has(el.type))
         .map((n) => {
             const tags = n.tags || {}
-            const routes = membership.get(n.id) || []
+            const routes = membership.get(`${n.type}/${n.id}`) || []
+            const { lat, lon } = coordinatesOf(n)
             return {
                 osm_id: n.id,
-                lat: n.lat,
-                lon: n.lon,
+                osm_type: n.type,
+                lat,
+                lon,
                 class: classify(tags),
                 name: tags.name || '',
                 highway: tags.highway || '',
@@ -133,10 +150,10 @@ function buildRows(elements) {
                 network: tags.network || '',
                 route_relations: routes.length,
                 routes: routes.map((r) => r.ref || r.name || String(r.id)).join('; '),
-                osm_url: `https://www.openstreetmap.org/node/${n.id}`,
+                osm_url: `https://www.openstreetmap.org/${n.type}/${n.id}`,
             }
         })
-        .sort((a, b) => a.osm_id - b.osm_id)
+        .sort((a, b) => a.osm_type.localeCompare(b.osm_type) || a.osm_id - b.osm_id)   // nodes, then ways
 }
 
 // RFC 4180: quote a field when it carries a separator, a quote or a line break; double the quotes.
@@ -157,8 +174,8 @@ function toGeoJson(rows, meta = {}) {
         const { lat, lon, ...properties } = row
         return JSON.stringify({
             type: 'Feature',
-            id: row.osm_id,
-            geometry: { type: 'Point', coordinates: [lon, lat] },
+            id: `${row.osm_type}/${row.osm_id}`,   // node and way ids are separate namespaces in OSM
+            geometry: lat === undefined ? null : { type: 'Point', coordinates: [lon, lat] },
             properties,
         })
     })
@@ -185,6 +202,10 @@ function summarize(rows) {
     for (const row of rows) byClass[row.class] += 1
     return {
         total: rows.length,
+        byType: {
+            node: rows.filter((r) => r.osm_type === 'node').length,
+            way: rows.filter((r) => r.osm_type === 'way').length,
+        },
         byClass,
         byOperator: countBy(rows, 'operator'),
         byNetwork: countBy(rows, 'network'),
@@ -192,6 +213,7 @@ function summarize(rows) {
         dataQuality: {
             withoutPublicTransport: rows.filter((r) => !r.public_transport).length,
             unexpectedPublicTransport: rows.filter((r) => r.public_transport && !['platform', 'stop_position'].includes(r.public_transport)).length,
+            stopPositionWithoutMode: rows.filter((r) => r.public_transport === 'stop_position' && !r.bus).length,
             busNo: rows.filter((r) => r.bus === 'no').length,
             withoutName: rows.filter((r) => !r.name).length,
         },
@@ -215,7 +237,7 @@ function formatSummary(summary, meta = {}) {
     const out = []
     out.push(`# Paradas de bus en OSM — Arequipa (${meta.osmBase || 'fecha desconocida'})`)
     out.push('')
-    out.push(`bbox ${bboxString(bounds)} · fuente ${meta.source || 'Overpass'}`)
+    out.push(`bbox ${bboxString(bounds)} · fuente ${meta.source || 'Overpass'} · ${summary.byType.node} nodos + ${summary.byType.way} ways (plataformas lineales, en su centro)`)
     out.push('')
     out.push('| clase | paradas | % |')
     out.push('|---|---:|---:|')
@@ -232,6 +254,7 @@ function formatSummary(summary, meta = {}) {
     out.push('Calidad de datos: '
         + `${dq.withoutPublicTransport} sin public_transport, `
         + `${dq.unexpectedPublicTransport} con public_transport distinto de platform/stop_position, `
+        + `${dq.stopPositionWithoutMode} stop_position sin modo (sin bus=*), `
         + `${dq.busNo} con bus=no, ${dq.withoutName} sin name.`)
     return out.join('\n') + '\n'
 }

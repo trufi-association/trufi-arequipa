@@ -16,9 +16,12 @@
     {"type": "node", "id": 10866662527, "lat": -16.4423642, "lon": -71.5288415, "tags": {"bench": "yes", "bin": "no", "bus": "yes", "flag:type": "yes", "highway": "bus_stop", "lit": "yes", "name": "Grifo \"San Fernando\", esq. Av. Dolores", "network": "Sistema Integrado de Transporte (SIT)", "operator": "Integra Arequipa S.A.C.", "public_transport": "platform", "shelter": "yes", "sign": "yes"}},
     {"type": "node", "id": 5777925904, "lat": -16.4047647, "lon": -71.5322196, "tags": {"bus": "yes", "public_transport": "stop_position"}},
     {"type": "node", "id": 11014310380, "lat": -16.4072283, "lon": -71.5308534, "tags": {"bench": "no", "bus": "yes", "highway": "bus_stop", "public_transport": "stop_area", "shelter": "no", "sign": "yes"}},
+    {"type": "node", "id": 11954185166, "lat": -16.3302517, "lon": -71.5566921, "tags": {"name": "Sor Ana", "public_transport": "stop_position"}},
+    {"type": "way", "id": 1245983469, "center": {"lat": -16.3525147, "lon": -71.5417543}, "nodes": [11607052701, 11607052702, 11607052703, 11607052704], "tags": {"bus": "yes", "network": "Sistema Integrado de Transporte (SIT)", "operator": "TransCayma S.A.C.", "public_transport": "platform"}},
     {"type": "relation", "id": 900000001, "members": [
       {"type": "node", "ref": 4058968456, "role": "stop"},
       {"type": "node", "ref": 4058234279, "role": "platform"},
+      {"type": "way", "ref": 1245983469, "role": "platform"},
       {"type": "node", "ref": 999999999, "role": "stop"},
       {"type": "way", "ref": 800000001, "role": ""}
     ], "tags": {"type": "route", "route": "bus", "ref": "C-3", "name": "C-3 Bus \"11 de mayo\": Mujeres con Esperanza → Terminal Terrestre", "network": "SIT"}},

@@ -72,9 +72,9 @@ npm ci
 npm run stops-review          # or: node tools/stops-review.js
 ```
 
-It queries Overpass for every bus-stop node inside the feed's bounding box (`bbox.js`, the same one `index.js` uses): `highway=bus_stop`, `public_transport=platform` + `bus=yes` and `public_transport=stop_position` + `bus=yes`, plus the `type=route` relations that list any of them as a member. It writes:
+It queries Overpass for every object that can stand for a bus stop inside the feed's bounding box (`bbox.js`, the same one `index.js` uses): the nodes tagged `highway=bus_stop`, `public_transport=platform` + `bus=yes` or `public_transport=stop_position` + `bus=yes`, the `stop_position` nodes that carry no mode tag at all (`bus`, `train`, `tram`… absent: two of them in Arequipa are bus stops the mappers left without `bus=yes`), and the platforms mapped as **ways** (`public_transport=platform` + `bus=yes`; a linear waiting area, placed at its centre, `osm_type=way`), plus the `type=route` relations that list any of them as a member. It writes:
 
-- `stops-review/stops-review.csv`: one row per stop with `osm_id`, `lat`, `lon`, `class`, `name`, the inventory tags (`shelter`, `bench`, `sign`, `traffic_sign`, `covered`, `lit`, `bin`), `operator`, `network`, how many route relations include the stop (`route_relations`, `routes`) and the `osm_url` to open it in the editor. UTF-8; opens in Excel or LibreOffice.
+- `stops-review/stops-review.csv`: one row per stop with `osm_id`, `osm_type` (`node` or `way`), `lat`, `lon`, `class`, `name`, the inventory tags (`shelter`, `bench`, `sign`, `traffic_sign`, `covered`, `lit`, `bin`), `operator`, `network`, how many route relations include the stop (`route_relations`, `routes`) and the `osm_url` to open it in the editor. UTF-8; opens in Excel or LibreOffice.
 - `stops-review/stops-review.geojson`: the same rows as points, to drop on [geojson.io](https://geojson.io), uMap or QGIS.
 
 The files live in their own folder, not in `out/`: the GTFS builder deletes `out/` entirely on every `node index.js`, and changes under `out/` trigger the *Validate GTFS* workflow.
@@ -95,7 +95,7 @@ Infrastructure wins over the sign: a shelter with a sign is counted once, as `in
 
 ### The same query in Overpass Turbo (no installation)
 
-Paste this into [overpass-turbo.eu](https://overpass-turbo.eu) and press *Run* ([pre-filled link](https://overpass-turbo.eu/?Q=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3B%0A(%0A%20%20node%5B%22highway%22%3D%22bus_stop%22%5D(-16.489732%2C-71.622936%2C-16.303314%2C-71.453334)%3B%0A%20%20node%5B%22public_transport%22%3D%22platform%22%5D%5B%22bus%22%3D%22yes%22%5D(-16.489732%2C-71.622936%2C-16.303314%2C-71.453334)%3B%0A%20%20node%5B%22public_transport%22%3D%22stop_position%22%5D%5B%22bus%22%3D%22yes%22%5D(-16.489732%2C-71.622936%2C-16.303314%2C-71.453334)%3B%0A)%3B%0Aout%20body%3B&C=-16.3965;-71.5381;12&R)): it draws every bus stop in the bounding box, and *Export → GeoJSON / KML / GPX* downloads them.
+Paste this into [overpass-turbo.eu](https://overpass-turbo.eu) and press *Run* ([pre-filled link](https://overpass-turbo.eu/?Q=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3B%0A(%0A%20%20node%5B%22highway%22%3D%22bus_stop%22%5D(-16.489732%2C-71.622936%2C-16.303314%2C-71.453334)%3B%0A%20%20node%5B%22public_transport%22%3D%22platform%22%5D%5B%22bus%22%3D%22yes%22%5D(-16.489732%2C-71.622936%2C-16.303314%2C-71.453334)%3B%0A%20%20node%5B%22public_transport%22%3D%22stop_position%22%5D%5B%22bus%22%3D%22yes%22%5D(-16.489732%2C-71.622936%2C-16.303314%2C-71.453334)%3B%0A%20%20node%5B%22public_transport%22%3D%22stop_position%22%5D%5B!%22bus%22%5D%5B!%22train%22%5D%5B!%22tram%22%5D%5B!%22subway%22%5D%5B!%22light_rail%22%5D%5B!%22ferry%22%5D%5B!%22railway%22%5D(-16.489732%2C-71.622936%2C-16.303314%2C-71.453334)%3B%0A%20%20way%5B%22public_transport%22%3D%22platform%22%5D%5B%22bus%22%3D%22yes%22%5D(-16.489732%2C-71.622936%2C-16.303314%2C-71.453334)%3B%0A)%3B%0Aout%20body%20center%3B&C=-16.3965;-71.5381;12&R)): it draws every bus stop in the bounding box (platform ways as a marker at their centre), and *Export → GeoJSON / KML / GPX* downloads them.
 
 ```
 [out:json][timeout:60];
@@ -103,11 +103,13 @@ Paste this into [overpass-turbo.eu](https://overpass-turbo.eu) and press *Run* (
   node["highway"="bus_stop"](-16.489732,-71.622936,-16.303314,-71.453334);
   node["public_transport"="platform"]["bus"="yes"](-16.489732,-71.622936,-16.303314,-71.453334);
   node["public_transport"="stop_position"]["bus"="yes"](-16.489732,-71.622936,-16.303314,-71.453334);
+  node["public_transport"="stop_position"][!"bus"][!"train"][!"tram"][!"subway"][!"light_rail"][!"ferry"][!"railway"](-16.489732,-71.622936,-16.303314,-71.453334);
+  way["public_transport"="platform"]["bus"="yes"](-16.489732,-71.622936,-16.303314,-71.453334);
 );
-out body;
+out body center;
 ```
 
-Filtered variants: [only the stops with infrastructure](https://overpass-turbo.eu/?Q=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3B%0A(%0A%20%20node%5B%22highway%22%3D%22bus_stop%22%5D%5B%22shelter%22%3D%22yes%22%5D(-16.489732%2C-71.622936%2C-16.303314%2C-71.453334)%3B%0A%20%20node%5B%22highway%22%3D%22bus_stop%22%5D%5B%22bench%22%3D%22yes%22%5D(-16.489732%2C-71.622936%2C-16.303314%2C-71.453334)%3B%0A%20%20node%5B%22highway%22%3D%22bus_stop%22%5D%5B%22covered%22%3D%22yes%22%5D(-16.489732%2C-71.622936%2C-16.303314%2C-71.453334)%3B%0A)%3B%0Aout%20body%3B&C=-16.3965;-71.5381;12&R) (`shelter=yes`, `bench=yes` or `covered=yes`) and [only the signed ones without infrastructure](https://overpass-turbo.eu/?Q=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3B%0Anode%5B%22highway%22%3D%22bus_stop%22%5D%5B%22sign%22%3D%22yes%22%5D%5B%22shelter%22!%3D%22yes%22%5D%5B%22bench%22!%3D%22yes%22%5D(-16.489732%2C-71.622936%2C-16.303314%2C-71.453334)%3B%0Aout%20body%3B&C=-16.3965;-71.5381;12&R) (`sign=yes` and neither `shelter=yes` nor `bench=yes`, a close approximation of the rules above).
+Filtered variants: [only the stops with infrastructure](https://overpass-turbo.eu/?Q=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3B%0A(%0A%20%20node%5B%22highway%22%3D%22bus_stop%22%5D%5B%22shelter%22%3D%22yes%22%5D(-16.489732%2C-71.622936%2C-16.303314%2C-71.453334)%3B%0A%20%20node%5B%22highway%22%3D%22bus_stop%22%5D%5B%22bench%22%3D%22yes%22%5D(-16.489732%2C-71.622936%2C-16.303314%2C-71.453334)%3B%0A%20%20node%5B%22highway%22%3D%22bus_stop%22%5D%5B%22covered%22%3D%22yes%22%5D(-16.489732%2C-71.622936%2C-16.303314%2C-71.453334)%3B%0A)%3B%0Aout%20body%3B&C=-16.3965;-71.5381;12&R) (`shelter=yes`, `bench=yes` or `covered=yes`) and [only the signed ones without infrastructure](https://overpass-turbo.eu/?Q=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3B%0Anode%5B%22highway%22%3D%22bus_stop%22%5D%5B%22sign%22%3D%22yes%22%5D%5B%22shelter%22!%3D%22yes%22%5D%5B%22bench%22!%3D%22yes%22%5D(-16.489732%2C-71.622936%2C-16.303314%2C-71.453334)%3B%0Aout%20body%3B&C=-16.3965;-71.5381;12&R) (`sign=yes` and neither `shelter=yes` nor `bench=yes`, a close approximation of the rules above). The two filtered links cover nodes; the platform ways carry no inventory tags today.
 
 ### Tests
 

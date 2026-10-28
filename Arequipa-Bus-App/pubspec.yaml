@@ -41,7 +41,7 @@ dependencies:
       # LTS de Arequipa + fixes de compatibilidad con Flutter 3.44
       # arequipa-lts/56 (HomePage.itinerariesFooterBuilder, #56); retag as
       # 1.0.2-arequipa-lts once the core PR is merged
-      ref: "bbad411718a06a347524882c8b5185a4e8b40e72"
+      ref: "cf7cd30a7a1a75ba4dc91257e5478a8c7240591c"
   # trufi_core:
   #   path: ../../trufi-core
   flutter_bloc: ^8.1.6

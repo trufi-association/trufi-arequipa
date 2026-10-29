@@ -1,4 +1,8 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ab_about_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for German (`de`).
 class ABAboutLocalizationDe extends ABAboutLocalization {
@@ -23,6 +27,15 @@ class ABAboutLocalizationDe extends ABAboutLocalization {
 
   @override
   String get aboutOpenSource => 'Diese App ist als Open Source auf GitHub veröffentlicht. Wir freuen uns, wenn Du zum Code beiträgst oder eine App für Deine eigene Stadt entwickelst.';
+
+  @override
+  String get disclaimerTitle => 'Zu den angezeigten Informationen';
+
+  @override
+  String get disclaimerContent => 'Die Fahrzeiten sind Schätzungen auf Basis der geplanten Routen.\nFahrzeuge können von ihrer Route abweichen oder Haltestellen auslassen.\nStraßen können ohne Vorankündigung gesperrt oder blockiert sein (Baustellen, Sperrungen durch Anwohner).\nNutze die Ergebnisse als Orientierung und plane einen Zeitpuffer ein.';
+
+  @override
+  String get resultsDisclaimer => 'Geschätzte Zeiten. Routen können abweichen und Straßen gesperrt sein.';
 
   @override
   String get menuAbout => 'Über Uns';

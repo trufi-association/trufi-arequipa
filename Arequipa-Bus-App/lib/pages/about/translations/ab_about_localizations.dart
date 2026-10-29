@@ -9,6 +9,8 @@ import 'ab_about_localizations_de.dart';
 import 'ab_about_localizations_en.dart';
 import 'ab_about_localizations_es.dart';
 
+// ignore_for_file: type=lint
+
 /// Callers can lookup localized strings with an instance of ABAboutLocalization
 /// returned by `ABAboutLocalization.of(context)`.
 ///
@@ -130,6 +132,24 @@ abstract class ABAboutLocalization {
   /// In es, this message translates to:
   /// **'Esta aplicación está publicada como código abierto en GitHub. Siéntase libre de contribuir  o utilizarlo para su propia ciudad.'**
   String get aboutOpenSource;
+
+  /// Title of the disclaimer section in the About page
+  ///
+  /// In es, this message translates to:
+  /// **'Sobre la información mostrada'**
+  String get disclaimerTitle;
+
+  /// Body of the disclaimer section: estimates, deviations, closed streets
+  ///
+  /// In es, this message translates to:
+  /// **'Los tiempos de viaje son estimados a partir de las rutas planificadas.\nLos vehículos pueden desviarse de su ruta o no detenerse en todas las paradas.\nLas calles pueden estar cerradas u obstruidas (obras, cierres vecinales) sin previo aviso.\nUsa los resultados como referencia y considera un margen de tiempo para tu viaje.'**
+  String get disclaimerContent;
+
+  /// One-line notice under the list of itineraries
+  ///
+  /// In es, this message translates to:
+  /// **'Tiempos estimados. Las rutas pueden tener desvíos y las calles pueden estar cerradas.'**
+  String get resultsDisclaimer;
 
   /// Menu item that shows the about page
   ///

@@ -25,6 +25,18 @@
     "@aboutOpenSource": {
         "description": "A note about open source"
     },
+    "disclaimerTitle": "Sobre la información mostrada",
+    "@disclaimerTitle": {
+        "description": "Title of the disclaimer section in the About page"
+    },
+    "disclaimerContent": "Los tiempos de viaje son estimados a partir de las rutas planificadas.\nLos vehículos pueden desviarse de su ruta o no detenerse en todas las paradas.\nLas calles pueden estar cerradas u obstruidas (obras, cierres vecinales) sin previo aviso.\nUsa los resultados como referencia y considera un margen de tiempo para tu viaje.",
+    "@disclaimerContent": {
+        "description": "Body of the disclaimer section: estimates, deviations, closed streets"
+    },
+    "resultsDisclaimer": "Tiempos estimados. Las rutas pueden tener desvíos y las calles pueden estar cerradas.",
+    "@resultsDisclaimer": {
+        "description": "One-line notice under the list of itineraries"
+    },
     "menuAbout": "Sobre nosotros",
     "@menuAbout": {
         "description": "Menu item that shows the about page"

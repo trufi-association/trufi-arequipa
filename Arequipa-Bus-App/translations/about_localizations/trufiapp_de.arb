@@ -25,6 +25,18 @@
     "@aboutOpenSource": {
         "description": "A note about open source"
     },
+    "disclaimerTitle": "Zu den angezeigten Informationen",
+    "@disclaimerTitle": {
+        "description": "Title of the disclaimer section in the About page"
+    },
+    "disclaimerContent": "Die Fahrzeiten sind Schätzungen auf Basis der geplanten Routen.\nFahrzeuge können von ihrer Route abweichen oder Haltestellen auslassen.\nStraßen können ohne Vorankündigung gesperrt oder blockiert sein (Baustellen, Sperrungen durch Anwohner).\nNutze die Ergebnisse als Orientierung und plane einen Zeitpuffer ein.",
+    "@disclaimerContent": {
+        "description": "Body of the disclaimer section: estimates, deviations, closed streets"
+    },
+    "resultsDisclaimer": "Geschätzte Zeiten. Routen können abweichen und Straßen gesperrt sein.",
+    "@resultsDisclaimer": {
+        "description": "One-line notice under the list of itineraries"
+    },
     "menuAbout": "Über Uns",
     "@menuAbout": {
         "description": "Menu item that shows the about page"

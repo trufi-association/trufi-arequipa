@@ -1,4 +1,8 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ab_about_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for Spanish Castilian (`es`).
 class ABAboutLocalizationEs extends ABAboutLocalization {
@@ -23,6 +27,15 @@ class ABAboutLocalizationEs extends ABAboutLocalization {
 
   @override
   String get aboutOpenSource => 'Esta aplicación está publicada como código abierto en GitHub. Siéntase libre de contribuir  o utilizarlo para su propia ciudad.';
+
+  @override
+  String get disclaimerTitle => 'Sobre la información mostrada';
+
+  @override
+  String get disclaimerContent => 'Los tiempos de viaje son estimados a partir de las rutas planificadas.\nLos vehículos pueden desviarse de su ruta o no detenerse en todas las paradas.\nLas calles pueden estar cerradas u obstruidas (obras, cierres vecinales) sin previo aviso.\nUsa los resultados como referencia y considera un margen de tiempo para tu viaje.';
+
+  @override
+  String get resultsDisclaimer => 'Tiempos estimados. Las rutas pueden tener desvíos y las calles pueden estar cerradas.';
 
   @override
   String get menuAbout => 'Sobre nosotros';

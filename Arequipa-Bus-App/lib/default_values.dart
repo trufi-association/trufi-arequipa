@@ -174,6 +174,19 @@ abstract class ArequipaBusDefaultValues {
                   mapChooseLocationProvider:
                       mapCollectionSelected.mapChooseLocationProvider(),
                   asyncExecutor: asyncExecutor ?? AsyncExecutor(),
+                  // #56: one line under the results so nobody takes the
+                  // times or the routes as guaranteed.
+                  itinerariesFooterBuilder: (context) => Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 4, 16, 12),
+                    child: Text(
+                      ABAboutLocalization.of(context)!.resultsDisclaimer,
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                            color: Theme.of(context).hintColor,
+                            fontStyle: FontStyle.italic,
+                          ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
                 ),
               );
             },

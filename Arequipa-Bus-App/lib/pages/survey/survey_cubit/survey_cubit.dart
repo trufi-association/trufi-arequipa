@@ -23,10 +23,15 @@ class SurveyCubit extends Cubit<SurveyState> {
   }
 
   Future<void> _load() async {
-    await _localRepository.loadRepository();
     final surveyLoaded = await _localRepository.getSurvey();
     emit((surveyLoaded ?? SurveyState.surveyStateDefault));
     if (surveyLoaded != null && surveyLoaded.surveyQuestions.isNotEmpty) {
+      // A survey finished before the completion flag existed (from the
+      // button, on an earlier version): count it, so the start-up prompt
+      // does not come back for it.
+      if (!surveyLoaded.isPresentation && surveyLoaded.isComplete) {
+        await _localRepository.markCompleted();
+      }
       syncDataWithServer(surveyLoaded);
     }
   }
@@ -45,7 +50,8 @@ class SurveyCubit extends Cubit<SurveyState> {
           tempSelectedOptions[i] = tempSelectedOptions[i].copyWith(
             isBackendSynced: true,
           );
-          final newState = surveyStateLoaded.copyWith(surveyQuestions: tempSelectedOptions);
+          final newState =
+              surveyStateLoaded.copyWith(surveyQuestions: tempSelectedOptions);
           _localRepository.saveSurvey(newState.toJson());
         } catch (e) {
           if (kDebugMode) {
@@ -54,7 +60,8 @@ class SurveyCubit extends Cubit<SurveyState> {
         }
       }
     }
-    final newState = surveyStateLoaded.copyWith(surveyQuestions: tempSelectedOptions);
+    final newState =
+        surveyStateLoaded.copyWith(surveyQuestions: tempSelectedOptions);
     _localRepository.saveSurvey(newState.toJson());
     emit(newState);
   }
@@ -80,6 +87,7 @@ class SurveyCubit extends Cubit<SurveyState> {
     required SurveyQuestionEnum surveyQuestion,
     required SurveyQuestionEnum nextSurveyQuestion,
     required List<SurveyOptionEnum> surveyOptions,
+    bool completesSurvey = false,
   }) async {
     var tempSelectedOptions = [...state.surveyQuestions];
     final index = tempSelectedOptions
@@ -118,6 +126,11 @@ class SurveyCubit extends Cubit<SurveyState> {
       );
       _localRepository.saveSurvey(newState.toJson());
       emit(newState);
+      if (completesSurvey) {
+        // The last question reached the server: the start-up reactor stops
+        // opening the modal (SurveyHiveLocalRepository.shouldShowSurvey).
+        await _localRepository.markCompleted();
+      }
     } catch (e) {
       if (kDebugMode) {
         print(e);
